@@ -1,68 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Gotham:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Museo:wght@100;300;500&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Cervantes Distribuidora Design System - Corporate Identity
-All colors MUST be HSL. */
+/* Cervantes Distribuidora Design System - Brand Identity
+All colors MUST be HSL. Based on brand color palette: ED6938, BC2B32, 56585A, F9C646 */
 
 @layer base {
   :root {
     /* Background & Base */
     --background: 0 0% 98%;
-    --foreground: 210 20% 15%;
+    --foreground: 240 2% 35%;
 
     /* Card Components */
     --card: 0 0% 100%;
-    --card-foreground: 210 20% 15%;
+    --card-foreground: 240 2% 35%;
 
     /* Popover Components */
     --popover: 0 0% 100%;
-    --popover-foreground: 210 20% 15%;
+    --popover-foreground: 240 2% 35%;
 
-    /* Corporate Blue - Trust & Tradition */
-    --primary: 210 100% 28%;
+    /* Brand Orange - Energy & Innovation (ED6938) */
+    --primary: 14 81% 58%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 210 85% 65%;
-    --primary-dark: 210 100% 20%;
+    --primary-light: 14 81% 75%;
+    --primary-dark: 14 81% 45%;
 
-    /* Corporate Green - Sustainability & Growth */
-    --secondary: 150 60% 35%;
+    /* Brand Red - Passion & Strength (BC2B32) */
+    --secondary: 355 63% 45%;
     --secondary-foreground: 0 0% 100%;
-    --secondary-light: 150 45% 55%;
+    --secondary-light: 355 63% 65%;
 
-    /* Gold Accent - Quality & Excellence */
-    --accent: 45 85% 55%;
-    --accent-foreground: 210 20% 15%;
-    --accent-light: 45 75% 70%;
+    /* Brand Yellow - Quality & Excellence (F9C646) */
+    --accent: 45 92% 63%;
+    --accent-foreground: 240 2% 35%;
+    --accent-light: 45 92% 80%;
 
-    /* Neutral Tones */
-    --muted: 210 15% 95%;
-    --muted-foreground: 210 12% 45%;
+    /* Brand Gray - Trust & Stability (56585A) */
+    --muted: 240 2% 95%;
+    --muted-foreground: 240 2% 35%;
 
     /* Status Colors */
-    --destructive: 0 75% 55%;
+    --destructive: 355 63% 45%;
     --destructive-foreground: 0 0% 100%;
     --success: 150 60% 45%;
-    --warning: 35 85% 60%;
+    --warning: 45 92% 63%;
 
     /* Interface Elements */
-    --border: 210 15% 88%;
-    --input: 210 15% 90%;
-    --ring: 210 100% 28%;
+    --border: 240 2% 88%;
+    --input: 240 2% 90%;
+    --ring: 14 81% 58%;
 
     /* Design System Extras */
     --radius: 0.75rem;
     
-    /* Corporate Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(210 100% 28%), hsl(210 85% 65%));
-    --gradient-secondary: linear-gradient(135deg, hsl(150 60% 35%), hsl(150 45% 55%));
-    --gradient-hero: linear-gradient(135deg, hsl(210 100% 28%) 0%, hsl(150 60% 35%) 50%, hsl(45 85% 55%) 100%);
-    --gradient-elegant: linear-gradient(180deg, hsl(0 0% 98%) 0%, hsl(210 15% 95%) 100%);
+    /* Brand Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(14 81% 58%), hsl(355 63% 45%));
+    --gradient-secondary: linear-gradient(135deg, hsl(355 63% 45%), hsl(14 81% 58%));
+    --gradient-hero: linear-gradient(135deg, hsl(14 81% 58%) 0%, hsl(355 63% 45%) 50%, hsl(45 92% 63%) 100%);
+    --gradient-elegant: linear-gradient(180deg, hsl(0 0% 98%) 0%, hsl(240 2% 95%) 100%);
+    --gradient-brand: linear-gradient(135deg, hsl(14 81% 58%), hsl(45 92% 63%));
 
     /* Shadows */
-    --shadow-soft: 0 4px 20px -2px hsl(210 100% 28% / 0.1);
-    --shadow-elegant: 0 10px 40px -10px hsl(210 100% 28% / 0.2);
-    --shadow-card: 0 2px 8px -2px hsl(210 20% 15% / 0.08);
+    --shadow-soft: 0 4px 20px -2px hsl(14 81% 58% / 0.1);
+    --shadow-elegant: 0 10px 40px -10px hsl(14 81% 58% / 0.2);
+    --shadow-card: 0 2px 8px -2px hsl(240 2% 35% / 0.08);
 
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -70,68 +74,69 @@ All colors MUST be HSL. */
 
     /* Sidebar Variables */
     --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 210 20% 15%;
-    --sidebar-primary: 210 100% 28%;
+    --sidebar-foreground: 240 2% 35%;
+    --sidebar-primary: 14 81% 58%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 210 15% 95%;
-    --sidebar-accent-foreground: 210 100% 28%;
-    --sidebar-border: 210 15% 88%;
-    --sidebar-ring: 210 100% 28%;
+    --sidebar-accent: 240 2% 95%;
+    --sidebar-accent-foreground: 14 81% 58%;
+    --sidebar-border: 240 2% 88%;
+    --sidebar-ring: 14 81% 58%;
   }
 
   .dark {
     /* Background & Base */
-    --background: 210 20% 8%;
+    --background: 240 2% 8%;
     --foreground: 0 0% 95%;
 
     /* Card Components */
-    --card: 210 20% 10%;
+    --card: 240 2% 10%;
     --card-foreground: 0 0% 95%;
 
     /* Popover Components */
-    --popover: 210 20% 10%;
+    --popover: 240 2% 10%;
     --popover-foreground: 0 0% 95%;
 
-    /* Corporate Blue - Trust & Tradition */
-    --primary: 210 85% 65%;
-    --primary-foreground: 210 20% 8%;
-    --primary-light: 210 75% 75%;
-    --primary-dark: 210 100% 20%;
+    /* Brand Orange - Energy & Innovation */
+    --primary: 14 81% 68%;
+    --primary-foreground: 240 2% 8%;
+    --primary-light: 14 81% 80%;
+    --primary-dark: 14 81% 50%;
 
-    /* Corporate Green - Sustainability & Growth */
-    --secondary: 150 45% 55%;
-    --secondary-foreground: 210 20% 8%;
-    --secondary-light: 150 35% 65%;
+    /* Brand Red - Passion & Strength */
+    --secondary: 355 63% 55%;
+    --secondary-foreground: 240 2% 8%;
+    --secondary-light: 355 63% 70%;
 
-    /* Gold Accent - Quality & Excellence */
-    --accent: 45 75% 70%;
-    --accent-foreground: 210 20% 8%;
-    --accent-light: 45 65% 80%;
+    /* Brand Yellow - Quality & Excellence */
+    --accent: 45 92% 70%;
+    --accent-foreground: 240 2% 8%;
+    --accent-light: 45 92% 85%;
 
     /* Neutral Tones */
-    --muted: 210 20% 15%;
-    --muted-foreground: 210 10% 60%;
+    --muted: 240 2% 15%;
+    --muted-foreground: 240 2% 60%;
 
     /* Status Colors */
-    --destructive: 0 65% 65%;
+    --destructive: 355 63% 55%;
     --destructive-foreground: 0 0% 95%;
     --success: 150 50% 55%;
-    --warning: 35 75% 70%;
+    --warning: 45 92% 70%;
 
     /* Interface Elements */
-    --border: 210 20% 20%;
-    --input: 210 20% 18%;
-    --ring: 210 85% 65%;
+    --border: 240 2% 20%;
+    --input: 240 2% 18%;
+    --ring: 14 81% 68%;
 
     /* Sidebar Dark Mode */
-    --sidebar-background: 210 20% 8%;
+    --sidebar-background: 240 2% 8%;
     --sidebar-foreground: 0 0% 95%;
-    --sidebar-primary: 210 85% 65%;
-    --sidebar-primary-foreground: 210 20% 8%;
-    --sidebar-accent: 210 20% 15%;
+    --sidebar-primary: 14 81% 68%;
+    --sidebar-primary-foreground: 240 2% 8%;
+    --sidebar-accent: 240 2% 15%;
     --sidebar-accent-foreground: 0 0% 95%;
-    --sidebar-border: 210 20% 20%;
-    --sidebar-ring: 210 85% 65%;
+    --sidebar-border: 240 2% 20%;
+    --sidebar-ring: 14 81% 68%;
+  }
 }
 
 @layer base {

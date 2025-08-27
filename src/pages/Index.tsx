@@ -8,6 +8,19 @@ import Footer from "@/components/Footer";
 import heroBanner from "@/assets/hero-banner.jpg";
 import brandsShowcase from "@/assets/brands-showcase.jpg";
 import teamImage from "@/assets/team-diversity.jpg";
+import brahmaLogo from "@/assets/brahma-logo.jpg";
+import spatenLogo from "@/assets/spaten-logo.jpg";
+import stellaLogo from "@/assets/stella-logo.jpg";
+import guaranaLogo from "@/assets/guarana-logo.jpg";
+import redbullLogo from "@/assets/redbull-logo.jpg";
+
+const brandLogos = [
+  { name: "Brahma", image: brahmaLogo },
+  { name: "Spaten", image: spatenLogo },
+  { name: "Stella Artois", image: stellaLogo },
+  { name: "Guaraná Antarctica", image: guaranaLogo },
+  { name: "Red Bull", image: redbullLogo },
+];
 
 const brands = [
   "Budweiser", "Skol", "Brahma", "Antarctica", "Stella Artois", 
@@ -125,12 +138,36 @@ export default function Index() {
         <section className="py-24 bg-gradient-elegant">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl text-center mb-16">
-              <h2 className="text-3xl font-bold tracking-tight mb-4">
+              <h2 className="text-3xl font-bold tracking-tight mb-4 font-gotham">
                 Marcas que Distribuímos
               </h2>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-lg text-muted-foreground font-museo">
                 Representamos com orgulho as principais marcas da Ambev
               </p>
+            </div>
+            
+            {/* Featured Brand Logos Carousel */}
+            <div className="relative mb-16">
+              <div className="flex justify-center items-center gap-8 mb-12 overflow-x-auto pb-4">
+                {brandLogos.map((brand, index) => (
+                  <div
+                    key={brand.name}
+                    className="flex-shrink-0 group relative overflow-hidden rounded-2xl bg-white shadow-elegant hover:shadow-soft transition-all duration-300 hover:-translate-y-2 min-w-[200px]"
+                  >
+                    <div className="p-6 text-center">
+                      <div className="h-24 w-full flex items-center justify-center mb-4 overflow-hidden rounded-xl">
+                        <img 
+                          src={brand.image} 
+                          alt={`${brand.name} logo`}
+                          className="max-h-full max-w-full object-contain"
+                        />
+                      </div>
+                      <h3 className="text-lg font-semibold font-gotham text-foreground">{brand.name}</h3>
+                    </div>
+                    <div className="absolute inset-0 bg-gradient-brand opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
+                  </div>
+                ))}
+              </div>
             </div>
             
             <div className="relative overflow-hidden rounded-2xl shadow-elegant mb-12">
@@ -148,16 +185,16 @@ export default function Index() {
                   key={brand}
                   className="group relative overflow-hidden rounded-xl bg-card p-4 shadow-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 text-center"
                 >
-                  <div className="mb-2 flex h-12 w-12 items-center justify-center rounded-full bg-gradient-primary text-white text-lg font-bold mx-auto">
+                  <div className="mb-2 flex h-12 w-12 items-center justify-center rounded-full bg-gradient-primary text-white text-lg font-bold mx-auto font-gotham">
                     {brand.charAt(0)}
                   </div>
-                  <h3 className="text-sm font-semibold">{brand}</h3>
+                  <h3 className="text-sm font-semibold font-museo">{brand}</h3>
                 </div>
               ))}
             </div>
             
             <div className="text-center mt-12">
-              <Button variant="outline" asChild>
+              <Button variant="outline" asChild className="font-gotham">
                 <Link to="/marcas">
                   Ver Todas as Marcas
                   <ArrowRight className="ml-2 h-4 w-4" />

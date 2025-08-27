@@ -18,6 +18,11 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'museo': ['Museo', 'sans-serif'],
+				'gotham': ['Gotham', 'sans-serif'],
+				'sans': ['Museo', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -73,7 +78,8 @@ export default {
 				'gradient-primary': 'var(--gradient-primary)',
 				'gradient-secondary': 'var(--gradient-secondary)',
 				'gradient-hero': 'var(--gradient-hero)',
-				'gradient-elegant': 'var(--gradient-elegant)'
+				'gradient-elegant': 'var(--gradient-elegant)',
+				'gradient-brand': 'var(--gradient-brand)'
 			},
 			boxShadow: {
 				'soft': 'var(--shadow-soft)',
