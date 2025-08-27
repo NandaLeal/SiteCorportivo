@@ -2,7 +2,7 @@ import { Building2, Target, Eye, Heart } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import companyImage from "@/assets/FACHADA.JPG";
+import companyImage from "@/assets/hero-banner.jpg";
 
 export default function QuemSomos() {
   return (
