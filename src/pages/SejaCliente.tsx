@@ -6,12 +6,13 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 const cities = [
-  "Montes Claros", "Pirapora", "Janaúba", "Januária", "Bocaiúva", "Coração de Jesus",
-  "Francisco Sá", "Mirabela", "Brasília de Minas", "São João da Ponte", "Varzelândia",
-  "Manga", "Itacarambi", "Pedras de Maria da Cruz", "Matias Cardoso", "Jaíba",
-  "Nova Porteirinha", "Porteirinha", "Riacho dos Machados", "Grão Mogol",
-  "Cristália", "Botumirim", "Josenópolis", "Novorizonte", "Olhos-d'Água",
-  "Capitão Enéas", "Claro dos Poções", "Glaucilândia", "Lontra", "Urucuia",
+                "Bocaiúva", "Botumirim", "Brasília de Minas", "Campo Azul", "Capitão Enéas", 
+                "Coração de Jesus", "Cristália", "Engenheiro Navarro", "Francisco Sá", 
+                "Glaucilândia", "Grão Mogol", "Guaraciama", "Ibiracatu", "Icaraí de Minas", 
+                "Itacambira", "Japonvar", "Juramento", "Lontra", "Luislândia", "Mirabela", 
+                "Montes Claros", "Olhos-d'Água", "Patis", "São Francisco", "São João da Lagoa", 
+                "São João da Ponte", "São João do Pacuí", "São Romão", "Ubaí", "Varzelândia", 
+                "Francisco Dumont"
 ];
 
 const benefits = [
