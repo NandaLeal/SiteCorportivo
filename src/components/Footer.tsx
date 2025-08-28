@@ -31,7 +31,7 @@ const footerNavigation = {
     {
       name: "TikTok",
       href: "https://www.tiktok.com/@cervantes.ambev",
-      icon: Video,
+      icon: <<i class="fa-brands fa-whatsapp"></i> ,
     },
     {
       name: "LinkedIn",
