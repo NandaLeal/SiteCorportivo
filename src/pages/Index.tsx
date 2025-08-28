@@ -2,6 +2,7 @@ import { ArrowRight, Target, Eye, Heart, Truck, Users, Star } from "lucide-react
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -38,16 +39,26 @@ export default function Index() {
     <>
       <Header />
       <main>
-        {/* Hero Section */}
-        <section className="relative py-24 sm:py-32 lg:py-40">
-          <div className="absolute inset-0">
-            <img
-              src={heroBanner}
-              alt="Frota Cervantes - Distribuidora de Bebidas"
-              className="h-full w-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-transparent" />
-          </div>
+        {/* Hero Section with Product Carousel */}
+        <section className="relative py-24 sm:py-32 lg:py-40 overflow-hidden">
+          <Carousel className="absolute inset-0">
+            <CarouselContent>
+              {brandLogos.map((brand, index) => (
+                <CarouselItem key={brand.name}>
+                  <div className="relative h-full">
+                    <img
+                      src={brand.image}
+                      alt={`${brand.name} - Distribuída pela Cervantes`}
+                      className="h-full w-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-transparent" />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="left-4" />
+            <CarouselNext className="right-4" />
+          </Carousel>
           
           <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl lg:mx-0">
