@@ -40,18 +40,14 @@ export default function Index() {
     <>
       <Header />
       <main>
-        {/* Hero Section with Product Carousel */}
+        {/* Hero Section */}
         <section className="relative py-24 sm:py-32 lg:py-40 overflow-hidden">
           <Carousel 
             className="absolute inset-0 group"
-            plugins={[
-              Autoplay({
-                delay: 4000,
-              }),
-            ]}
+            plugins={[Autoplay({ delay: 4000 })]}
           >
             <CarouselContent>
-              {brandLogos.map((brand, index) => (
+              {brandLogos.map((brand) => (
                 <CarouselItem key={brand.name}>
                   <div className="relative h-full">
                     <img
@@ -70,24 +66,24 @@ export default function Index() {
           
           <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl lg:mx-0">
-              <Badge variant="secondary" className="mb-6 text-base px-4 py-2">
+              <Badge variant="secondary" className="mb-6 text-base px-4 py-2 font-gotham font-medium">
                 Parceiro Oficial Ambev
               </Badge>
-              <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+              <h1 className="text-4xl font-gotham font-bold tracking-tight text-white sm:text-6xl">
                 31 anos levando qualidade para o Norte de Minas
               </h1>
-              <p className="mt-6 text-xl leading-8 text-white/90">
-                Há <strong>31 anos</strong> levando qualidade e confiança para <strong>Montes Claros</strong> e 
-                mais <strong>30 cidades do Norte de Minas</strong>.
+              <p className="mt-6 text-xl font-gotham font-light leading-8 text-white/90">
+                Há <strong className="font-medium">31 anos</strong> levando qualidade e confiança para <strong className="font-medium">Montes Claros</strong> e 
+                mais <strong className="font-medium">30 cidades do Norte de Minas</strong>.
               </p>
               <div className="mt-10 flex items-center gap-x-6">
-                <Button size="lg" asChild className="bg-white text-primary hover:bg-white/90">
+                <Button size="lg" asChild className="bg-white text-primary hover:bg-white/90 font-gotham font-medium">
                   <Link to="/seja-cliente">
                     Quer ser nosso cliente?
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
-                <Button variant="outline" size="lg" asChild className="border-white text-white hover:bg-white/10">
+                <Button variant="outline" size="lg" asChild className="border-white text-white hover:bg-white/10 font-gotham font-medium">
                   <Link to="/trabalhe-conosco">
                     Trabalhe Conosco
                   </Link>
@@ -108,8 +104,8 @@ export default function Index() {
                       <stat.icon className="h-8 w-8 text-primary" />
                     </div>
                   </div>
-                  <div className="text-4xl font-bold text-primary mb-2">{stat.number}</div>
-                  <div className="text-muted-foreground font-medium">{stat.label}</div>
+                  <div className="text-4xl font-gotham font-bold text-primary mb-2">{stat.number}</div>
+                  <div className="text-muted-foreground font-gotham font-medium">{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -121,21 +117,21 @@ export default function Index() {
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-center">
               <div className="lg:pr-8">
-                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-6">
+                <h2 className="text-3xl font-gotham font-bold tracking-tight sm:text-4xl mb-6">
                   Mais que uma distribuidora
                 </h2>
-                <p className="text-lg leading-8 text-muted-foreground mb-8">
-                  Somos a <strong className="text-foreground">Distribuidora de Bebidas Cervantes</strong>, 
+                <p className="text-lg font-gotham font-light leading-8 text-muted-foreground mb-8">
+                  Somos a <strong className="font-medium text-foreground">Distribuidora de Bebidas Cervantes</strong>, 
                   representantes da Ambev em nossa região. Nosso compromisso é 
-                  <strong className="text-primary"> excelência</strong>, 
-                  <strong className="text-secondary"> sustentabilidade</strong> e 
-                  <strong className="text-accent"> foco no cliente</strong>.
+                  <strong className="font-medium text-primary"> excelência</strong>, 
+                  <strong className="font-medium text-secondary"> sustentabilidade</strong> e 
+                  <strong className="font-medium text-accent"> foco no cliente</strong>.
                 </p>
-                <p className="text-lg leading-8 text-muted-foreground mb-8">
+                <p className="text-lg font-gotham font-light leading-8 text-muted-foreground mb-8">
                   Acreditamos firmemente em ser mais do que uma simples revenda, 
-                  <strong className="text-primary"> inspirando pessoas a fazer o bem</strong>.
+                  <strong className="font-medium text-primary"> inspirando pessoas a fazer o bem</strong>.
                 </p>
-                <Button asChild>
+                <Button asChild className="font-gotham font-medium">
                   <Link to="/quem-somos">
                     Conheça Nossa História
                     <ArrowRight className="ml-2 h-4 w-4" />
@@ -157,18 +153,18 @@ export default function Index() {
         <section className="py-24 bg-gradient-elegant">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl text-center mb-16">
-              <h2 className="text-3xl font-bold tracking-tight mb-4 font-gotham">
+              <h2 className="text-3xl font-gotham font-bold tracking-tight mb-4">
                 Marcas que Distribuímos
               </h2>
-              <p className="text-lg text-muted-foreground font-museo">
+              <p className="text-lg font-gotham font-light text-muted-foreground">
                 Representamos com orgulho as principais marcas da Ambev
               </p>
             </div>
-            
+
             {/* Featured Brand Logos Carousel */}
             <div className="relative mb-16">
               <div className="flex justify-center items-center gap-8 mb-12 overflow-x-auto pb-4">
-                {brandLogos.map((brand, index) => (
+                {brandLogos.map((brand) => (
                   <div
                     key={brand.name}
                     className="flex-shrink-0 group relative overflow-hidden rounded-2xl bg-white shadow-elegant hover:shadow-soft transition-all duration-300 hover:-translate-y-2 min-w-[200px]"
@@ -181,7 +177,7 @@ export default function Index() {
                           className="max-h-full max-w-full object-contain"
                         />
                       </div>
-                      <h3 className="text-lg font-semibold font-gotham text-foreground">{brand.name}</h3>
+                      <h3 className="text-lg font-gotham font-medium text-foreground">{brand.name}</h3>
                     </div>
                     <div className="absolute inset-0 bg-gradient-brand opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
                   </div>
@@ -197,9 +193,9 @@ export default function Index() {
               />
               <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20" />
             </div>
-            
+
             <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
-              {brands.map((brand, index) => (
+              {brands.map((brand) => (
                 <div
                   key={brand}
                   className="group relative overflow-hidden rounded-xl bg-card p-4 shadow-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 text-center"
@@ -207,13 +203,13 @@ export default function Index() {
                   <div className="mb-2 flex h-12 w-12 items-center justify-center rounded-full bg-gradient-primary text-white text-lg font-bold mx-auto font-gotham">
                     {brand.charAt(0)}
                   </div>
-                  <h3 className="text-sm font-semibold font-museo">{brand}</h3>
+                  <h3 className="text-sm font-gotham font-medium">{brand}</h3>
                 </div>
               ))}
             </div>
-            
+
             <div className="text-center mt-12">
-              <Button variant="outline" asChild className="font-gotham">
+              <Button variant="outline" asChild className="font-gotham font-medium">
                 <Link to="/marcas">
                   Ver Todas as Marcas
                   <ArrowRight className="ml-2 h-4 w-4" />
@@ -227,10 +223,10 @@ export default function Index() {
         <section className="py-24">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl text-center mb-16">
-              <h2 className="text-3xl font-bold tracking-tight mb-4">
+              <h2 className="text-3xl font-gotham font-bold tracking-tight mb-4">
                 Nossos Valores
               </h2>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-lg font-gotham font-light text-muted-foreground">
                 Os pilares que guiam nossa jornada há mais de três décadas
               </p>
             </div>
@@ -241,10 +237,10 @@ export default function Index() {
                   <div className="rounded-full bg-primary/10 p-3 w-fit mx-auto mb-4">
                     <Target className="h-8 w-8 text-primary" />
                   </div>
-                  <CardTitle className="text-xl">Missão</CardTitle>
+                  <CardTitle className="text-xl font-gotham font-medium">Missão</CardTitle>
                 </CardHeader>
                 <CardContent className="text-center">
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-muted-foreground font-gotham font-light leading-relaxed">
                     Distribuir produtos de qualidade com excelência operacional, 
                     construindo relacionamentos duradouros e contribuindo para 
                     o desenvolvimento da região Norte de Minas.
@@ -257,10 +253,10 @@ export default function Index() {
                   <div className="rounded-full bg-secondary/10 p-3 w-fit mx-auto mb-4">
                     <Eye className="h-8 w-8 text-secondary" />
                   </div>
-                  <CardTitle className="text-xl">Visão</CardTitle>
+                  <CardTitle className="text-xl font-gotham font-medium">Visão</CardTitle>
                 </CardHeader>
                 <CardContent className="text-center">
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-muted-foreground font-gotham font-light leading-relaxed">
                     Ser a distribuidora de bebidas mais confiável e inovadora 
                     do Norte de Minas, reconhecida pela excelência no atendimento 
                     e sustentabilidade.
@@ -273,10 +269,10 @@ export default function Index() {
                   <div className="rounded-full bg-accent/10 p-3 w-fit mx-auto mb-4">
                     <Heart className="h-8 w-8 text-accent" />
                   </div>
-                  <CardTitle className="text-xl">Sonho</CardTitle>
+                  <CardTitle className="text-xl font-gotham font-medium">Sonho</CardTitle>
                 </CardHeader>
                 <CardContent className="text-center">
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-muted-foreground font-gotham font-light leading-relaxed">
                     Inspirar pessoas a fazer o bem, criando um impacto positivo 
                     na sociedade através de nossos produtos, serviços e 
                     relacionamentos genuínos.
@@ -291,21 +287,21 @@ export default function Index() {
         <section className="py-24 bg-gradient-hero">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl text-center">
-              <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-6">
+              <h2 className="text-3xl font-gotham font-bold tracking-tight text-white sm:text-4xl mb-6">
                 Pronto para Fazer Parte da Nossa História?
               </h2>
-              <p className="text-xl text-white/90 mb-10">
+              <p className="text-xl font-gotham font-light text-white/90 mb-10">
                 Seja nosso cliente ou integre nossa equipe. Juntos, continuamos 
                 construindo o futuro do Norte de Minas.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" variant="secondary" asChild>
+                <Button size="lg" variant="secondary" asChild className="font-gotham font-medium">
                   <Link to="/seja-cliente">
                     Quer ser nosso cliente?
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10" asChild>
+                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 font-gotham font-medium" asChild>
                   <Link to="/trabalhe-conosco">
                     Trabalhe Conosco
                   </Link>
