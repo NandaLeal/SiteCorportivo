@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -41,7 +42,14 @@ export default function Index() {
       <main>
         {/* Hero Section with Product Carousel */}
         <section className="relative py-24 sm:py-32 lg:py-40 overflow-hidden">
-          <Carousel className="absolute inset-0">
+          <Carousel 
+            className="absolute inset-0 group"
+            plugins={[
+              Autoplay({
+                delay: 4000,
+              }),
+            ]}
+          >
             <CarouselContent>
               {brandLogos.map((brand, index) => (
                 <CarouselItem key={brand.name}>
@@ -56,8 +64,8 @@ export default function Index() {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="left-4" />
-            <CarouselNext className="right-4" />
+            <CarouselPrevious className="left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <CarouselNext className="right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </Carousel>
           
           <div className="relative mx-auto max-w-7xl px-6 lg:px-8">

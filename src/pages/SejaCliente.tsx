@@ -4,16 +4,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-
-const cities = [
-                "Bocaiúva", "Botumirim", "Brasília de Minas", "Campo Azul", "Capitão Enéas", 
-                "Coração de Jesus", "Cristália", "Engenheiro Navarro", "Francisco Sá", 
-                "Glaucilândia", "Grão Mogol", "Guaraciama", "Ibiracatu", "Icaraí de Minas", 
-                "Itacambira", "Japonvar", "Juramento", "Lontra", "Luislândia", "Mirabela", 
-                "Montes Claros", "Olhos-d'Água", "Patis", "São Francisco", "São João da Lagoa", 
-                "São João da Ponte", "São João do Pacuí", "São Romão", "Ubaí", "Varzelândia", 
-                "Francisco Dumont"
-];
+import mapaNorteMinas1 from "@/assets/images/mapa-norte-minas-1.png";
+import mapaNorteMinas2 from "@/assets/images/mapa-norte-minas-2.png";
 
 const benefits = [
   {
@@ -113,23 +105,35 @@ export default function SejaCliente() {
               <CardHeader className="text-center">
                 <CardTitle className="flex items-center justify-center gap-2 text-2xl">
                   <MapPin className="h-6 w-6 text-primary" />
-                  Cidades Atendidas
+                  Região de Cobertura
                 </CardTitle>
                 <p className="text-muted-foreground">
                   Nossa frota chega a todos estes municípios com regularidade
                 </p>
               </CardHeader>
-              <CardContent>
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                  {cities.map((city, index) => (
-                    <div
-                      key={city}
-                      className="flex items-center gap-2 p-3 rounded-lg bg-muted/30 hover:bg-muted/50 transition-colors"
-                    >
-                      <div className="h-2 w-2 rounded-full bg-primary" />
-                      <span className="text-sm font-medium">{city}</span>
-                    </div>
-                  ))}
+              <CardContent className="p-8">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                  <div className="group relative overflow-hidden rounded-xl shadow-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-1">
+                    <img
+                      src={mapaNorteMinas1}
+                      alt="Mapa do Norte de Minas - Região 1"
+                      className="w-full h-auto object-cover rounded-xl"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
+                  </div>
+                  <div className="group relative overflow-hidden rounded-xl shadow-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-1">
+                    <img
+                      src={mapaNorteMinas2}
+                      alt="Mapa do Norte de Minas - Região 2"
+                      className="w-full h-auto object-cover rounded-xl"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-secondary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
+                  </div>
+                </div>
+                <div className="text-center mt-8">
+                  <p className="text-sm text-muted-foreground">
+                    Áreas destacadas representam nossa cobertura completa de entrega
+                  </p>
                 </div>
               </CardContent>
             </Card>
