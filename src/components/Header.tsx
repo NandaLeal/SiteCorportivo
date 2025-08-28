@@ -1,17 +1,80 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Package, Users, Award, UserPlus, Briefcase, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import logoImage from "@/assets/images/LOGO.jpg";
 
 const navigation = [
-  { name: "Início", href: "/" },
-  { name: "Quem Somos", href: "/quem-somos" },
-  { name: "Marcas", href: "/marcas" },
-  { name: "Seja Nosso Cliente", href: "/seja-cliente" },
-  { name: "Trabalhe Conosco", href: "/trabalhe-conosco" },
-  { name: "Contato", href: "/contato" },
+  { name: "Início", href: "/", icon: Package, color: "bg-amber-500" },
+  { name: "Quem Somos", href: "/quem-somos", icon: Users, color: "bg-blue-500" },
+  { name: "Marcas", href: "/marcas", icon: Award, color: "bg-green-500" },
+  { name: "Seja Nosso Cliente", href: "/seja-cliente", icon: UserPlus, color: "bg-purple-500" },
+  { name: "Trabalhe Conosco", href: "/trabalhe-conosco", icon: Briefcase, color: "bg-red-500" },
+  { name: "Contato", href: "/contato", icon: Phone, color: "bg-orange-500" },
 ];
+
+const BeerBoxNavItem = ({ item, isActive, onClick }: { 
+  item: typeof navigation[0], 
+  isActive: boolean, 
+  onClick?: () => void 
+}) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const Icon = item.icon;
+
+  const handleClick = () => {
+    setIsOpen(true);
+    setTimeout(() => {
+      setIsOpen(false);
+      onClick?.();
+    }, 300);
+  };
+
+  return (
+    <Link
+      to={item.href}
+      onClick={handleClick}
+      className="group relative block transform transition-all duration-300 hover:scale-105"
+    >
+      <div className={cn(
+        "relative perspective-1000 transform-style-preserve-3d transition-transform duration-300",
+        isOpen && "rotate-y-12"
+      )}>
+        {/* Caixa de Cerveja */}
+        <div className={cn(
+          "relative h-16 w-24 rounded-lg shadow-lg transform transition-all duration-300",
+          item.color,
+          isActive && "ring-2 ring-primary ring-offset-2",
+          isOpen && "shadow-xl scale-110"
+        )}>
+          {/* Tampa da caixa */}
+          <div className={cn(
+            "absolute -top-1 left-0 right-0 h-3 rounded-t-lg transform transition-all duration-300 origin-bottom",
+            item.color,
+            "brightness-110",
+            isOpen && "-rotate-x-45 translate-y-1"
+          )} />
+          
+          {/* Frente da caixa */}
+          <div className="absolute inset-0 flex flex-col items-center justify-center text-white rounded-lg">
+            <Icon className="h-6 w-6 mb-1" />
+            <span className="text-xs font-gotham-medium leading-tight text-center px-1">
+              {item.name}
+            </span>
+          </div>
+          
+          {/* Efeito de abertura */}
+          {isOpen && (
+            <div className="absolute inset-0 bg-white/20 rounded-lg animate-pulse" />
+          )}
+          
+          {/* Sombra interna */}
+          <div className="absolute inset-0 rounded-lg shadow-inner bg-black/10" />
+        </div>
+      </div>
+    </Link>
+  );
+};
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -23,7 +86,7 @@ export default function Header() {
         <div className="flex lg:flex-1">
           <Link to="/" className="-m-1.5 p-1.5">
                 <img
-                  src="@/assets/images/LOGO.jpg"
+                  src={logoImage}
                   alt="Cervantes Distribuidora"
                   className="h-12 w-auto"
                 />
@@ -38,20 +101,13 @@ export default function Header() {
             <Menu className="h-6 w-6" aria-hidden="true" />
           </Button>
         </div>
-        <div className="hidden lg:flex lg:gap-x-12">
+        <div className="hidden lg:flex lg:gap-x-8 lg:items-center">
           {navigation.map((item) => (
-            <Link
+            <BeerBoxNavItem
               key={item.name}
-              to={item.href}
-              className={cn(
-                "text-sm font-semibold leading-6 transition-colors hover:text-primary",
-                location.pathname === item.href
-                  ? "text-primary"
-                  : "text-foreground"
-              )}
-            >
-              {item.name}
-            </Link>
+              item={item}
+              isActive={location.pathname === item.href}
+            />
           ))}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
@@ -69,9 +125,11 @@ export default function Header() {
         <div className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-background px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-border">
           <div className="flex items-center justify-between">
             <Link to="/" className="-m-1.5 p-1.5">
-              <span className="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-                Cervantes
-              </span>
+              <img
+                src={logoImage}
+                alt="Cervantes Distribuidora"
+                className="h-8 w-auto"
+              />
             </Link>
             <Button
               variant="ghost"
@@ -83,21 +141,14 @@ export default function Header() {
           </div>
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-border">
-              <div className="space-y-2 py-6">
+              <div className="grid grid-cols-2 gap-4 py-6">
                 {navigation.map((item) => (
-                  <Link
+                  <BeerBoxNavItem
                     key={item.name}
-                    to={item.href}
-                    className={cn(
-                      "-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 transition-colors",
-                      location.pathname === item.href
-                        ? "bg-muted text-primary"
-                        : "text-foreground hover:bg-muted"
-                    )}
+                    item={item}
+                    isActive={location.pathname === item.href}
                     onClick={() => setMobileMenuOpen(false)}
-                  >
-                    {item.name}
-                  </Link>
+                  />
                 ))}
               </div>
             </div>
