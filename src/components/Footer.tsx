@@ -25,7 +25,7 @@ const footerNavigation = {
     },
     {
       name: "WhatsApp",
-      href: "http://wa.me/553832131234",
+      href: "http://wa.me/553832131234?text= Seja bem-vindo a maior revenda no Norte de Minas.",
       icon: MessageCircle,
     },
     {
