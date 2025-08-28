@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { MapPin, Phone, Mail, Instagram, Facebook } from "lucide-react";
+import { MapPin, Phone, Mail, Instagram, Facebook, MessageCircle, Linkedin, Video } from "lucide-react";
 
 const footerNavigation = {
   empresa: [
@@ -22,6 +22,21 @@ const footerNavigation = {
       name: "Facebook",
       href: "https://www.facebook.com/CervantesAmbev/",
       icon: Facebook,
+    },
+    {
+      name: "WhatsApp",
+      href: "https://wa.me/5538999999999",
+      icon: MessageCircle,
+    },
+    {
+      name: "TikTok",
+      href: "https://www.tiktok.com/@cervantes.ambev",
+      icon: Video,
+    },
+    {
+      name: "LinkedIn",
+      href: "https://www.linkedin.com/company/cervantes-ambev/",
+      icon: Linkedin,
     },
   ],
 };

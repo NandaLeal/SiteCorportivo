@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { useState } from "react";
 import mapaNorteMinas1 from "@/assets/images/areaMatriz.webp";
 import mapaNorteMinas2 from "@/assets/images/areaFilial.webp";
 
@@ -26,6 +27,12 @@ const benefits = [
 ];
 
 export default function SejaCliente() {
+  const [expandedMap, setExpandedMap] = useState<number | null>(null);
+
+  const handleMapClick = (mapIndex: number) => {
+    setExpandedMap(expandedMap === mapIndex ? null : mapIndex);
+  };
+
   return (
     <>
       <Header />
@@ -112,22 +119,40 @@ export default function SejaCliente() {
                 </p>
               </CardHeader>
               <CardContent className="p-8">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                  <div className="group relative overflow-hidden rounded-xl shadow-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-1">
+                <div className={`grid gap-8 transition-all duration-500 ${
+                  expandedMap !== null ? 'grid-cols-1' : 'grid-cols-1 lg:grid-cols-2'
+                }`}>
+                  <div 
+                    className={`group relative overflow-hidden rounded-xl shadow-card hover:shadow-elegant transition-all duration-500 hover:-translate-y-1 cursor-pointer ${
+                      expandedMap === 1 ? 'scale-105' : expandedMap !== null ? 'scale-90 opacity-50' : ''
+                    }`}
+                    onClick={() => handleMapClick(1)}
+                  >
                     <img
                       src={mapaNorteMinas1}
                       alt="Área de atendimento da Matriz"
                       className="w-full h-auto object-cover rounded-xl"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
+                    <div className="absolute top-4 left-4 bg-primary/90 text-primary-foreground px-3 py-1 rounded-full text-sm font-medium">
+                      Matriz
+                    </div>
                   </div>
-                  <div className="group relative overflow-hidden rounded-xl shadow-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-1">
+                  <div 
+                    className={`group relative overflow-hidden rounded-xl shadow-card hover:shadow-elegant transition-all duration-500 hover:-translate-y-1 cursor-pointer ${
+                      expandedMap === 2 ? 'scale-105' : expandedMap !== null ? 'scale-90 opacity-50' : ''
+                    }`}
+                    onClick={() => handleMapClick(2)}
+                  >
                     <img
                       src={mapaNorteMinas2}
                       alt="Área de atendimento da Filial"
                       className="w-full h-auto object-cover rounded-xl"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-secondary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
+                    <div className="absolute top-4 left-4 bg-secondary/90 text-secondary-foreground px-3 py-1 rounded-full text-sm font-medium">
+                      Filial
+                    </div>
                   </div>
                 </div>
                 <div className="text-center mt-8">
