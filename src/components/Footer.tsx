@@ -25,7 +25,7 @@ const footerNavigation = {
     },
     {
       name: "WhatsApp",
-      href: "https://api.whatsapp.com/553832151234",
+      href: "https://api.whatsapp.com/send/?phone=553832151234&text&type=phone_number&app_absent=0",
       icon: MessageCircle,
     },
     {
