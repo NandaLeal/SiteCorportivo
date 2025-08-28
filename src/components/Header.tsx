@@ -24,7 +24,7 @@ export default function Header() {
           <Link to="/" className="-m-1.5 p-1.5">
             <Link to="/" className="-m-1.5 p-1.5">
   <img
-    src="/LOGO.jpg"
+    src="@/assets/images/LOGO.jpg"
     alt="Cervantes Distribuidora"
     className="h-12 w-auto"
   />
