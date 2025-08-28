@@ -29,11 +29,6 @@ const footerNavigation = {
       icon: MessageCircle,
     },
     {
-      name: "TikTok",
-      href: "https://www.tiktok.com/@cervantes.ambev",
-      icon: <<i class="fa-brands fa-whatsapp"></i> ,
-    },
-    {
       name: "LinkedIn",
       href: "https://www.linkedin.com/company/cervantes-ambev/",
       icon: Linkedin,
