@@ -25,7 +25,7 @@ const footerNavigation = {
     },
     {
       name: "WhatsApp",
-      href: "https://wa.me/5538999999999",
+      href: "https://wa.me/553832131234",
       icon: MessageCircle,
     },
     {
