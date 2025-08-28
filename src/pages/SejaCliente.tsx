@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import mapaNorteMinas1 from "@/assets/images/areaMatriz.webp";
-import mapaNorteMinas2 from "@/assets/images/areaFilia.webp";
+import mapaNorteMinas2 from "@/assets/images/areaFilial.webp";
 
 const benefits = [
   {
