@@ -9,14 +9,14 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary-dark shadow-soft hover:shadow-elegant",
-        destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90 shadow-soft",
-        outline: "border-2 border-primary text-primary bg-transparent hover:bg-primary hover:text-primary-foreground transition-smooth",
-        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary-light shadow-soft hover:shadow-elegant",
-        ghost: "hover:bg-accent/10 hover:text-accent-foreground",
-        link: "text-primary underline-offset-4 hover:underline",
-        hero: "bg-gradient-primary text-white border-0 shadow-elegant hover:shadow-soft hover:scale-105 transform transition-smooth",
-        accent: "bg-accent text-accent-foreground hover:bg-accent-light shadow-soft hover:shadow-elegant",
+        default: "bg-primary text-primary-foreground hover:bg-primary-dark shadow-soft hover:shadow-elegant font-gotham font-gotham-medium",
+        destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90 shadow-soft font-gotham font-gotham-medium",
+        outline: "border-2 border-primary text-primary bg-transparent hover:bg-primary hover:text-primary-foreground transition-smooth font-gotham font-gotham-medium",
+        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary-light shadow-soft hover:shadow-elegant font-gotham font-gotham-medium",
+        ghost: "hover:bg-accent/10 hover:text-accent-foreground font-gotham font-gotham-light",
+        link: "text-primary underline-offset-4 hover:underline font-gotham font-gotham-light",
+        hero: "bg-gradient-primary text-white border-0 shadow-elegant hover:shadow-soft hover:scale-105 transform transition-smooth font-gotham font-gotham-bold",
+        accent: "bg-accent text-accent-foreground hover:bg-accent-light shadow-soft hover:shadow-elegant font-gotham font-gotham-medium",
       },
       size: {
         default: "h-11 px-6 py-3",

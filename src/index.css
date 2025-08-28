@@ -1,6 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Gotham:wght@300;400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Museo:wght@100;300;500&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -145,6 +142,42 @@ All colors MUST be HSL. Based on brand color palette: ED6938, BC2B32, 56585A, F9
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-museo font-museo-book;
+  }
+
+  /* Typography Hierarchy - Museo como padrão para títulos e textos principais */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-museo;
+  }
+
+  h1 {
+    @apply font-museo-medium;
+  }
+
+  h2, h3 {
+    @apply font-museo-book;
+  }
+
+  h4, h5, h6 {
+    @apply font-museo-book;
+  }
+
+  p, span, div {
+    @apply font-museo font-museo-book;
+  }
+}
+
+@layer utilities {
+  /* Gotham utilities para destaques e call-to-actions */
+  .font-highlight {
+    @apply font-gotham font-gotham-medium;
+  }
+
+  .font-cta {
+    @apply font-gotham font-gotham-bold;
+  }
+
+  .font-support {
+    @apply font-gotham font-gotham-light;
   }
 }

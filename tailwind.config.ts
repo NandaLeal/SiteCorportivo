@@ -19,9 +19,19 @@ export default {
     },
     extend: {
       fontFamily: {
-        gotham: ["Gotham", "sans-serif"], // Gotham será a fonte principal
-        museo: ["Museo", "sans-serif"],
-        sans: ["Gotham", "sans-serif"], // redefini o "sans" para usar Gotham
+        museo: ["Museo", "sans-serif"], // Museo como fonte principal
+        gotham: ["Gotham", "sans-serif"], // Gotham como fonte secundária
+        sans: ["Museo", "sans-serif"], // redefini o "sans" para usar Museo como padrão
+      },
+      fontWeight: {
+        // Museo weights
+        'museo-light': '100',
+        'museo-book': '300', 
+        'museo-medium': '500',
+        // Gotham weights  
+        'gotham-light': '300',
+        'gotham-medium': '500',
+        'gotham-bold': '700',
       },
       colors: {
         border: "hsl(var(--border))",
