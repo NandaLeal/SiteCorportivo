@@ -3,15 +3,15 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Package, Users, Award, UserPlus, Briefcase, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import logoImage from "@/assets/images/LOGO.jpg";
+import { LogoProcessor } from "./LogoProcessor";
 
 const navigation = [
-  { name: "Início", href: "/", icon: Package, color: "bg-amber-500" },
-  { name: "Quem Somos", href: "/quem-somos", icon: Users, color: "bg-blue-500" },
-  { name: "Marcas", href: "/marcas", icon: Award, color: "bg-green-500" },
-  { name: "Seja Nosso Cliente", href: "/seja-cliente", icon: UserPlus, color: "bg-purple-500" },
-  { name: "Trabalhe Conosco", href: "/trabalhe-conosco", icon: Briefcase, color: "bg-red-500" },
-  { name: "Contato", href: "/contato", icon: Phone, color: "bg-orange-500" },
+  { name: "Início", href: "/", icon: Package },
+  { name: "Quem Somos", href: "/quem-somos", icon: Users },
+  { name: "Marcas", href: "/marcas", icon: Award },
+  { name: "Seja Nosso Cliente", href: "/seja-cliente", icon: UserPlus },
+  { name: "Trabalhe Conosco", href: "/trabalhe-conosco", icon: Briefcase },
+  { name: "Contato", href: "/contato", icon: Phone },
 ];
 
 const BeerBoxNavItem = ({ item, isActive, onClick }: { 
@@ -42,21 +42,19 @@ const BeerBoxNavItem = ({ item, isActive, onClick }: {
       )}>
         {/* Caixa de Cerveja */}
         <div className={cn(
-          "relative h-16 w-24 rounded-lg shadow-lg transform transition-all duration-300",
-          item.color,
+          "relative h-16 w-24 rounded-lg shadow-lg transform transition-all duration-300 bg-primary",
           isActive && "ring-2 ring-primary ring-offset-2",
           isOpen && "shadow-xl scale-110"
         )}>
           {/* Tampa da caixa */}
           <div className={cn(
             "absolute -top-1 left-0 right-0 h-3 rounded-t-lg transform transition-all duration-300 origin-bottom",
-            item.color,
-            "brightness-110",
+            "bg-primary brightness-110",
             isOpen && "-rotate-x-45 translate-y-1"
           )} />
           
           {/* Frente da caixa */}
-          <div className="absolute inset-0 flex flex-col items-center justify-center text-white rounded-lg">
+          <div className="absolute inset-0 flex flex-col items-center justify-center text-primary-foreground rounded-lg">
             <Icon className="h-6 w-6 mb-1" />
             <span className="text-xs font-gotham-medium leading-tight text-center px-1">
               {item.name}
@@ -85,12 +83,8 @@ export default function Header() {
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
           <Link to="/" className="-m-1.5 p-1.5">
-                <img
-                  src={logoImage}
-                  alt="Cervantes Distribuidora"
-                  className="h-12 w-auto"
-                />
-              </Link>
+            <LogoProcessor />
+          </Link>
         </div>
         <div className="flex lg:hidden">
           <Button
@@ -125,11 +119,7 @@ export default function Header() {
         <div className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-background px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-border">
           <div className="flex items-center justify-between">
             <Link to="/" className="-m-1.5 p-1.5">
-              <img
-                src={logoImage}
-                alt="Cervantes Distribuidora"
-                className="h-8 w-auto"
-              />
+              <LogoProcessor mobile />
             </Link>
             <Button
               variant="ghost"
