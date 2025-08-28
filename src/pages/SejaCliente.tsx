@@ -4,8 +4,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import mapaNorteMinas1 from "@/assets/images/AREA MATRIZ.webp";
-import mapaNorteMinas2 from "@/assets/images/AREA FILIAL.webp";
+import mapaNorteMinas1 from "@/assets/images/fachada.png";
+import mapaNorteMinas2 from "@/assets/images/fachada.png";
 
 const benefits = [
   {
