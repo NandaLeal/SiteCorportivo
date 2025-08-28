@@ -116,7 +116,7 @@ export default function SejaCliente() {
                   <div className="group relative overflow-hidden rounded-xl shadow-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-1">
                     <img
                       src={mapaNorteMinas1}
-                      alt="Mapa do Norte de Minas - Região 1"
+                      alt="Área de atendimento da Matriz"
                       className="w-full h-auto object-cover rounded-xl"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
@@ -124,7 +124,7 @@ export default function SejaCliente() {
                   <div className="group relative overflow-hidden rounded-xl shadow-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-1">
                     <img
                       src={mapaNorteMinas2}
-                      alt="Mapa do Norte de Minas - Região 2"
+                      alt="Área de atendimento da Filial"
                       className="w-full h-auto object-cover rounded-xl"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-secondary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
