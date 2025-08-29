@@ -46,10 +46,11 @@ export default function Footer() {
             <Link to="/" className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
               <Link to="/" className="flex items-center">
                 <img 
-                  src= {logoFundo}
+                  src={logoFundo}
                   alt="Distribuidora Cervantes" 
-                  className="h-10 w-auto" />
-                />
+                  className="h-10 w-auto" 
+                  />
+                </Link>
               </Link>
 
             </Link>
