@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Mail, Instagram, Facebook, MessageCircle, Linkedin, Video } from "lucide-react";
-import logoFundo from '@/assets/images/logo.png';
+import logo.png from "src/assets/images/logo.png";
 
 const footerNavigation = {
   empresa: [
@@ -46,9 +46,8 @@ export default function Footer() {
             <Link to="/" className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
               <Link to="/" className="flex items-center">
                 <img 
-                  src= {logoFundo}
-                  alt="Distribuidora Cervantes" 
-                  className="h-10 w-auto" />
+                  src="/logo.png" 
+                  className="h-10 w-auto" 
                 />
               </Link>
 
