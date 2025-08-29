@@ -47,7 +47,6 @@ export default function Footer() {
               <Link to="/" className="flex items-center">
                 <img 
                   src="/logo.png" 
-                  className="h-10 w-auto" 
                 />
               </Link>
 
