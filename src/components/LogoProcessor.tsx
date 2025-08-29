@@ -34,7 +34,7 @@ export const LogoProcessor = ({ mobile = false }: LogoProcessorProps) => {
     <img
       src={processedLogoUrl || logoImage}
       alt="Cervantes Distribuidora"
-      className={${mobile ? 'h-8' : 'h-12'} w-auto object-contain transition-opacity duration-300 ${isProcessing ? 'opacity-50' : 'opacity-100'}`}
+      className={`${mobile ? 'h-8' : 'h-12'} w-auto transition-opacity duration-300 ${isProcessing ? 'opacity-50' : 'opacity-100'}`}
     />
   );
 };
