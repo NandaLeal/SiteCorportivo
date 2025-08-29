@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { removeBackground, loadImageFromUrl } from '@/lib/backgroundRemoval';
-import logoImage from '@/assets/images/LOGO.jpg';
+import logoImage from '@/assets/images/logo.png';
 
 interface LogoProcessorProps {
   mobile?: boolean;
