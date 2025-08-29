@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Mail, Instagram, Facebook, MessageCircle, Linkedin, Video } from "lucide-react";
-import logoFundo from "@/assets/images/logo.png";
 
 const footerNavigation = {
   empresa: [
@@ -44,16 +43,7 @@ export default function Footer() {
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8">
             <Link to="/" className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-              <Link to="/" className="flex items-center">
-                <img 
-                  src= {logoFundo}
-                  alt="Distribuidora Cervantes" 
-                  className="h-10 w-auto" 
-                />
-</Link>
-
-              </Link>
-
+              Distribuidora Cervantes
             </Link>
             <p className="text-sm leading-6 text-muted-foreground">
               Há 31 anos levando qualidade e confiança para Montes Claros e mais 30 cidades do Norte de Minas.
