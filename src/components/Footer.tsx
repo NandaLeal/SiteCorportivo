@@ -52,7 +52,7 @@ export default function Footer() {
 
             </Link>
             <p className="text-sm leading-6 text-muted-foreground">
-              Há 31 anos levando qualidade e confiança para Montes Claros e mais 30 cidades do Norte de Minas.
+              Há 31 anos levando qualidade e confiança para Montes Claros e mais 30 cidades do Norte de Minas!
               Representantes oficiais da Ambev em nossa região.
             </p>
             <div className="flex space-x-6">
