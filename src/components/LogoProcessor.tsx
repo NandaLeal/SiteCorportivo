@@ -34,7 +34,7 @@ export const LogoProcessor = ({ mobile = false }: LogoProcessorProps) => {
     <img
       src={processedLogoUrl || logoImage}
       alt="Cervantes Distribuidora"
-     <div className={"h-16 w-40" }> {height 64px width 180px; }
+     <div className={"h-16 w-40" }> 
       <LogoProcessor/>
       </div>
   </img>
