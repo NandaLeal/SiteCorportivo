@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Mail, Instagram, Facebook, MessageCircle, Linkedin, Video } from "lucide-react";
-import logoImage from '@/assets/images/logo.png';
 
 const footerNavigation = {
   empresa: [
