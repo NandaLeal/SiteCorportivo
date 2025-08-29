@@ -43,7 +43,11 @@ export default function Footer() {
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8">
             <Link to="/" className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-              Distribuidora Cervantes
+              <img 
+                  src="/logo.png" 
+                  alt="Distribuidora Cervantes" 
+                  className="h-10 w-auto" 
+              />
             </Link>
             <p className="text-sm leading-6 text-muted-foreground">
               Há 31 anos levando qualidade e confiança para Montes Claros e mais 30 cidades do Norte de Minas.
