@@ -30,7 +30,7 @@ const footerNavigation = {
     },
     {
       name: "LinkedIn",
-      href: "https://www.linkedin.com/company/cervantes-ambev/",
+      href: "https://www.linkedin.com/in/distribuidora-de-bebidas-cervantes-ambev-609b8a246/",
       icon: Linkedin,
     },
   ],
