@@ -45,7 +45,7 @@ export default function Footer() {
           <div className="space-y-8">
             <Link to="/" className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
               <img 
-                 <img src={logo} alt="Distribuidora Cervantes" className="h-10 w-auto" />
+                 <img src={logo.png} alt="Distribuidora Cervantes" className="h-10 w-auto" />
               />
             </Link>
             <p className="text-sm leading-6 text-muted-foreground">
