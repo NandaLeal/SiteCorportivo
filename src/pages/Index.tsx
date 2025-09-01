@@ -12,9 +12,9 @@ import brandsShowcase from "@/assets/brands-showcase.jpg";
 import teamImage from "@/assets/team-diversity.jpg";
 import brahmaLogo from "@/assets/brahma-logo.jpg";
 import spatenLogo from "@/assets/spaten-logo.jpg";
-import stellaLogo from "@/assets/stella-logo.jpg";
-import guaranaLogo from "@/assets/guarana-logo.jpg";
 import redbullLogo from "@/assets/redbull-logo.jpg";
+import guaranaLogo from "@/assets/guarana-logo.jpg";
+import stellaLogo from "@/assets/stella-logo.jpg";
 
 const brandLogos = [
   { name: "Brahma", image: brahmaLogo },
