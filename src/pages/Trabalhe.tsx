@@ -18,7 +18,7 @@ export default function Trabalhe() {
                 Trabalhe Conosco
               </h1>
               <p className="text-lg leading-8 text-muted-foreground">
-                Faça parte de um time que topa qualquer parada, assume desafios e bate metas! 💪🏼
+                Faça parte de um time que topa qualquer parada, assume desafios e bate metas!
               </p>
             </div>
           </div>
@@ -33,7 +33,7 @@ export default function Trabalhe() {
                   <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-primary mb-6">
                     <Heart className="h-5 w-5" />
                     <span className="font-medium">Diversidade & Inclusão</span>
-                    <span className="text-lg">🏳️‍⚧️</span>
+                    <span className="text-lg"></span>
                   </div>
                   <h2 className="text-3xl font-bold mb-6">Oportunidades para Todos</h2>
                 </div>
@@ -43,12 +43,12 @@ export default function Trabalhe() {
                     A Cervantes acredita que todo ser humano deve ter a oportunidade de trabalhar e se desenvolver 
                     em um ambiente que valoriza o <strong className="text-primary">respeito</strong>, a{" "}
                     <strong className="text-secondary">diversidade</strong> e a{" "}
-                    <strong className="text-accent">inclusão</strong>. 🏳️‍⚧️
+                    <strong className="text-accent">inclusão</strong>.
                   </p>
                   
                   <div className="bg-gradient-primary/5 rounded-2xl p-8 my-8">
                     <p className="text-xl font-semibold text-foreground mb-4">
-                      Somos um time que topa qualquer parada, assume desafios e bate metas! 💪🏼
+                      Somos um time que topa qualquer parada, assume desafios e bate metas!
                     </p>
                   </div>
                 </div>
