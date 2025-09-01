@@ -67,7 +67,7 @@ export default function Index() {
           <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl lg:mx-0">
               <Badge variant="secondary" className="mb-6 text-base px-4 py-2 font-gotham font-medium">
-                Parceiro Oficial Ambev
+                Revenda Ambev
               </Badge>
               <h1 className="text-4xl font-gotham font-bold tracking-tight text-white sm:text-6xl">
                 Cervantes
