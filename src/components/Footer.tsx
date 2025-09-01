@@ -43,13 +43,12 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-6 pb-8 pt-20 sm:pt-16 lg:px-8 lg:pt-25">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8">
-            <Link to="/" className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-              <Link to="/" className="flex items-center">
-                <img 
-                  src= {logoFundo}
-                />
-              </Link>
-
+            <Link to="/" className="inline-block">
+              <img 
+                src={logoFundo}
+                alt="Cervantes Distribuidora"
+                className="h-12 w-auto object-contain"
+              />
             </Link>
             <p className="text-sm leading-6 text-muted-foreground">
               Há 31 anos levando qualidade e confiança para Montes Claros e mais 30 cidades do Norte de Minas!
