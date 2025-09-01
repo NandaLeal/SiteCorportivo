@@ -70,10 +70,10 @@ export default function Index() {
                 Parceiro Oficial Ambev
               </Badge>
               <h1 className="text-4xl font-gotham font-bold tracking-tight text-white sm:text-6xl">
-                31 anos levando qualidade para o Norte de Minas
+                Cervantes
               </h1>
               <p className="mt-6 text-xl font-gotham font-light leading-8 text-white/90">
-                Há <strong className="font-medium">31 anos</strong> levando qualidade e confiança para <strong className="font-medium">Montes Claros</strong> e 
+                Há <strong className="font-medium">+30 anos</strong> levando qualidade e confiança para <strong className="font-medium">Montes Claros</strong> e 
                 mais <strong className="font-medium">30 cidades do Norte de Minas</strong>.
               </p>
               <div className="mt-10 flex items-center gap-x-6">
