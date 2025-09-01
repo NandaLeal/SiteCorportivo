@@ -47,7 +47,7 @@ export default function Footer() {
               <img 
                 src={logoFundo}
                 alt="Cervantes Distribuidora"
-                className="h-25 w-82 object-contain"
+                className="h-22 w-76 object-contain"
               />
             </Link>
             <p className="text-sm leading-6 text-muted-foreground">
