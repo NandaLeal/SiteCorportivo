@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Package, Users, Award, UserPlus, Briefcase, Phone } from "lucide-react";
@@ -42,20 +43,20 @@ const BeerBoxNavItem = ({ item, isActive, onClick }: {
       )}>
         {/* Caixa de Cerveja */}
         <div className={cn(
-          "relative h-16 w-24 rounded-lg shadow-lg transform transition-all duration-300 bg-primary",
+          "relative h-12 w-20 rounded-lg shadow-lg transform transition-all duration-300 bg-primary",
           isActive && "ring-2 ring-primary ring-offset-2",
           isOpen && "shadow-xl scale-110"
         )}>
           {/* Tampa da caixa */}
           <div className={cn(
-            "absolute -top-1 left-0 right-0 h-3 rounded-t-lg transform transition-all duration-300 origin-bottom",
+            "absolute -top-1 left-0 right-0 h-2 rounded-t-lg transform transition-all duration-300 origin-bottom",
             "bg-primary brightness-110",
             isOpen && "-rotate-x-45 translate-y-1"
           )} />
           
           {/* Frente da caixa */}
           <div className="absolute inset-0 flex flex-col items-center justify-center text-primary-foreground rounded-lg">
-            <Icon className="h-6 w-6 mb-1" />
+            <Icon className="h-4 w-4 mb-1" />
             <span className="text-xs font-gotham-medium leading-tight text-center px-1">
               {item.name}
             </span>
@@ -80,10 +81,12 @@ export default function Header() {
 
   return (
     <header className="bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50 w-full border-b border-border shadow-soft">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between p-3 lg:px-8" aria-label="Global">
-        <div className="flex lg:flex-1">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between py-2 px-3 lg:px-6" aria-label="Global">
+        <div className="flex lg:flex-1 -ml-2">
           <Link to="/" className="-m-1.5 p-1.5">
-            <LogoProcessor/>
+            <div className="h-10 w-24">
+              <LogoProcessor/>
+            </div>
           </Link>
         </div>
         <div className="flex lg:hidden">
@@ -95,7 +98,7 @@ export default function Header() {
             <Menu className="h-6 w-6" aria-hidden="true" />
           </Button>
         </div>
-        <div className="hidden lg:flex lg:gap-x-8 lg:items-center">
+        <div className="hidden lg:flex lg:gap-x-6 lg:items-center">
           {navigation.map((item) => (
             <BeerBoxNavItem
               key={item.name}
@@ -105,7 +108,7 @@ export default function Header() {
           ))}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <Button variant="default" asChild>
+          <Button variant="default" asChild className="px-4 py-2 text-sm">
             <Link to="/seja-cliente">Seja Nosso Cliente</Link>
           </Button>
         </div>
@@ -119,7 +122,9 @@ export default function Header() {
         <div className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-background px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-border">
           <div className="flex items-center justify-between">
             <Link to="/" className="-m-1.5 p-1.5">
-              <LogoProcessor mobile />
+              <div className="h-8 w-20">
+                <LogoProcessor mobile />
+              </div>
             </Link>
             <Button
               variant="ghost"
