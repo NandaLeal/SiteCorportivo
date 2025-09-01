@@ -84,7 +84,7 @@ export default function Header() {
       <nav className="mx-auto flex max-w-7xl items-center justify-between py-2 px-3 lg:px-6" aria-label="Global">
         <div className="flex lg:flex-1 -ml-2">
           <Link to="/" className="-m-1.5 p-1.5">
-            <div className="h-10 w-24">
+            <div className="h-16 w-32">
               <LogoProcessor/>
             </div>
           </Link>
@@ -122,7 +122,7 @@ export default function Header() {
         <div className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-background px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-border">
           <div className="flex items-center justify-between">
             <Link to="/" className="-m-1.5 p-1.5">
-              <div className="h-8 w-20">
+              <div className="h-12 w-28">
                 <LogoProcessor mobile />
               </div>
             </Link>
