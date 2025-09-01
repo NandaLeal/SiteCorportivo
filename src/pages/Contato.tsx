@@ -207,10 +207,10 @@ export default function Contato() {
                     width="600" 
                     height="450" 
                     style={{border:0}} 
-                    allowfullscreen="" 
+                    allowFullScreen 
                     loading="lazy" 
-                    eferrerpolicy="no-referrer-when-downgrade"
-                    ></iframe>
+                    referrerPolicy="no-referrer-when-downgrade"
+                  />
               </div>
           </Card>
 
