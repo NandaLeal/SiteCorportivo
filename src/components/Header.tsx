@@ -48,14 +48,6 @@ const BeerBoxNavItem = ({ item, isActive, onClick }: {
           isActive && "ring-2 ring-primary ring-offset-2 bg-accent",
           isOpen && "shadow-xl scale-110"
         )}>
-          {/* Tampa da caixa */}
-          <div className={cn(
-            "absolute -top-1 left-0 right-0 h-2 rounded-t-lg transform transition-all duration-300 origin-bottom",
-            "bg-primary group-hover:bg-accent brightness-110",
-            isActive && "bg-accent",
-            isOpen && "-rotate-x-45 translate-y-1"
-          )} />
-          
           {/* Frente da caixa */}
           <div className={cn(
             "absolute inset-0 flex flex-col items-center justify-center rounded-lg transition-colors duration-300",

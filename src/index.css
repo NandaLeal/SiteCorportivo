@@ -30,10 +30,10 @@ All colors MUST be HSL. Based on brand color palette: ED6938, BC2B32, 56585A, F9
     --secondary-foreground: 0 0% 100%;
     --secondary-light: 355 63% 65%;
 
-    /* Brand Yellow - Quality & Excellence (F9C646) */
-    --accent: 45 92% 63%;
+    /* Light Orange - Quality & Excellence */
+    --accent: 25 90% 65%;
     --accent-foreground: 240 2% 35%;
-    --accent-light: 45 92% 80%;
+    --accent-light: 25 90% 80%;
 
     /* Brand Gray - Trust & Stability (56585A) */
     --muted: 240 2% 95%;
@@ -104,10 +104,10 @@ All colors MUST be HSL. Based on brand color palette: ED6938, BC2B32, 56585A, F9
     --secondary-foreground: 240 2% 8%;
     --secondary-light: 355 63% 70%;
 
-    /* Brand Yellow - Quality & Excellence */
-    --accent: 45 92% 70%;
+    /* Light Orange - Quality & Excellence */
+    --accent: 25 90% 70%;
     --accent-foreground: 240 2% 8%;
-    --accent-light: 45 92% 85%;
+    --accent-light: 25 90% 85%;
 
     /* Neutral Tones */
     --muted: 240 2% 15%;
