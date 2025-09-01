@@ -19,7 +19,7 @@ import redbullLogo from "@/assets/redbull-logo.jpg";
 const brandLogos = [
   { name: "Brahma", image: brahmaLogo },
   { name: "Spaten", image: spatenLogo },
-  { name: "Stella Artois", image: stellaLogo },
+  { name: "Stella", image: stellaLogo },
   { name: "Guaraná Antarctica", image: guaranaLogo },
   { name: "Red Bull", image: redbullLogo },
 ];
