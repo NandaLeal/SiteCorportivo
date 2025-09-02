@@ -157,7 +157,7 @@ export default function SejaCliente() {
                 </div>
                 <div className="text-center mt-8">
                   <p className="text-sm text-muted-foreground">
-                    Áreas destacadas representam nossa cobertura completa de entrega
+                    Essas são as áreas que a nossa revenda!
                   </p>
                 </div>
               </CardContent>
