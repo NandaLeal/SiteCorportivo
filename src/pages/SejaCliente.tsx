@@ -124,7 +124,7 @@ export default function SejaCliente() {
                 }`}>
                   <div 
                     className={`group relative overflow-hidden rounded-xl shadow-card hover:shadow-elegant transition-all duration-500 hover:-translate-y-1 cursor-pointer ${
-                      expandedMap === 1 ? 'scale-105' : expandedMap !== null ? 'scale-90 opacity-50' : ''
+                      expandedMap === 1 ? 'scale-105 z-20' : expandedMap !== null ? 'scale-90 opacity-50 z-10' : 'z-10'
                     }`}
                     onClick={() => handleMapClick(1)}
                   >
@@ -140,7 +140,7 @@ export default function SejaCliente() {
                   </div>
                   <div 
                     className={`group relative overflow-hidden rounded-xl shadow-card hover:shadow-elegant transition-all duration-500 hover:-translate-y-1 cursor-pointer ${
-                      expandedMap === 2 ? 'scale-105' : expandedMap !== null ? 'scale-90 opacity-50' : ''
+                      expandedMap === 2 ? 'scale-105 z-20' : expandedMap !== null ? 'scale-90 opacity-50 z-10' : 'z-10'
                     }`}
                     onClick={() => handleMapClick(2)}
                   >
