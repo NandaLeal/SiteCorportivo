@@ -38,7 +38,7 @@ export default function WhatsAppFloat({
         {/* Tooltip */}
         <div className="absolute right-full mr-3 hidden group-hover:block">
           <div className="whitespace-nowrap rounded-lg bg-card px-3 py-2 text-sm font-medium text-card-foreground shadow-lg border">
-            Falar no WhatsApp
+            Conversar com Miguelito
             <div className="absolute left-full top-1/2 -translate-y-1/2 border-4 border-transparent border-l-card" />
           </div>
         </div>
