@@ -27,7 +27,7 @@ export default function WhatsAppFloat({
           "hover:scale-110 hover:shadow-xl hover:animate-pulse",
           "focus:outline-none focus:ring-4 focus:ring-primary/20"
         )}
-        aria-label="Falar no WhatsApp"
+        aria-label="Conversar com Miguelito"
       >
         <MessageCircle className="h-6 w-6" />
         
