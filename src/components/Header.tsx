@@ -79,10 +79,10 @@ export default function Header() {
 
   return (
     <header className="bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50 w-full border-b border-border shadow-soft">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between py-2 px-3 lg:px-8" aria-label="Global">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between py-2 px-3 sm:px-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1 -ml-2">
           <Link to="/" className="-m-1.5 p-1.5">
-            <div className="h-16 w-32">
+            <div className="h-12 w-24 sm:h-16 sm:w-32">
               <LogoProcessor/>
             </div>
           </Link>
@@ -90,13 +90,15 @@ export default function Header() {
         <div className="flex lg:hidden">
           <Button
             variant="ghost"
+            size="sm"
             className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5"
             onClick={() => setMobileMenuOpen(true)}
           >
-            <Menu className="h-6 w-6" aria-hidden="true" />
+            <Menu className="h-5 w-5" aria-hidden="true" />
+            <span className="sr-only">Abrir menu</span>
           </Button>
         </div>
-        <div className="hidden lg:flex lg:gap-x-6 lg:items-center">
+        <div className="hidden lg:flex lg:gap-x-4 xl:gap-x-6 lg:items-center">
           {navigation.map((item) => (
             <BeerBoxNavItem
               key={item.name}
@@ -106,44 +108,83 @@ export default function Header() {
           ))}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <Button variant="default" asChild className="px-4 py-2 text-sm">
+          <Button variant="default" asChild className="px-3 py-2 text-sm xl:px-4">
             <Link to="/seja-cliente">Seja Nosso Cliente</Link>
           </Button>
         </div>
       </nav>
       
-      {/* Mobile menu */}
+      {/* Mobile menu - Enhanced with backdrop */}
       <div className={cn(
         "lg:hidden",
-        mobileMenuOpen ? "fixed inset-0 z-10" : "hidden"
+        mobileMenuOpen ? "fixed inset-0 z-50" : "hidden"
       )}>
-        <div className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-background px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-border">
-          <div className="flex items-center justify-between">
-            <Link to="/" className="-m-1.5 p-1.5">
-              <div className="h-12 w-28">
-                <LogoProcessor mobile />
-              </div>
-            </Link>
-            <Button
-              variant="ghost"
-              className="-m-2.5 rounded-md p-2.5"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              <X className="h-6 w-6" aria-hidden="true" />
-            </Button>
-          </div>
-          <div className="mt-6 flow-root">
-            <div className="-my-6 divide-y divide-border">
-              <div className="grid grid-cols-2 gap-4 py-6">
-                {navigation.map((item) => (
-                  <BeerBoxNavItem
+        {/* Backdrop */}
+        <div 
+          className="fixed inset-0 bg-black/50 backdrop-blur-sm"
+          onClick={() => setMobileMenuOpen(false)}
+        />
+        
+        {/* Menu Panel */}
+        <div className="fixed inset-y-0 right-0 z-50 w-full max-w-xs sm:max-w-sm overflow-y-auto bg-background shadow-2xl">
+          <div className="p-6">
+            <div className="flex items-center justify-between mb-8">
+              <Link 
+                to="/" 
+                className="-m-1.5 p-1.5"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <div className="h-10 w-24">
+                  <LogoProcessor mobile />
+                </div>
+              </Link>
+              <Button
+                variant="ghost"
+                size="sm"
+                className="-m-2.5 rounded-md p-2.5"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <X className="h-5 w-5" aria-hidden="true" />
+                <span className="sr-only">Fechar menu</span>
+              </Button>
+            </div>
+            
+            {/* Navigation Items */}
+            <nav className="space-y-4">
+              {navigation.map((item) => {
+                const Icon = item.icon;
+                const isActive = location.pathname === item.href;
+                
+                return (
+                  <Link
                     key={item.name}
-                    item={item}
-                    isActive={location.pathname === item.href}
+                    to={item.href}
                     onClick={() => setMobileMenuOpen(false)}
-                  />
-                ))}
-              </div>
+                    className={cn(
+                      "flex items-center gap-3 rounded-xl p-3 text-sm font-medium transition-colors",
+                      isActive 
+                        ? "bg-primary text-primary-foreground" 
+                        : "text-muted-foreground hover:bg-muted hover:text-foreground"
+                    )}
+                  >
+                    <Icon className="h-5 w-5" />
+                    {item.name}
+                  </Link>
+                );
+              })}
+            </nav>
+            
+            {/* CTA Button */}
+            <div className="mt-8 pt-6 border-t border-border">
+              <Button 
+                asChild 
+                className="w-full"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <Link to="/seja-cliente">
+                  Seja Nosso Cliente
+                </Link>
+              </Button>
             </div>
           </div>
         </div>

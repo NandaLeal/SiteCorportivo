@@ -40,40 +40,40 @@ const footerNavigation = {
 export default function Footer() {
   return (
     <footer className="bg-gradient-elegant border-t">
-      <div className="mx-auto max-w-7xl px-6 pb-8 pt-20 sm:pt-16 lg:px-8 lg:pt-25">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-6 pt-16 sm:pt-20 lg:pt-24">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
-          <div className="space-y-8">
+          <div className="space-y-6 sm:space-y-8 mb-12 xl:mb-0">
             <Link to="/" className="inline-block">
               <img 
                 src={logoFundo}
                 alt="Cervantes Distribuidora"
-                className="h-16 w-64 object-contain"
+                className="h-12 w-48 sm:h-16 sm:w-64 object-contain"
               />
             </Link>
-            <p className="text-sm leading-6 text-muted-foreground">
+            <p className="text-sm leading-6 text-muted-foreground max-w-sm">
               Há 31 anos levando qualidade e confiança para Montes Claros e mais 30 cidades do Norte de Minas!
               Representantes oficiais da Ambev em nossa região.
             </p>
-            <div className="flex space-x-6">
+            <div className="flex space-x-4 sm:space-x-6">
               {footerNavigation.social.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-primary transition-colors"
+                  className="text-muted-foreground hover:text-primary transition-colors p-2 hover:bg-primary/10 rounded-lg"
                 >
                   <span className="sr-only">{item.name}</span>
-                  <item.icon className="h-6 w-6" aria-hidden="true" />
+                  <item.icon className="h-5 w-5 sm:h-6 sm:w-6" aria-hidden="true" />
                 </a>
               ))}
             </div>
           </div>
-          <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
-            <div className="md:grid md:grid-cols-2 md:gap-8">
+          <div className="grid grid-cols-1 gap-8 sm:gap-12 sm:grid-cols-2 xl:col-span-2 xl:mt-0">
+            <div className="grid grid-cols-1 gap-8 sm:gap-12 sm:grid-cols-2">
               <div>
-                <h3 className="text-sm font-semibold leading-6 text-foreground">Empresa</h3>
-                <ul role="list" className="mt-6 space-y-4">
+                <h3 className="text-sm font-semibold leading-6 text-foreground mb-4 sm:mb-6">Empresa</h3>
+                <ul role="list" className="space-y-3 sm:space-y-4">
                   {footerNavigation.empresa.map((item) => (
                     <li key={item.name}>
                       <Link
@@ -86,9 +86,9 @@ export default function Footer() {
                   ))}
                 </ul>
               </div>
-              <div className="mt-10 md:mt-0">
-                <h3 className="text-sm font-semibold leading-6 text-foreground">Cliente</h3>
-                <ul role="list" className="mt-6 space-y-4">
+              <div>
+                <h3 className="text-sm font-semibold leading-6 text-foreground mb-4 sm:mb-6">Cliente</h3>
+                <ul role="list" className="space-y-3 sm:space-y-4">
                   {footerNavigation.cliente.map((item) => (
                     <li key={item.name}>
                       <Link
@@ -102,41 +102,39 @@ export default function Footer() {
                 </ul>
               </div>
             </div>
-            <div className="md:grid md:grid-cols-1">
-              <div>
-                <h3 className="text-sm font-semibold leading-6 text-foreground">Contato</h3>
-                <ul role="list" className="mt-6 space-y-4">
-                  <li className="flex items-start space-x-2">
-                    <MapPin className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-muted-foreground">
-                      Montes Claros - MG<br />
-                      Norte de Minas Gerais
-                    </span>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <Phone className="h-5 w-5 text-primary flex-shrink-0" />
-                    <a
-                      href="tel:+553832131234"
-                      className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                    >
-                      (38) 3213-1234
-                    </a>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <Mail className="h-5 w-5 text-primary flex-shrink-0" />
-                    <a
-                      href="mailto:contato@cervantes.com.br"
-                      className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                    >
-                      contato@cervantes.com.br
-                    </a>
-                  </li>
-                </ul>
-              </div>
+            <div>
+              <h3 className="text-sm font-semibold leading-6 text-foreground mb-4 sm:mb-6">Contato</h3>
+              <ul role="list" className="space-y-3 sm:space-y-4">
+                <li className="flex items-start space-x-2">
+                  <MapPin className="h-4 w-4 sm:h-5 sm:w-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-sm text-muted-foreground">
+                    Montes Claros - MG<br />
+                    Norte de Minas Gerais
+                  </span>
+                </li>
+                <li className="flex items-center space-x-2">
+                  <Phone className="h-4 w-4 sm:h-5 sm:w-5 text-primary flex-shrink-0" />
+                  <a
+                    href="tel:+553832131234"
+                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    (38) 3213-1234
+                  </a>
+                </li>
+                <li className="flex items-center space-x-2">
+                  <Mail className="h-4 w-4 sm:h-5 sm:w-5 text-primary flex-shrink-0" />
+                  <a
+                    href="mailto:contato@cervantes.com.br"
+                    className="text-sm text-muted-foreground hover:text-primary transition-colors break-all"
+                  >
+                    contato@cervantes.com.br
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
-        <div className="mt-16 border-t border-border pt-8 sm:mt-20 lg:mt-24">
+        <div className="mt-12 border-t border-border pt-6 sm:mt-16 sm:pt-8 lg:mt-20">
           <p className="text-xs leading-5 text-muted-foreground text-center">
             &copy; {new Date().getFullYear()} Distribuidora de Bebidas Cervantes. Todos os direitos reservados.
           </p>

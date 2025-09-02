@@ -34,14 +34,14 @@ export default function Contato() {
       <Header />
       <main className="min-h-screen">
         {/* Hero Section */}
-        <section className="relative py-24 sm:py-32">
+        <section className="relative py-16 sm:py-20 lg:py-24 xl:py-32">
           <div className="absolute inset-0 bg-gradient-hero opacity-10" />
-          <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-2xl text-center">
-              <h1 className="text-4xl font-bold tracking-tight sm:text-6xl mb-6">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight mb-4 sm:mb-6">
                 Contato
               </h1>
-              <p className="text-lg leading-8 text-muted-foreground">
+              <p className="text-base sm:text-lg leading-7 sm:leading-8 text-muted-foreground">
                 Entre em contato conosco. Estamos aqui para ajudar!
               </p>
             </div>
@@ -49,22 +49,22 @@ export default function Contato() {
         </section>
 
         {/* Contact Info & Form */}
-        <section className="py-24 bg-gradient-elegant">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start">
+        <section className="py-16 sm:py-20 lg:py-24 bg-gradient-elegant">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto grid max-w-2xl grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-x-8">
               
               {/* Contact Information */}
-              <div className="lg:pr-4">
-                <div className="space-y-6">
+              <div className="lg:pr-4 order-2 lg:order-1">
+                <div className="space-y-4 sm:space-y-6">
                   <Card className="shadow-card">
-                    <CardHeader>
-                      <CardTitle className="flex items-center gap-2">
-                        <MapPin className="h-5 w-5 text-primary" />
+                    <CardHeader className="p-4 sm:p-6">
+                      <CardTitle className="flex items-center gap-2 text-base sm:text-lg">
+                        <MapPin className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
                         Endereço
                       </CardTitle>
                     </CardHeader>
-                    <CardContent>
-                      <p className="text-muted-foreground">
+                    <CardContent className="p-4 sm:p-6 pt-0">
+                      <p className="text-sm sm:text-base text-muted-foreground">
                         Montes Claros - MG<br />
                         Norte de Minas Gerais<br />
                         Brasil
@@ -73,16 +73,16 @@ export default function Contato() {
                   </Card>
 
                   <Card className="shadow-card">
-                    <CardHeader>
-                      <CardTitle className="flex items-center gap-2">
-                        <Phone className="h-5 w-5 text-primary" />
+                    <CardHeader className="p-4 sm:p-6">
+                      <CardTitle className="flex items-center gap-2 text-base sm:text-lg">
+                        <Phone className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
                         Telefone
                       </CardTitle>
                     </CardHeader>
-                    <CardContent>
+                    <CardContent className="p-4 sm:p-6 pt-0">
                       <a
                         href="tel:+553832131234"
-                        className="text-muted-foreground hover:text-primary transition-colors"
+                        className="text-sm sm:text-base text-muted-foreground hover:text-primary transition-colors"
                       >
                         (38) 3213-1234
                       </a>
@@ -90,16 +90,16 @@ export default function Contato() {
                   </Card>
 
                   <Card className="shadow-card">
-                    <CardHeader>
-                      <CardTitle className="flex items-center gap-2">
-                        <Mail className="h-5 w-5 text-primary" />
+                    <CardHeader className="p-4 sm:p-6">
+                      <CardTitle className="flex items-center gap-2 text-base sm:text-lg">
+                        <Mail className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
                         E-mail
                       </CardTitle>
                     </CardHeader>
-                    <CardContent>
+                    <CardContent className="p-4 sm:p-6 pt-0">
                       <a
                         href="mailto:contato@cervantes.com.br"
-                        className="text-muted-foreground hover:text-primary transition-colors"
+                        className="text-sm sm:text-base text-muted-foreground hover:text-primary transition-colors break-all"
                       >
                         contato@cervantes.com.br
                       </a>
@@ -107,14 +107,14 @@ export default function Contato() {
                   </Card>
 
                   <Card className="shadow-card">
-                    <CardHeader>
-                      <CardTitle className="flex items-center gap-2">
-                        <Clock className="h-5 w-5 text-primary" />
+                    <CardHeader className="p-4 sm:p-6">
+                      <CardTitle className="flex items-center gap-2 text-base sm:text-lg">
+                        <Clock className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
                         Horário de Atendimento
                       </CardTitle>
                     </CardHeader>
-                    <CardContent>
-                      <div className="space-y-1 text-muted-foreground">
+                    <CardContent className="p-4 sm:p-6 pt-0">
+                      <div className="space-y-1 text-sm sm:text-base text-muted-foreground">
                         <p>Segunda a Sexta: 8h às 18h</p>
                         <p>Sábado: 8h às 12h</p>
                         <p>Domingo: Fechado</p>
@@ -125,60 +125,64 @@ export default function Contato() {
               </div>
 
               {/* Contact Form */}
-              <div>
+              <div className="order-1 lg:order-2">
                 <Card className="shadow-elegant">
-                  <CardHeader>
-                    <CardTitle>Envie uma Mensagem</CardTitle>
+                  <CardHeader className="p-4 sm:p-6">
+                    <CardTitle className="text-lg sm:text-xl">Envie uma Mensagem</CardTitle>
                   </CardHeader>
-                  <CardContent>
-                    <form onSubmit={handleSubmit} className="space-y-6">
-                      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                  <CardContent className="p-4 sm:p-6 pt-0">
+                    <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+                      <div className="grid grid-cols-1 gap-4 sm:gap-6 sm:grid-cols-2">
                         <div className="space-y-2">
-                          <Label htmlFor="nome">Nome *</Label>
+                          <Label htmlFor="nome" className="text-sm sm:text-base">Nome *</Label>
                           <Input 
                             id="nome" 
                             name="nome"
                             type="text" 
                             required
                             placeholder="Seu nome completo"
+                            className="text-sm sm:text-base"
                           />
                         </div>
                         <div className="space-y-2">
-                          <Label htmlFor="telefone">Telefone</Label>
+                          <Label htmlFor="telefone" className="text-sm sm:text-base">Telefone</Label>
                           <Input 
                             id="telefone" 
                             name="telefone"
                             type="tel" 
                             placeholder="(00) 00000-0000"
+                            className="text-sm sm:text-base"
                           />
                         </div>
                       </div>
                       
                       <div className="space-y-2">
-                        <Label htmlFor="email">E-mail *</Label>
+                        <Label htmlFor="email" className="text-sm sm:text-base">E-mail *</Label>
                         <Input 
                           id="email" 
                           name="email"
                           type="email" 
                           required
                           placeholder="seu@email.com"
+                          className="text-sm sm:text-base"
                         />
                       </div>
                       
                       <div className="space-y-2">
-                        <Label htmlFor="mensagem">Mensagem *</Label>
+                        <Label htmlFor="mensagem" className="text-sm sm:text-base">Mensagem *</Label>
                         <Textarea 
                           id="mensagem" 
                           name="mensagem"
                           required
                           placeholder="Digite sua mensagem..."
                           rows={5}
+                          className="text-sm sm:text-base resize-none"
                         />
                       </div>
                       
                       <Button 
                         type="submit" 
-                        className="w-full" 
+                        className="w-full text-sm sm:text-base" 
                         disabled={isSubmitting}
                       >
                         {isSubmitting ? "Enviando..." : "Enviar Mensagem"}
@@ -192,11 +196,11 @@ export default function Contato() {
         </section>
 
         {/* Map Section */}
-        <section className="py-24">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="mx-auto max-w-2xl text-center mb-12">
-              <h2 className="text-3xl font-bold tracking-tight">Nossa Localização</h2>
-              <p className="mt-4 text-lg text-muted-foreground">
+        <section className="py-16 sm:py-20 lg:py-24">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-2xl text-center mb-8 sm:mb-12">
+              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight">Nossa Localização</h2>
+              <p className="mt-3 sm:mt-4 text-base sm:text-lg text-muted-foreground">
                 Estamos localizados em Montes Claros, atendendo todo o Norte de Minas
               </p>
             </div>

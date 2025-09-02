@@ -41,7 +41,7 @@ export default function Index() {
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="relative py-24 sm:py-32 lg:py-40 overflow-hidden">
+        <section className="relative py-16 sm:py-24 lg:py-32 xl:py-40 overflow-hidden min-h-[70vh] sm:min-h-[80vh] lg:min-h-screen flex items-center">
           <Carousel 
             className="absolute inset-0 group"
             plugins={[Autoplay({ delay: 4000 })]}
@@ -49,7 +49,7 @@ export default function Index() {
             <CarouselContent>
               {brandLogos.map((brand) => (
                 <CarouselItem key={brand.name}>
-                  <div className="relative h-full">
+                  <div className="relative h-full min-h-[70vh] sm:min-h-[80vh] lg:min-h-screen">
                     <img
                       src={brand.image}
                       alt={`${brand.name} - Distribuída pela Cervantes`}
@@ -60,30 +60,31 @@ export default function Index() {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            <CarouselNext className="right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <CarouselPrevious className="left-2 sm:left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 h-8 w-8 sm:h-10 sm:w-10" />
+            <CarouselNext className="right-2 sm:right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 h-8 w-8 sm:h-10 sm:w-10" />
           </Carousel>
           
-          <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full">
             <div className="mx-auto max-w-2xl lg:mx-0">
-              <Badge variant="secondary" className="mb-6 text-base px-4 py-2 font-gotham font-medium">
+              <Badge variant="secondary" className="mb-4 sm:mb-6 text-sm sm:text-base px-3 py-1 sm:px-4 sm:py-2 font-gotham font-medium">
                 Revenda Ambev
               </Badge>
-              <h1 className="text-4xl font-gotham font-bold tracking-tight text-white sm:text-6xl">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-gotham font-bold tracking-tight text-white">
                 Cervantes
               </h1>
-              <p className="mt-6 text-xl font-gotham font-light leading-8 text-white/90">
+              <p className="mt-4 sm:mt-6 text-lg sm:text-xl font-gotham font-light leading-7 sm:leading-8 text-white/90">
                 Há <strong className="font-medium">+30 anos</strong> levando qualidade e confiança para <strong className="font-medium">Montes Claros</strong> e 
                 mais <strong className="font-medium">30 cidades do Norte de Minas</strong>.
               </p>
-              <div className="mt-10 flex items-center gap-x-6">
-                <Button size="lg" asChild className="bg-white text-primary hover:bg-white/90 font-gotham font-medium">
+              <div className="mt-6 sm:mt-10 flex flex-col sm:flex-row items-center gap-4 sm:gap-x-6">
+                <Button size="lg" asChild className="w-full sm:w-auto bg-white text-primary hover:bg-white/90 font-gotham font-medium">
                   <Link to="/seja-cliente">
-                    Quer ser nosso cliente?
+                    <span className="hidden sm:inline">Quer ser nosso cliente?</span>
+                    <span className="sm:hidden">Seja Cliente</span>
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
-                <Button variant="outline" size="lg" asChild className="border-white text-white hover:bg-white/10 font-gotham font-medium">
+                <Button variant="outline" size="lg" asChild className="w-full sm:w-auto border-white text-white hover:bg-white/10 font-gotham font-medium">
                   <Link to="/trabalhe-conosco">
                     Trabalhe Conosco
                   </Link>
@@ -94,18 +95,18 @@ export default function Index() {
         </section>
 
         {/* Stats Section */}
-        <section className="py-16 bg-gradient-elegant">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="grid grid-cols-1 gap-8 sm:grid-cols-3">
+        <section className="py-12 sm:py-16 lg:py-20 bg-gradient-elegant">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 gap-6 sm:gap-8 sm:grid-cols-3">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
-                  <div className="flex justify-center mb-4">
-                    <div className="rounded-full bg-primary/10 p-3">
-                      <stat.icon className="h-8 w-8 text-primary" />
+                  <div className="flex justify-center mb-3 sm:mb-4">
+                    <div className="rounded-full bg-primary/10 p-2 sm:p-3">
+                      <stat.icon className="h-6 w-6 sm:h-8 sm:w-8 text-primary" />
                     </div>
                   </div>
-                  <div className="text-4xl font-gotham font-bold text-primary mb-2">{stat.number}</div>
-                  <div className="text-muted-foreground font-gotham font-medium">{stat.label}</div>
+                  <div className="text-3xl sm:text-4xl font-gotham font-bold text-primary mb-2">{stat.number}</div>
+                  <div className="text-sm sm:text-base text-muted-foreground font-gotham font-medium px-2">{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -113,32 +114,32 @@ export default function Index() {
         </section>
 
         {/* Company Introduction */}
-        <section className="py-24">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-center">
-              <div className="lg:pr-8">
-                <h2 className="text-3xl font-gotham font-bold tracking-tight sm:text-4xl mb-6">
+        <section className="py-16 sm:py-20 lg:py-24">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto grid max-w-2xl grid-cols-1 gap-y-12 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:gap-x-8 lg:gap-y-0 lg:items-center">
+              <div className="lg:pr-8 order-2 lg:order-1">
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-gotham font-bold tracking-tight mb-4 sm:mb-6">
                   Mais que uma distribuidora
                 </h2>
-                <p className="text-lg font-gotham font-light leading-8 text-muted-foreground mb-8">
+                <p className="text-base sm:text-lg font-gotham font-light leading-7 sm:leading-8 text-muted-foreground mb-6 sm:mb-8">
                   Somos a <strong className="font-medium text-foreground">Distribuidora de Bebidas Cervantes</strong>, 
                   representantes da Ambev em nossa região. Nosso compromisso é 
                   <strong className="font-medium text-primary"> excelência</strong>, 
                   <strong className="font-medium text-secondary"> sustentabilidade</strong> e 
                   <strong className="font-medium text-accent"> foco no cliente</strong>.
                 </p>
-                <p className="text-lg font-gotham font-light leading-8 text-muted-foreground mb-8">
+                <p className="text-base sm:text-lg font-gotham font-light leading-7 sm:leading-8 text-muted-foreground mb-6 sm:mb-8">
                   Acreditamos firmemente em ser mais do que uma simples revenda, 
                   <strong className="font-medium text-primary"> inspirando pessoas a fazer o bem</strong>.
                 </p>
-                <Button asChild className="font-gotham font-medium">
+                <Button asChild className="font-gotham font-medium w-full sm:w-auto">
                   <Link to="/quem-somos">
                     Conheça Nossa História
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
               </div>
-              <div className="relative">
+              <div className="relative order-1 lg:order-2">
                 <img
                   src={teamImage}
                   alt="Equipe Cervantes - Diversidade e Inclusão"
@@ -150,34 +151,34 @@ export default function Index() {
         </section>
 
         {/* Brands Carousel */}
-        <section className="py-24 bg-gradient-elegant">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="mx-auto max-w-2xl text-center mb-16">
-              <h2 className="text-3xl font-gotham font-bold tracking-tight mb-4">
+        <section className="py-16 sm:py-20 lg:py-24 bg-gradient-elegant">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-2xl text-center mb-12 sm:mb-16">
+              <h2 className="text-2xl sm:text-3xl font-gotham font-bold tracking-tight mb-4">
                 Marcas que Distribuímos
               </h2>
-              <p className="text-lg font-gotham font-light text-muted-foreground">
+              <p className="text-base sm:text-lg font-gotham font-light text-muted-foreground">
                 Representamos com orgulho as principais marcas da Ambev
               </p>
             </div>
 
-            {/* Featured Brand Logos Carousel */}
-            <div className="relative mb-16">
-              <div className="flex justify-center items-center gap-8 mb-12 overflow-x-auto pb-4">
+            {/* Featured Brand Logos - Mobile Responsive */}
+            <div className="relative mb-12 sm:mb-16">
+              <div className="flex justify-start sm:justify-center items-center gap-4 sm:gap-6 lg:gap-8 mb-8 sm:mb-12 overflow-x-auto pb-4 px-2 sm:px-0">
                 {brandLogos.map((brand) => (
                   <div
                     key={brand.name}
-                    className="flex-shrink-0 group relative overflow-hidden rounded-2xl bg-white shadow-elegant hover:shadow-soft transition-all duration-300 hover:-translate-y-2 min-w-[200px]"
+                    className="flex-shrink-0 group relative overflow-hidden rounded-xl sm:rounded-2xl bg-white shadow-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 sm:hover:-translate-y-2 min-w-[140px] sm:min-w-[180px] lg:min-w-[200px]"
                   >
-                    <div className="p-6 text-center">
-                      <div className="h-24 w-full flex items-center justify-center mb-4 overflow-hidden rounded-xl">
+                    <div className="p-4 sm:p-6 text-center">
+                      <div className="h-16 sm:h-20 lg:h-24 w-full flex items-center justify-center mb-3 sm:mb-4 overflow-hidden rounded-lg sm:rounded-xl">
                         <img 
                           src={brand.image} 
                           alt={`${brand.name} logo`}
                           className="max-h-full max-w-full object-contain"
                         />
                       </div>
-                      <h3 className="text-lg font-gotham font-medium text-foreground">{brand.name}</h3>
+                      <h3 className="text-sm sm:text-base lg:text-lg font-gotham font-medium text-foreground">{brand.name}</h3>
                     </div>
                     <div className="absolute inset-0 bg-gradient-brand opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
                   </div>
@@ -185,31 +186,31 @@ export default function Index() {
               </div>
             </div>
             
-            <div className="relative overflow-hidden rounded-2xl shadow-elegant mb-12">
+            <div className="relative overflow-hidden rounded-xl sm:rounded-2xl shadow-elegant mb-8 sm:mb-12">
               <img
                 src={brandsShowcase}
                 alt="Marcas distribuídas pela Cervantes"
-                className="w-full h-64 object-cover"
+                className="w-full h-48 sm:h-56 lg:h-64 object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20" />
             </div>
 
-            <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
+            <div className="grid grid-cols-2 gap-3 sm:gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
               {brands.map((brand) => (
                 <div
                   key={brand}
-                  className="group relative overflow-hidden rounded-xl bg-card p-4 shadow-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 text-center"
+                  className="group relative overflow-hidden rounded-lg sm:rounded-xl bg-card p-3 sm:p-4 shadow-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 text-center"
                 >
-                  <div className="mb-2 flex h-12 w-12 items-center justify-center rounded-full bg-gradient-primary text-white text-lg font-bold mx-auto font-gotham">
+                  <div className="mb-2 flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-gradient-primary text-white text-sm sm:text-lg font-bold mx-auto font-gotham">
                     {brand.charAt(0)}
                   </div>
-                  <h3 className="text-sm font-gotham font-medium">{brand}</h3>
+                  <h3 className="text-xs sm:text-sm font-gotham font-medium px-1">{brand}</h3>
                 </div>
               ))}
             </div>
 
-            <div className="text-center mt-12">
-              <Button variant="outline" asChild className="font-gotham font-medium">
+            <div className="text-center mt-8 sm:mt-12">
+              <Button variant="outline" asChild className="font-gotham font-medium w-full sm:w-auto">
                 <Link to="/marcas">
                   Ver Todas as Marcas
                   <ArrowRight className="ml-2 h-4 w-4" />
@@ -220,27 +221,27 @@ export default function Index() {
         </section>
 
         {/* Mission, Vision, Values */}
-        <section className="py-24">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="mx-auto max-w-2xl text-center mb-16">
-              <h2 className="text-3xl font-gotham font-bold tracking-tight mb-4">
+        <section className="py-16 sm:py-20 lg:py-24">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-2xl text-center mb-12 sm:mb-16">
+              <h2 className="text-2xl sm:text-3xl font-gotham font-bold tracking-tight mb-4">
                 Nossos Valores
               </h2>
-              <p className="text-lg font-gotham font-light text-muted-foreground">
+              <p className="text-base sm:text-lg font-gotham font-light text-muted-foreground">
                 Os pilares que guiam nossa jornada há mais de três décadas
               </p>
             </div>
             
-            <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
+            <div className="grid grid-cols-1 gap-6 sm:gap-8 lg:grid-cols-3">
               <Card className="shadow-card hover:shadow-elegant transition-shadow duration-300 border-t-4 border-t-primary">
-                <CardHeader className="text-center">
-                  <div className="rounded-full bg-primary/10 p-3 w-fit mx-auto mb-4">
-                    <Target className="h-8 w-8 text-primary" />
+                <CardHeader className="text-center p-4 sm:p-6">
+                  <div className="rounded-full bg-primary/10 p-2 sm:p-3 w-fit mx-auto mb-3 sm:mb-4">
+                    <Target className="h-6 w-6 sm:h-8 sm:w-8 text-primary" />
                   </div>
-                  <CardTitle className="text-xl font-gotham font-medium">Missão</CardTitle>
+                  <CardTitle className="text-lg sm:text-xl font-gotham font-medium">Missão</CardTitle>
                 </CardHeader>
-                <CardContent className="text-center">
-                  <p className="text-muted-foreground font-gotham font-light leading-relaxed">
+                <CardContent className="text-center p-4 sm:p-6 pt-0 sm:pt-0">
+                  <p className="text-sm sm:text-base text-muted-foreground font-gotham font-light leading-relaxed">
                     Distribuir produtos de qualidade com excelência operacional, 
                     construindo relacionamentos duradouros e contribuindo para 
                     o desenvolvimento da região Norte de Minas.
@@ -249,14 +250,14 @@ export default function Index() {
               </Card>
 
               <Card className="shadow-card hover:shadow-elegant transition-shadow duration-300 border-t-4 border-t-secondary">
-                <CardHeader className="text-center">
-                  <div className="rounded-full bg-secondary/10 p-3 w-fit mx-auto mb-4">
-                    <Eye className="h-8 w-8 text-secondary" />
+                <CardHeader className="text-center p-4 sm:p-6">
+                  <div className="rounded-full bg-secondary/10 p-2 sm:p-3 w-fit mx-auto mb-3 sm:mb-4">
+                    <Eye className="h-6 w-6 sm:h-8 sm:w-8 text-secondary" />
                   </div>
-                  <CardTitle className="text-xl font-gotham font-medium">Visão</CardTitle>
+                  <CardTitle className="text-lg sm:text-xl font-gotham font-medium">Visão</CardTitle>
                 </CardHeader>
-                <CardContent className="text-center">
-                  <p className="text-muted-foreground font-gotham font-light leading-relaxed">
+                <CardContent className="text-center p-4 sm:p-6 pt-0 sm:pt-0">
+                  <p className="text-sm sm:text-base text-muted-foreground font-gotham font-light leading-relaxed">
                     Ser a distribuidora de bebidas mais confiável e inovadora 
                     do Norte de Minas, reconhecida pela excelência no atendimento 
                     e sustentabilidade.
@@ -265,14 +266,14 @@ export default function Index() {
               </Card>
 
               <Card className="shadow-card hover:shadow-elegant transition-shadow duration-300 border-t-4 border-t-accent">
-                <CardHeader className="text-center">
-                  <div className="rounded-full bg-accent/10 p-3 w-fit mx-auto mb-4">
-                    <Heart className="h-8 w-8 text-accent" />
+                <CardHeader className="text-center p-4 sm:p-6">
+                  <div className="rounded-full bg-accent/10 p-2 sm:p-3 w-fit mx-auto mb-3 sm:mb-4">
+                    <Heart className="h-6 w-6 sm:h-8 sm:w-8 text-accent" />
                   </div>
-                  <CardTitle className="text-xl font-gotham font-medium">Sonho</CardTitle>
+                  <CardTitle className="text-lg sm:text-xl font-gotham font-medium">Sonho</CardTitle>
                 </CardHeader>
-                <CardContent className="text-center">
-                  <p className="text-muted-foreground font-gotham font-light leading-relaxed">
+                <CardContent className="text-center p-4 sm:p-6 pt-0 sm:pt-0">
+                  <p className="text-sm sm:text-base text-muted-foreground font-gotham font-light leading-relaxed">
                     Inspirar pessoas a fazer o bem, criando um impacto positivo 
                     na sociedade através de nossos produtos, serviços e 
                     relacionamentos genuínos.
@@ -284,24 +285,25 @@ export default function Index() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-24 bg-gradient-hero">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <section className="py-16 sm:py-20 lg:py-24 bg-gradient-hero">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-2xl text-center">
-              <h2 className="text-3xl font-gotham font-bold tracking-tight text-white sm:text-4xl mb-6">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-gotham font-bold tracking-tight text-white mb-4 sm:mb-6">
                 Pronto para Fazer Parte da Nossa História?
               </h2>
-              <p className="text-xl font-gotham font-light text-white/90 mb-10">
+              <p className="text-lg sm:text-xl font-gotham font-light text-white/90 mb-8 sm:mb-10">
                 Seja nosso cliente ou integre nossa equipe. Juntos, continuamos 
                 construindo o futuro do Norte de Minas.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" variant="secondary" asChild className="font-gotham font-medium">
+                <Button size="lg" variant="secondary" asChild className="font-gotham font-medium w-full sm:w-auto">
                   <Link to="/seja-cliente">
-                    Quer ser nosso cliente?
+                    <span className="hidden sm:inline">Quer ser nosso cliente?</span>
+                    <span className="sm:hidden">Seja Cliente</span>
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 font-gotham font-medium" asChild>
+                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 font-gotham font-medium w-full sm:w-auto" asChild>
                   <Link to="/trabalhe-conosco">
                     Trabalhe Conosco
                   </Link>
