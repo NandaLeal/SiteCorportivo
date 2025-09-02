@@ -69,7 +69,7 @@ export default function Marcas() {
         </section>
 
         {/* Categories Overview */}
-        /*(<section className="py-24">
+        {/*(<section className="py-24">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl text-center mb-16">
               <h2 className="text-3xl font-bold tracking-tight">Categorias de Produtos</h2>
@@ -94,7 +94,7 @@ export default function Marcas() {
               ))}
             </div>
           </div>
-        </section>*/
+        </section>*/}
 
         {/* Brands Grid */}
         <section className="py-24 bg-gradient-elegant">
