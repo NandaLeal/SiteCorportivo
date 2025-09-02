@@ -50,7 +50,7 @@ export default function QuemSomos() {
                   <div className="max-w-xl">
                     <p className="mt-6">
                       Somos a <strong className="font-semibold text-foreground">Distribuidora de Bebidas Cervantes</strong>, 
-                      atuando há <strong className="font-semibold text-primary">31 anos</strong> em Montes Claros e em mais de 
+                      atuando há mais de <strong className="font-semibold text-primary">30 anos</strong> em Montes Claros e em mais de 
                       <strong className="font-semibold text-primary"> 30 cidades do Norte de Minas</strong>. 
                     </p>
                     <p className="mt-8">
