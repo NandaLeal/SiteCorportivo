@@ -52,7 +52,7 @@ export default function Marcas() {
             <div className="mx-auto max-w-3xl text-center">
               <div className="mb-8">
                 <Badge variant="secondary" className="text-lg px-4 py-2">
-                  Parceiro Oficial Ambev
+                  Parceiro Ambev
                 </Badge>
               </div>
               <h2 className="text-3xl font-bold tracking-tight mb-6">
