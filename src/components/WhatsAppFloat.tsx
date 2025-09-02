@@ -24,17 +24,16 @@ export default function WhatsAppFloat({
           "group relative flex h-14 w-14 items-center justify-center rounded-full",
           "bg-primary text-primary-foreground shadow-lg",
           "transition-all duration-300 ease-out",
-          "hover:scale-110 hover:shadow-xl",
-          "focus:outline-none focus:ring-4 focus:ring-primary/20",
-          "animate-pulse hover:animate-none"
+          "hover:scale-110 hover:shadow-xl hover:animate-pulse",
+          "focus:outline-none focus:ring-4 focus:ring-primary/20"
         )}
         aria-label="Falar no WhatsApp"
       >
         <MessageCircle className="h-6 w-6" />
         
         {/* Pulse rings */}
-        <div className="absolute inset-0 rounded-full bg-primary animate-ping opacity-20" />
-        <div className="absolute inset-0 rounded-full bg-primary animate-ping opacity-10 animation-delay-1000" />
+        <div className="absolute inset-0 rounded-full bg-primary opacity-20 group-hover:animate-ping" />
+        <div className="absolute inset-0 rounded-full bg-primary opacity-10 group-hover:animate-ping group-hover:animation-delay-1000" />
         
         {/* Tooltip */}
         <div className="absolute right-full mr-3 hidden group-hover:block">
