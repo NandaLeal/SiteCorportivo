@@ -32,6 +32,14 @@ export default {
         'gotham-light': '300',
         'gotham-medium': '500',
         'gotham-bold': '700',
+        //Fonte Ambev
+        theme: {
+          extend: {
+          fontFamily: {
+          minha: ['MinhaFonte', 'sans-serif'], 
+          },
+  },
+}
       },
       colors: {
         border: "hsl(var(--border))",
