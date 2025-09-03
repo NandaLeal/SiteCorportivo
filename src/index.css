@@ -6,7 +6,7 @@
 All colors MUST be HSL. Based on brand color palette: ED6938, BC2B32, 56585A, F9C646 */
 
 @font-face {
-  font-family: 'fonteAmbev';
+  font-family: '1Bold';
   src: url('/1Bold.woff') format('woff');
   font-weight: normal;
   font-style: normal;
@@ -151,16 +151,16 @@ All colors MUST be HSL. Based on brand color palette: ED6938, BC2B32, 56585A, F9
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'fonteAmbev', Arial, sans-serif;
+    font-family: 'Manrope', Arial, sans-serif;
   }
 
-  /* Typography Hierarchy - fonteAmbev como fonte padrão */
+  /* Typography Hierarchy - 1Bold para títulos, Manrope para texto */
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'fonteAmbev', Arial, sans-serif;
+    font-family: '1Bold', Arial, sans-serif;
   }
 
   p, span, div {
-    font-family: 'fonteAmbev', Arial, sans-serif;
+    font-family: 'Manrope', Arial, sans-serif;
   }
 }
 

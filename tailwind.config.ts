@@ -19,10 +19,10 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ["fonteAmbev", "Arial", "sans-serif"], // fonte principal do site
-        museo: ["fonteAmbev", "sans-serif"],
-        gotham: ["fonteAmbev", "sans-serif"],
-        minha: ["fonteAmbev", "sans-serif"],
+        sans: ["Manrope", "Arial", "sans-serif"], // fonte principal do site
+        heading: ["1Bold", "Arial", "sans-serif"], // fonte para títulos
+        manrope: ["Manrope", "sans-serif"],
+        bold: ["1Bold", "sans-serif"],
       },
       fontWeight: {
         // Museo weights
