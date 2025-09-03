@@ -30,7 +30,7 @@ const brands = [
 ];
 
 const stats = [
-  { number: "31", label: "Anos de Tradição", icon: Star },
+  { number: "+30", label: "Anos de Tradição", icon: Star },
   { number: "30+", label: "Cidades Atendidas", icon: Truck },
   { number: "1000+", label: "Clientes Satisfeitos", icon: Users },
 ];
