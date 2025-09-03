@@ -114,7 +114,7 @@ export default function Header() {
         </div>
       </nav>
       
-      {/* Mobile menu - Enhanced with backdrop */}
+      {/* Mobile menu - Horizontal tabs */}
       <div className={cn(
         "lg:hidden",
         mobileMenuOpen ? "fixed inset-0 z-50" : "hidden"
@@ -125,32 +125,24 @@ export default function Header() {
           onClick={() => setMobileMenuOpen(false)}
         />
         
-        {/* Menu Panel */}
-        <div className="fixed inset-y-0 right-0 z-50 w-full max-w-xs sm:max-w-sm overflow-y-auto bg-background shadow-2xl">
-          <div className="p-6">
-            <div className="flex items-center justify-between mb-8">
-              <Link 
-                to="/" 
-                className="-m-1.5 p-1.5"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                <div className="h-10 w-24">
-                  <LogoProcessor mobile />
-                </div>
-              </Link>
+        {/* Horizontal Navigation Tabs */}
+        <div className="fixed top-16 left-0 right-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border shadow-lg">
+          <div className="px-4 py-3">
+            {/* Close button */}
+            <div className="flex justify-end mb-3">
               <Button
                 variant="ghost"
                 size="sm"
-                className="-m-2.5 rounded-md p-2.5"
+                className="h-8 w-8 p-0"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                <X className="h-5 w-5" aria-hidden="true" />
+                <X className="h-4 w-4" aria-hidden="true" />
                 <span className="sr-only">Fechar menu</span>
               </Button>
             </div>
             
-            {/* Navigation Items */}
-            <nav className="space-y-4">
+            {/* Horizontal Navigation */}
+            <div className="flex flex-wrap gap-2 justify-center">
               {navigation.map((item) => {
                 const Icon = item.icon;
                 const isActive = location.pathname === item.href;
@@ -161,30 +153,17 @@ export default function Header() {
                     to={item.href}
                     onClick={() => setMobileMenuOpen(false)}
                     className={cn(
-                      "flex items-center gap-3 rounded-xl p-3 text-sm font-medium transition-colors",
+                      "flex flex-col items-center gap-1 rounded-lg px-3 py-2 min-w-[70px] text-xs font-medium transition-colors",
                       isActive 
-                        ? "bg-primary text-primary-foreground" 
-                        : "text-muted-foreground hover:bg-muted hover:text-foreground"
+                        ? "bg-primary text-primary-foreground shadow-md" 
+                        : "text-muted-foreground hover:bg-muted hover:text-foreground bg-muted/30"
                     )}
                   >
-                    <Icon className="h-5 w-5" />
-                    {item.name}
+                    <Icon className="h-4 w-4" />
+                    <span className="text-center leading-tight">{item.name}</span>
                   </Link>
                 );
               })}
-            </nav>
-            
-            {/* CTA Button */}
-            <div className="mt-8 pt-6 border-t border-border">
-              <Button 
-                asChild 
-                className="w-full"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                <Link to="/seja-cliente">
-                  Seja Nosso Cliente
-                </Link>
-              </Button>
             </div>
           </div>
         </div>
