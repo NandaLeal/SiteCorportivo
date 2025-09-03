@@ -6,11 +6,12 @@
 All colors MUST be HSL. Based on brand color palette: ED6938, BC2B32, 56585A, F9C646 */
 
 @font-face {
-  font-family: 'fonteAmbev'; /* nome que você vai usar no Tailwind */
-  src: url('/src/1Bold.woff') format('woff');
-  font-weight: bold;
+  font-family: 'fonteAmbev';
+  src: url('/1Bold.woff') format('woff');
+  font-weight: normal;
   font-style: normal;
   font-display: swap;
+}
   
 @layer base {
   :root {
@@ -149,28 +150,17 @@ All colors MUST be HSL. Based on brand color palette: ED6938, BC2B32, 56585A, F9
   }
 
   body {
-    @apply bg-background text-foreground font-museo font-museo-book;
+    @apply bg-background text-foreground;
+    font-family: 'fonteAmbev', Arial, sans-serif;
   }
 
-  /* Typography Hierarchy - Museo como padrão para títulos e textos principais */
+  /* Typography Hierarchy - fonteAmbev como fonte padrão */
   h1, h2, h3, h4, h5, h6 {
-    @apply font-museo;
-  }
-
-  h1 {
-    @apply font-museo-medium;
-  }
-
-  h2, h3 {
-    @apply font-museo-book;
-  }
-
-  h4, h5, h6 {
-    @apply font-museo-book;
+    font-family: 'fonteAmbev', Arial, sans-serif;
   }
 
   p, span, div {
-    @apply font-museo font-museo-book;
+    font-family: 'fonteAmbev', Arial, sans-serif;
   }
 }
 

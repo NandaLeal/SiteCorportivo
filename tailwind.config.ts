@@ -19,9 +19,10 @@ export default {
     },
     extend: {
       fontFamily: {
-        museo: ["Museo", "sans-serif"], // Museo como fonte principal
-        gotham: ["Gotham", "sans-serif"], // Gotham como fonte secundária
-        sans: ["Museo", "sans-serif"], // redefini o "sans" para usar Museo como padrão
+        sans: ["fonteAmbev", "Arial", "sans-serif"], // fonte principal do site
+        museo: ["fonteAmbev", "sans-serif"],
+        gotham: ["fonteAmbev", "sans-serif"],
+        minha: ["fonteAmbev", "sans-serif"],
       },
       fontWeight: {
         // Museo weights
