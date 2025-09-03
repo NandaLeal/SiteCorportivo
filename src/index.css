@@ -5,6 +5,13 @@
 /* Cervantes Distribuidora Design System - Brand Identity
 All colors MUST be HSL. Based on brand color palette: ED6938, BC2B32, 56585A, F9C646 */
 
+@font-face {
+  font-family: 'fonteAmbev'; /* nome que você vai usar no Tailwind */
+  src: url('/src/1Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+  
 @layer base {
   :root {
     /* Background & Base */
