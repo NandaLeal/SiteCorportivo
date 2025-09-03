@@ -36,7 +36,7 @@ export default {
         theme: {
           extend: {
           fontFamily: {
-          minha: ['MinhaFonte', 'sans-serif'], 
+          minha: ['fonteAmbev', 'sans-serif'], 
           },
   },
 }
