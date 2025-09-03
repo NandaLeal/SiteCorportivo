@@ -126,7 +126,7 @@ export default function Header() {
         />
         
         {/* Horizontal Navigation Tabs */}
-        <div className="fixed top-16 left-0 right-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border shadow-lg">
+        <div className="fixed top-16 left-0 right-0 z-50 bg-white border-b border-border shadow-lg">
           <div className="px-4 py-3">
             {/* Close button */}
             <div className="flex justify-end mb-3">
