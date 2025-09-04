@@ -16,20 +16,7 @@ export default function Contato() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-
-    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    // O Formspree cuidará do envio dos dados
-    const form = e.target as HTMLFormElement;
     
-    // Envia os dados para o Formspree
-    const response = await fetch(form.action, {
-      method: 'POST',
-      body: new FormData(form),
-    });
-      
     // Simulate form submission
     setTimeout(() => {
       toast({
@@ -40,10 +27,6 @@ export default function Contato() {
       // Reset form
       (e.target as HTMLFormElement).reset();
     }, 1000);
-  };
-
-    setIsSubmitting(false);
-    form.reset(); // Resetar o formulário
   };
 
   return (
@@ -88,18 +71,7 @@ export default function Contato() {
                       </p>
                     </CardContent>
                   </Card>
-                <div className="order-1 lg:order-2">
-                  <Card className="shadow-elegant">
-                    <CardHeader className="p-4 sm:p-6">
-                      <CardTitle className="text-lg sm:text-xl">Envie uma Mensagem</CardTitle>
-                    </CardHeader>
-                    <CardContent className="p-4 sm:p-6 pt-0">
-                    <form 
-                      action="https://formspree.io/f/mandljkd" // Substitua pelo ID do seu formulário
-                      method="POST"
-                      onSubmit={handleSubmit} 
-                      className="space-y-4 sm:space-y-6"
-                    >
+
                   <Card className="shadow-card">
                     <CardHeader className="p-4 sm:p-6">
                       <CardTitle className="flex items-center gap-2 text-base sm:text-lg">
@@ -251,5 +223,3 @@ export default function Contato() {
     </>
   );
 }
-
-Esse o meu codigo onde vou integrar o formspree
