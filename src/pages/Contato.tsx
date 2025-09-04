@@ -17,6 +17,10 @@ export default function Contato() {
     e.preventDefault();
     setIsSubmitting(true);
 
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
     // O Formspree cuidará do envio dos dados
     const form = e.target as HTMLFormElement;
     
@@ -25,18 +29,18 @@ export default function Contato() {
       method: 'POST',
       body: new FormData(form),
     });
-
-    if (response.ok) {
+      
+    // Simulate form submission
+    setTimeout(() => {
       toast({
         title: "Mensagem enviada!",
         description: "Obrigado pelo contato. Retornaremos em breve.",
       });
-    } else {
-      toast({
-        title: "Erro ao enviar",
-        description: "Houve um problema ao enviar sua mensagem. Tente novamente.",
-      });
-    }
+      setIsSubmitting(false);
+      // Reset form
+      (e.target as HTMLFormElement).reset();
+    }, 1000);
+  };
 
     setIsSubmitting(false);
     form.reset(); // Resetar o formulário
@@ -68,7 +72,84 @@ export default function Contato() {
               
               {/* Contact Information */}
               <div className="lg:pr-4 order-2 lg:order-1">
-                {/* ... (seu conteúdo de informações de contato) ... */}
+                <div className="space-y-4 sm:space-y-6">
+                  <Card className="shadow-card">
+                    <CardHeader className="p-4 sm:p-6">
+                      <CardTitle className="flex items-center gap-2 text-base sm:text-lg">
+                        <MapPin className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
+                        Endereço
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent className="p-4 sm:p-6 pt-0">
+                      <p className="text-sm sm:text-base text-muted-foreground">
+                        Montes Claros - MG<br />
+                        Norte de Minas Gerais<br />
+                        Brasil
+                      </p>
+                    </CardContent>
+                  </Card>
+                <div className="order-1 lg:order-2">
+                  <Card className="shadow-elegant">
+                    <CardHeader className="p-4 sm:p-6">
+                      <CardTitle className="text-lg sm:text-xl">Envie uma Mensagem</CardTitle>
+                    </CardHeader>
+                    <CardContent className="p-4 sm:p-6 pt-0">
+                    <form 
+                      action="https://formspree.io/f/mandljkd" // Substitua pelo ID do seu formulário
+                      method="POST"
+                      onSubmit={handleSubmit} 
+                      className="space-y-4 sm:space-y-6"
+                    >
+                  <Card className="shadow-card">
+                    <CardHeader className="p-4 sm:p-6">
+                      <CardTitle className="flex items-center gap-2 text-base sm:text-lg">
+                        <Phone className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
+                        Telefone
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent className="p-4 sm:p-6 pt-0">
+                      <a
+                        href="tel:+553832131234"
+                        className="text-sm sm:text-base text-muted-foreground hover:text-primary transition-colors"
+                      >
+                        (38) 3213-1234
+                      </a>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="shadow-card">
+                    <CardHeader className="p-4 sm:p-6">
+                      <CardTitle className="flex items-center gap-2 text-base sm:text-lg">
+                        <Mail className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
+                        E-mail
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent className="p-4 sm:p-6 pt-0">
+                      <a
+                        href="mailto:contato@cervantes.com.br"
+                        className="text-sm sm:text-base text-muted-foreground hover:text-primary transition-colors break-all"
+                      >
+                        contato@cervantes.com.br
+                      </a>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="shadow-card">
+                    <CardHeader className="p-4 sm:p-6">
+                      <CardTitle className="flex items-center gap-2 text-base sm:text-lg">
+                        <Clock className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
+                        Horário de Atendimento
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent className="p-4 sm:p-6 pt-0">
+                      <div className="space-y-1 text-sm sm:text-base text-muted-foreground">
+                        <p>Segunda a Sexta: 8h às 18h</p>
+                        <p>Sábado: 8h às 12h</p>
+                        <p>Domingo: Fechado</p>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>
               </div>
 
               {/* Contact Form */}
@@ -78,12 +159,7 @@ export default function Contato() {
                     <CardTitle className="text-lg sm:text-xl">Envie uma Mensagem</CardTitle>
                   </CardHeader>
                   <CardContent className="p-4 sm:p-6 pt-0">
-                    <form 
-                      action="https://formspree.io/f/mandljkd" // Substitua pelo ID do seu formulário
-                      method="POST"
-                      onSubmit={handleSubmit} 
-                      className="space-y-4 sm:space-y-6"
-                    >
+                    <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
                       <div className="grid grid-cols-1 gap-4 sm:gap-6 sm:grid-cols-2">
                         <div className="space-y-2">
                           <Label htmlFor="nome" className="text-sm sm:text-base">Nome *</Label>
@@ -175,3 +251,5 @@ export default function Contato() {
     </>
   );
 }
+
+Esse o meu codigo onde vou integrar o formspree
