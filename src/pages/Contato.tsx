@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -17,16 +18,40 @@ export default function Contato() {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      const formData = new FormData(e.currentTarget);
+      const contactData = {
+        nome: formData.get("nome") as string,
+        telefone: formData.get("telefone") as string || null,
+        email: formData.get("email") as string,
+        mensagem: formData.get("mensagem") as string,
+      };
+
+      const { error } = await supabase
+        .from("contacts")
+        .insert([contactData]);
+
+      if (error) {
+        throw error;
+      }
+
       toast({
-        title: "Mensagem enviada!",
+        title: "Mensagem enviada com sucesso!",
         description: "Obrigado pelo contato. Retornaremos em breve.",
       });
-      setIsSubmitting(false);
+      
       // Reset form
       (e.target as HTMLFormElement).reset();
-    }, 1000);
+    } catch (error) {
+      console.error("Erro ao enviar mensagem:", error);
+      toast({
+        title: "Erro ao enviar mensagem",
+        description: "Tente novamente mais tarde.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
