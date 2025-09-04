@@ -86,9 +86,9 @@ export default function QuemSomos() {
                   </div>
                   <h3 className="text-xl font-semibold mb-4">Missão</h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Distribuir produtos de qualidade com excelência operacional, 
-                    construindo relacionamentos duradouros e contribuindo para 
-                    o desenvolvimento da região Norte de Minas.
+                    Garantir a distribuição de produtos de qualidade
+                    com excelência e encantamento de nossos clientes
+                    e consumidores
                   </p>
                 </CardContent>
               </Card>
@@ -100,9 +100,9 @@ export default function QuemSomos() {
                   </div>
                   <h3 className="text-xl font-semibold mb-4">Visão</h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Ser a distribuidora de bebidas mais confiável e inovadora 
-                    do Norte de Minas, reconhecida pela excelência no atendimento 
-                    e sustentabilidade.
+                    Estar entre as melhores revendas do Brasil em
+                    excelência e rentabilidade sendo queriada pelos
+                    seus colaboradores, clientes e sociedade
                   </p>
                 </CardContent>
               </Card>
@@ -114,9 +114,9 @@ export default function QuemSomos() {
                   </div>
                   <h3 className="text-xl font-semibold mb-4">Sonho</h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Inspirar pessoas a fazer o bem, criando um impacto positivo 
-                    na sociedade através de nossos produtos, serviços e 
-                    relacionamentos genuínos.
+                    Inspirar o bem com segurança e engajamento,
+                    otimizando custos, fortalecendo nossas marcas,
+                    sempre com foco no cliente.
                   </p>
                 </CardContent>
               </Card>
