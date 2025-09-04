@@ -88,7 +88,7 @@ export default function QuemSomos() {
                   <p className="text-muted-foreground leading-relaxed">
                     Garantir a distribuição de produtos de qualidade
                     com excelência e encantamento de nossos clientes
-                    e consumidores
+                    e consumidores.
                   </p>
                 </CardContent>
               </Card>
@@ -102,7 +102,7 @@ export default function QuemSomos() {
                   <p className="text-muted-foreground leading-relaxed">
                     Estar entre as melhores revendas do Brasil em
                     excelência e rentabilidade sendo queriada pelos
-                    seus colaboradores, clientes e sociedade
+                    seus colaboradores, clientes e sociedade.
                   </p>
                 </CardContent>
               </Card>
