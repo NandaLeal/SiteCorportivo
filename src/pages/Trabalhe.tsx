@@ -1,4 +1,4 @@
-import { Heart, Users, Target, Mail, Phone, Instagram, Facebook } from "lucide-react";
+import { Heart, Users, Target, Mail, Phone, Instagram, Linkedin } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
@@ -94,15 +94,15 @@ export default function Trabalhe() {
                       
                       <Button variant="outline" asChild className="justify-start h-auto p-4">
                         <a
-                          href="https://www.facebook.com/CervantesAmbev/"
+                          href="https://www.linkedin.com/company/cervantes-ambev/"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="flex items-center gap-3"
                         >
-                          <Facebook className="h-5 w-5 text-blue-600" />
+                          <Linkedin className="h-5 w-5 text-blue-700" />
                           <div className="text-left">
-                            <div className="font-semibold">Facebook</div>
-                            <div className="text-sm text-muted-foreground">CervantesAmbev</div>
+                            <div className="font-semibold">LinkedIn</div>
+                            <div className="text-sm text-muted-foreground">cervantes-ambev</div>
                           </div>
                         </a>
                       </Button>
