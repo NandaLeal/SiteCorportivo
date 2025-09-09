@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import heroBanner from "@/assets/hero-banner.jpg";
-import brandsShowcase from "@/assets/brands-showcase.jpg";
+import brandsShowcase from "@/assets/brands-showcase-new.jpg";
 import teamImage from "@/assets/team-diversity.jpg";
 import brahmaLogo from "@/assets/brahma-logo.jpg";
 import spatenLogo from "@/assets/spaten-logo.jpg";
