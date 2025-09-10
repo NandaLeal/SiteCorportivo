@@ -22,7 +22,7 @@ const heroCarouselImages = [
   { name: "Brahma", image: brahmaLogo },
   { name: "Spaten", image: spatenLogo },
   { name: "Stella", image: stellaLogo },
-  { name: "Guaraná Antarctica", image: guaranaBannner },
+  { name: "Guaraná Antarctica", image: guaranaBanner },
   { name: "Red Bull", image: redbullLogo },
 ];
 
