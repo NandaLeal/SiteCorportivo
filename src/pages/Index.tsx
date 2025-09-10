@@ -13,7 +13,7 @@ import teamImage from "@/assets/team-diversity.jpg";
 import brahmaLogo from "@/assets/brahma-logo.jpg";
 import spatenLogo from "@/assets/spaten-logo.jpg";
 import redbullLogo from "@/assets/redbull-logo.jpg";
-import guaranaBanner from "@/assets/guarana-banner.jpg";
+import guaranaBanner from "@/assets/imagens/guarana-banner.jpg";
 import guaranaLogo from "@/assets/guarana-logo.jpg";
 import stellaLogo from "@/assets/stella-logo.jpg";
 
