@@ -74,19 +74,13 @@ export default function Index() {
             <CarouselNext className="right-2 sm:right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 h-8 w-8 sm:h-10 sm:w-10" />
           </Carousel>
           
-          <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full">
+          <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full h-full flex items-end pb-8 sm:pb-12 lg:pb-16">
             <div className="mx-auto max-w-2xl lg:mx-0">
-              <Badge variant="secondary" className="mb-4 sm:mb-6 text-sm sm:text-base px-3 py-1 sm:px-4 sm:py-2 font-gotham font-medium">
-                Revenda Ambev
-              </Badge>
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-gotham font-bold tracking-tight text-white">
-                Cervantes
-              </h1>
-              <p className="mt-4 sm:mt-6 text-lg sm:text-xl font-gotham font-light leading-7 sm:leading-8 text-white/90">
+              <p className="mb-4 sm:mb-6 text-lg sm:text-xl font-gotham font-light leading-7 sm:leading-8 text-white/90">
                 Há <strong className="font-medium">+30 anos</strong> levando qualidade e confiança para <strong className="font-medium">Montes Claros</strong> e 
                 mais <strong className="font-medium">30 cidades do Norte de Minas</strong>.
               </p>
-              <div className="mt-6 sm:mt-10 flex flex-col sm:flex-row items-center gap-4 sm:gap-x-6">
+              <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-x-6">
                 <Button size="lg" asChild className="w-full sm:w-auto bg-white text-primary hover:bg-white/90 font-gotham font-medium">
                   <Link to="/seja-cliente">
                     <span className="hidden sm:inline">Quer ser nosso cliente?</span>
