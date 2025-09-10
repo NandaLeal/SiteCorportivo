@@ -16,6 +16,16 @@ import redbullLogo from "@/assets/redbull-logo.jpg";
 import guaranaLogo from "@/assets/guarana-logo.jpg";
 import stellaLogo from "@/assets/stella-logo.jpg";
 
+// Hero carousel images (separate from brands section)
+const heroCarouselImages = [
+  { name: "Brahma", image: brahmaLogo },
+  { name: "Spaten", image: spatenLogo },
+  { name: "Stella", image: stellaLogo },
+  { name: "Guaraná Antarctica", image: guaranaLogo },
+  { name: "Red Bull", image: redbullLogo },
+];
+
+// Brand logos for "Brands we distribute" section
 const brandLogos = [
   { name: "Brahma", image: brahmaLogo },
   { name: "Spaten", image: spatenLogo },
@@ -47,7 +57,7 @@ export default function Index() {
             plugins={[Autoplay({ delay: 4000 })]}
           >
             <CarouselContent>
-              {brandLogos.map((brand) => (
+              {heroCarouselImages.map((brand) => (
                 <CarouselItem key={brand.name}>
                   <div className="relative h-full min-h-[70vh] sm:min-h-[80vh] lg:min-h-screen">
                     <img
