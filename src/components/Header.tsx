@@ -117,7 +117,7 @@ export default function Header() {
       {/* Mobile menu - Horizontal tabs */}
       <div className={cn(
         "lg:hidden",
-        mobileMenuOpen ? "fixed inset-0 z-[60]" : "hidden"
+        mobileMenuOpen ? "fixed inset-0 z-[9999]" : "hidden"
       )}>
         {/* Backdrop */}
         <div 
@@ -126,7 +126,7 @@ export default function Header() {
         />
         
         {/* Horizontal Navigation Tabs */}
-        <div className="fixed top-0 left-0 right-0 z-[60] bg-white border-b border-border shadow-lg">
+        <div className="fixed top-0 left-0 right-0 z-[9999] bg-white border-b border-border shadow-lg">
           <div className="px-4 pt-0 pb-3">
             {/* Close button */}
             <div className="flex justify-end mb-3">
