@@ -74,7 +74,7 @@ export default function Index() {
             <CarouselNext className="right-2 sm:right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 h-8 w-8 sm:h-10 sm:w-10" />
           </Carousel>
           
-          <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full h-full flex items-end pb-8 sm:pb-12 lg:pb-16">
+          <div className="absolute bottom-0 left-0 right-0 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-8 sm:pb-12 lg:pb-16">
             <div className="mx-auto max-w-2xl lg:mx-0">
               <p className="mb-4 sm:mb-6 text-lg sm:text-xl font-gotham font-light leading-7 sm:leading-8 text-white/90">
                 Há <strong className="font-medium">+30 anos</strong> levando qualidade e confiança para <strong className="font-medium">Montes Claros</strong> e 
