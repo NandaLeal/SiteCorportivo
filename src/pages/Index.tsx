@@ -14,6 +14,7 @@ import brahmaLogo from "@/assets/brahma-logo.jpg";
 import brahmaBanner from "@/assets/brahma-banner.jpg";
 import brahmaPortifolio from "@/assets/brahma-portifolio.jpg";
 import spatenLogo from "@/assets/spaten-logo.jpg";
+import spatenPortifolio from "@/assets/spaten-portifolio.jpg";
 import redbullLogo from "@/assets/redbull-logo.jpg";
 import redbullBanner from "@/assets/redbull-banner.jpg";
 import guaranaBanner from "@/assets/guarana-banner.jpg";
@@ -41,7 +42,7 @@ const brandLogos = [
 // Mapping brands to their logos
 const brandLogosMap: { [key: string]: string } = {
   "Brahma": brahmaPortifolio,
-  "Spaten": spatenLogo,
+  "Spaten": spatenPortifolio,
   "Stella Artois": stellaLogo,
   "Guaraná Antarctica": guaranaLogo,
   "Red Bull": redbullLogo,
