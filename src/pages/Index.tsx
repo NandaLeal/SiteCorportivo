@@ -12,7 +12,7 @@ import brandsShowcase from "@/assets/brands-showcase-new.jpg";
 import teamImage from "@/assets/team-diversity.jpg";
 import brahmaLogo from "@/assets/brahma-logo.jpg";
 import brahmaBanner from "@/assets/brahma-banner.jpg";
-import brahmaPortifolio from "@/assets/brahma-portifolio.png";
+import brahmaPortifolio from "@/assets/brahma-portifolio.jpg";
 import spatenLogo from "@/assets/spaten-logo.jpg";
 import redbullLogo from "@/assets/redbull-logo.jpg";
 import redbullBanner from "@/assets/redbull-banner.jpg";
