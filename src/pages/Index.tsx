@@ -53,19 +53,19 @@ export default function Index() {
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="relative py-16 sm:py-24 lg:py-32 xl:py-40 overflow-hidden min-h-[70vh] sm:min-h-[80vh] lg:min-h-screen flex items-center">
+        <section className="relative overflow-hidden">
           <Carousel 
-            className="absolute inset-0 group"
+            className="group"
             plugins={[Autoplay({ delay: 4000 })]}
           >
             <CarouselContent>
               {heroCarouselImages.map((brand) => (
                 <CarouselItem key={brand.name}>
-                  <div className="relative h-full min-h-[70vh] sm:min-h-[80vh] lg:min-h-screen bg-gradient-to-br from-primary/5 to-secondary/5 flex items-center justify-center">
+                  <div className="relative w-full h-[60vh] sm:h-[70vh] lg:h-[80vh] bg-gradient-to-br from-primary/5 to-secondary/5 flex items-center justify-center">
                     <img
                       src={brand.image}
                       alt={`${brand.name} - Distribuída pela Cervantes`}
-                      className="w-full h-full object-contain max-w-full max-h-full p-4 sm:p-8 lg:p-12"
+                      className="w-auto h-auto max-w-[90%] max-h-[90%] object-contain"
                     />
                   </div>
                 </CarouselItem>
@@ -75,7 +75,7 @@ export default function Index() {
             <CarouselNext className="right-2 sm:right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 h-8 w-8 sm:h-10 sm:w-10" />
           </Carousel>
           
-          <div className="absolute bottom-0 left-0 right-0 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-8 sm:pb-12 lg:pb-16">
+          <div className="absolute bottom-0 left-0 right-0 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-8 sm:pb-12 lg:pb-16 z-10">
             <div className="mx-auto max-w-2xl lg:mx-0">
               <p className="mb-4 sm:mb-6 text-lg sm:text-xl font-gotham font-light leading-7 sm:leading-8 text-white/90">
                 Há <strong className="font-medium">+30 anos</strong> levando qualidade e confiança para <strong className="font-medium">Montes Claros</strong> e 
