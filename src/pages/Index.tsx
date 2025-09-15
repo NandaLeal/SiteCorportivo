@@ -86,31 +86,6 @@ export default function Index() {
             <CarouselPrevious className="left-2 sm:left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 h-8 w-8 sm:h-10 sm:w-10 z-20" />
             <CarouselNext className="right-2 sm:right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 h-8 w-8 sm:h-10 sm:w-10 z-20" />
           </Carousel>
-          
-          <div className="absolute bottom-0 left-0 right-0 w-full px-4 sm:px-6 lg:px-8 pb-8 sm:pb-12 lg:pb-16 z-20">
-            <div className="mx-auto max-w-7xl">
-              <div className="mx-auto max-w-2xl lg:mx-0">
-                <p className="mb-4 sm:mb-6 text-lg sm:text-xl font-gotham font-light leading-7 sm:leading-8 text-white/90 drop-shadow-lg">
-                  Há <strong className="font-medium">+30 anos</strong> levando qualidade e confiança para <strong className="font-medium">Montes Claros</strong> e 
-                  mais <strong className="font-medium">30 cidades do Norte de Minas</strong>.
-                </p>
-                <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-x-6">
-                  <Button size="lg" asChild className="w-full sm:w-auto bg-white text-primary hover:bg-white/90 font-gotham font-medium shadow-lg">
-                    <Link to="/seja-cliente">
-                      <span className="hidden sm:inline">Quer ser nosso cliente?</span>
-                      <span className="sm:hidden">Seja Cliente</span>
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
-                  </Button>
-                  <Button variant="outline" size="lg" asChild className="w-full sm:w-auto border-white text-white hover:bg-white/10 font-gotham font-medium backdrop-blur-sm">
-                    <Link to="/trabalhe-conosco">
-                      Trabalhe Conosco
-                    </Link>
-                  </Button>
-                </div>
-              </div>
-            </div>
-          </div>
         </section>
 
         {/* Stats Section */}
