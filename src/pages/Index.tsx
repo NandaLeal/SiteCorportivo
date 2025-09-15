@@ -23,7 +23,7 @@ const heroCarouselImages = [
   { name: "Spaten", image: spatenLogo },
   { name: "Stella", image: stellaLogo },
   { name: "Guaraná Antarctica", image: guaranaBanner },
-  { name: "Red Bull", image: redbullLogo },
+  { name: "Red Bull", image: redbullBanner },
 ];
 
 // Brand logos for "Brands we distribute" section
