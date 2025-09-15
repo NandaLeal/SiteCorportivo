@@ -37,6 +37,15 @@ const brandLogos = [
   { name: "Red Bull", image: redbullLogo },
 ];
 
+// Mapping brands to their logos
+const brandLogosMap: { [key: string]: string } = {
+  "Brahma": brahmaLogo,
+  "Spaten": spatenLogo,
+  "Stella Artois": stellaLogo,
+  "Guaraná Antarctica": guaranaLogo,
+  "Red Bull": redbullLogo,
+};
+
 const brands = [
   "Budweiser", "Skol", "Brahma", "Antarctica", "Stella Artois", 
   "Corona", "Guaraná Antarctica", "Pepsi", "H2OH!", "Lipton"
@@ -209,8 +218,18 @@ export default function Index() {
                   key={brand}
                   className="group relative overflow-hidden rounded-lg sm:rounded-xl bg-card p-3 sm:p-4 shadow-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 text-center"
                 >
-                  <div className="mb-2 flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-gradient-primary text-white text-sm sm:text-lg font-bold mx-auto font-gotham">
-                    {brand.charAt(0)}
+                  <div className="mb-2 flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-white border-2 border-primary/20 mx-auto overflow-hidden">
+                    {brandLogosMap[brand] ? (
+                      <img 
+                        src={brandLogosMap[brand]} 
+                        alt={`${brand} logo`}
+                        className="w-full h-full object-contain p-1"
+                      />
+                    ) : (
+                      <div className="bg-gradient-primary text-white text-sm sm:text-lg font-bold font-gotham w-full h-full flex items-center justify-center rounded-full">
+                        {brand.charAt(0)}
+                      </div>
+                    )}
                   </div>
                   <h3 className="text-xs sm:text-sm font-gotham font-medium px-1">{brand}</h3>
                 </div>
