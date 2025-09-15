@@ -61,11 +61,11 @@ export default function Index() {
             <CarouselContent>
               {heroCarouselImages.map((brand) => (
                 <CarouselItem key={brand.name}>
-                  <div className="relative h-full min-h-[70vh] sm:min-h-[80vh] lg:min-h-screen">
+                  <div className="relative h-full min-h-[70vh] sm:min-h-[80vh] lg:min-h-screen bg-gradient-to-br from-primary/5 to-secondary/5 flex items-center justify-center">
                     <img
                       src={brand.image}
                       alt={`${brand.name} - Distribuída pela Cervantes`}
-                      className="h-full w-full object-cover"
+                      className="w-full h-full object-contain max-w-full max-h-full p-4 sm:p-8 lg:p-12"
                     />
                   </div>
                 </CarouselItem>
