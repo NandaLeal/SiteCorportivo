@@ -11,6 +11,7 @@ import heroBanner from "@/assets/hero-banner.jpg";
 import brandsShowcase from "@/assets/brands-showcase-new.jpg";
 import teamImage from "@/assets/team-diversity.jpg";
 import brahmaLogo from "@/assets/brahma-logo.jpg";
+import brahmaBanner from "@/assets/brahma-banner.jpg";
 import spatenLogo from "@/assets/spaten-logo.jpg";
 import redbullLogo from "@/assets/redbull-logo.jpg";
 import redbullBanner from "@/assets/redbull-banner.jpg";
@@ -20,7 +21,7 @@ import stellaLogo from "@/assets/stella-logo.jpg";
 
 // Hero carousel images (separate from brands section)
 const heroCarouselImages = [
-  { name: "Brahma", image: brahmaLogo },
+  { name: "Brahma", image: brahmaBanner },
   { name: "Spaten", image: spatenLogo },
   { name: "Stella", image: stellaLogo },
   { name: "Guaraná Antarctica", image: guaranaBanner },
