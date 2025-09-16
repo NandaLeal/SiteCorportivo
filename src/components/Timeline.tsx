@@ -1,10 +1,10 @@
-import { Building, Users, Award, Target, Star, Calendar, Truck, Globe } from "lucide-react";
+import { Calendar } from "lucide-react";
 
 interface TimelineEvent {
   year: string;
   title: string;
   description: string;
-  icon: React.ComponentType<any>;
+  imagePlaceholder: string;
   gradient: string;
   textColor: string;
 }
@@ -14,7 +14,7 @@ const timelineEvents: TimelineEvent[] = [
     year: "1990",
     title: "Fundação da Cervantes",
     description: "Início das atividades como distribuidora de bebidas no Norte de Minas, com foco na qualidade e atendimento personalizado.",
-    icon: Building,
+    imagePlaceholder: "Coloque aqui a imagem da fundação da empresa",
     gradient: "from-blue-500 to-purple-600",
     textColor: "text-blue-600"
   },
@@ -22,7 +22,7 @@ const timelineEvents: TimelineEvent[] = [
     year: "1995",
     title: "Parceria com a Ambev",
     description: "Tornamo-nos representantes oficiais da Ambev, expandindo nosso portfólio com as principais marcas do mercado.",
-    icon: Users,
+    imagePlaceholder: "Coloque aqui a imagem da parceria com Ambev",
     gradient: "from-purple-500 to-pink-600",
     textColor: "text-purple-600"
   },
@@ -30,7 +30,7 @@ const timelineEvents: TimelineEvent[] = [
     year: "2000",
     title: "Expansão Regional",
     description: "Ampliação da área de cobertura para 30+ cidades, consolidando nossa presença no Norte de Minas Gerais.",
-    icon: Globe,
+    imagePlaceholder: "Coloque aqui a imagem da expansão regional",
     gradient: "from-pink-500 to-red-600",
     textColor: "text-pink-600"
   },
@@ -38,7 +38,7 @@ const timelineEvents: TimelineEvent[] = [
     year: "2010",
     title: "Modernização da Frota",
     description: "Investimento em tecnologia e logística, garantindo entregas mais eficientes e sustentáveis.",
-    icon: Truck,
+    imagePlaceholder: "Coloque aqui a imagem da frota modernizada",
     gradient: "from-red-500 to-orange-600",
     textColor: "text-red-600"
   },
@@ -46,7 +46,7 @@ const timelineEvents: TimelineEvent[] = [
     year: "2015",
     title: "Certificações de Qualidade",
     description: "Conquista de importantes certificações, reforçando nosso compromisso com a excelência operacional.",
-    icon: Award,
+    imagePlaceholder: "Coloque aqui a imagem das certificações",
     gradient: "from-orange-500 to-yellow-600",
     textColor: "text-orange-600"
   },
@@ -54,7 +54,7 @@ const timelineEvents: TimelineEvent[] = [
     year: "2020",
     title: "Inovação Digital",
     description: "Implementação de sistemas digitais avançados e plataformas online para melhor atendimento aos clientes.",
-    icon: Target,
+    imagePlaceholder: "Coloque aqui a imagem da inovação digital",
     gradient: "from-yellow-500 to-green-600",
     textColor: "text-yellow-600"
   },
@@ -62,7 +62,7 @@ const timelineEvents: TimelineEvent[] = [
     year: "2024",
     title: "Futuro Sustentável",
     description: "Lançamento de iniciativas sustentáveis e projetos sociais, inspirando pessoas a fazer o bem.",
-    icon: Star,
+    imagePlaceholder: "Coloque aqui a imagem dos projetos sustentáveis",
     gradient: "from-green-500 to-teal-600",
     textColor: "text-green-600"
   }
@@ -90,7 +90,6 @@ export default function Timeline() {
           {/* Timeline Events */}
           <div className="space-y-12 lg:space-y-16">
             {timelineEvents.map((event, index) => {
-              const Icon = event.icon;
               const isEven = index % 2 === 0;
 
               return (
@@ -118,21 +117,30 @@ export default function Timeline() {
                     </p>
                   </div>
 
-                  {/* Center Icon/Image */}
+                  {/* Center Image Placeholder */}
                   <div className="relative z-10 flex items-center justify-center">
                     {/* Connection Line */}
                     <div className={`absolute w-8 h-0.5 bg-gradient-to-r ${event.gradient} ${
                       isEven ? '-left-8' : '-right-8'
                     }`}></div>
                     
-                    {/* Icon Container */}
+                    {/* Image Container */}
                     <div className={`
-                      relative w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-br ${event.gradient} 
+                      relative w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 rounded-2xl 
                       shadow-elegant hover:shadow-glow transition-all duration-500 
-                      group-hover:scale-110 group-hover:rotate-6
-                      flex items-center justify-center
+                      group-hover:scale-110 group-hover:rotate-3
+                      overflow-hidden bg-gradient-to-br ${event.gradient}
+                      border-4 border-white
                     `}>
-                      <Icon className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
+                      {/* Image Placeholder */}
+                      <div className="w-full h-full bg-gradient-to-br from-white/90 to-white/70 flex items-center justify-center">
+                        <div className="text-center p-2">
+                          <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-primary rounded-lg mx-auto mb-1 flex items-center justify-center">
+                            <span className="text-white text-xs sm:text-sm font-bold">IMG</span>
+                          </div>
+                          <p className="text-xs text-gray-600 leading-tight">{event.imagePlaceholder}</p>
+                        </div>
+                      </div>
                       
                       {/* Glow Effect */}
                       <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${event.gradient} opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-500`}></div>
