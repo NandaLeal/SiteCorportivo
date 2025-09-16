@@ -136,15 +136,17 @@ export default function Marcas() {
                   className="group relative overflow-hidden rounded-xl bg-card p-6 shadow-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-1"
                 >
                   <div className="flex flex-col items-center text-center">
-                    <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-primary text-white text-xl font-bold overflow-hidden">
+                    <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-white text-xl font-bold overflow-hidden">
                       {brandLogos[brand.name] ? (
                         <img
                           src={brandLogos[brand.name]}
                           alt={`${brand.name} logo`}
-                          className="w-full h-full object-contain p-1"
+                          className="w-full h-full object-cover rounded-full"
                         />
                       ) : (
-                        brand.name.charAt(0)
+                        <div className="bg-gradient-primary w-full h-full flex items-center justify-center rounded-full">
+                          {brand.name.charAt(0)}
+                        </div>
                       )}
                     </div>
                     <h3 className="text-lg font-semibold mb-2">{brand.name}</h3>

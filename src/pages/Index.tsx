@@ -63,7 +63,7 @@ const brandLogosMap: { [key: string]: string } = {
 
 const brands = [
   "Budweiser", "Skol", "Brahma", "Antarctica", "Stella Artois", 
-  "Corona", "Guaraná Antarctica", "Pepsi", "H2OH!", "Lipton"
+  "Corona", "Guaraná Antarctica", "Pepsi", "H2OH!", "Beck's"
 ];
 
 const stats = [
@@ -208,12 +208,12 @@ export default function Index() {
                   key={brand}
                   className="group relative overflow-hidden rounded-lg sm:rounded-xl bg-card p-3 sm:p-4 shadow-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 text-center"
                 >
-                  <div className="mb-2 flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-white border-2 border-primary/20 mx-auto overflow-hidden">
+                  <div className="mb-2 flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-primary/10 mx-auto overflow-hidden">
                     {brandLogosMap[brand] ? (
                       <img 
                         src={brandLogosMap[brand]} 
                         alt={`${brand} logo`}
-                        className="w-full h-full object-contain p-1"
+                        className="w-full h-full object-cover rounded-full"
                       />
                     ) : (
                       <div className="bg-gradient-primary text-white text-sm sm:text-lg font-bold font-gotham w-full h-full flex items-center justify-center rounded-full">
