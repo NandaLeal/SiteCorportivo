@@ -2,6 +2,7 @@ import { Building2, Target, Eye, Heart } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Timeline from "@/components/Timeline";
 import companyImage from "@/assets/fachada.jpg";
 
 export default function QuemSomos() {
@@ -68,6 +69,9 @@ export default function QuemSomos() {
             </div>
           </div>
         </section>
+
+        {/* Timeline Section */}
+        <Timeline />
 
         {/* Values Section */}
         <section className="py-24 sm:py-32">

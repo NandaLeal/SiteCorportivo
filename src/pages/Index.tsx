@@ -7,7 +7,7 @@ import Autoplay from "embla-carousel-autoplay";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Timeline from "@/components/Timeline";
+
 import heroBanner from "@/assets/hero-banner.jpg";
 import brandsShowcase from "@/assets/brands-showcase-new.jpg";
 import teamImage from "@/assets/team-diversity.jpg";
@@ -99,8 +99,8 @@ export default function Index() {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="left-2 sm:left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 h-8 w-8 sm:h-10 sm:w-10 z-20" />
-            <CarouselNext className="right-2 sm:right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 h-8 w-8 sm:h-10 sm:w-10 z-20" />
+            <CarouselPrevious className="left-2 sm:left-4 lg:left-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 h-10 w-10 sm:h-12 sm:w-12 lg:h-14 lg:w-14 z-20 bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20" />
+            <CarouselNext className="right-2 sm:right-4 lg:right-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 h-10 w-10 sm:h-12 sm:w-12 lg:h-14 lg:w-14 z-20 bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20" />
           </Carousel>
         </section>
 
@@ -304,8 +304,6 @@ export default function Index() {
           </div>
         </section>
 
-        {/* Timeline Section */}
-        <Timeline />
 
         {/* CTA Section */}
         <section className="py-16 sm:py-20 lg:py-24 bg-gradient-hero">
