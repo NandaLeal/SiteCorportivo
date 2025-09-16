@@ -76,7 +76,7 @@ const timelineEvents: TimelineEvent[] = [
   },
   {
     year: "2024",
-    title: "Nosso Marketplace",
+    title: "30 Anos",
     description: "Lançamento de iniciativas sustentáveis e projetos sociais, inspirando pessoas a fazer o bem.",
     image: linhaDoTempo8,
     gradient: "from-green-500 to-teal-700",
