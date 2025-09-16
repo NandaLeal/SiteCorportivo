@@ -2,6 +2,30 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Badge } from "@/components/ui/badge";
 
+// Brand portfolio images
+import brahmaPortifolio from "@/assets/brahma-portifolio.jpg";
+import budweiserPortifolio from "@/assets/budweiser-portifolio.jpg";
+import coronaPortifolio from "@/assets/corona-portifolio.jpg";
+import pepsiPortifolio from "@/assets/pepsi-portifolio.jpg";
+import h2ohPortifolio from "@/assets/h2oh-portifolio.jpg";
+import skolPortifolio from "@/assets/skol-portifolio.jpg";
+import spatenPortifolio from "@/assets/spaten-portifolio.jpg";
+import stellaPortifolio from "@/assets/stella-portifolio.jpg";
+import antarcticaPortifolio from "@/assets/antarctica-portifolio.jpg";
+
+// Brand logos mapping
+const brandLogos: Record<string, string> = {
+  "Brahma": brahmaPortifolio,
+  "Budweiser": budweiserPortifolio,
+  "Corona": coronaPortifolio,
+  "Pepsi": pepsiPortifolio,
+  "H2OH!": h2ohPortifolio,
+  "Skol": skolPortifolio,
+  "Spaten": spatenPortifolio,
+  "Stella Artois": stellaPortifolio,
+  "Antarctica": antarcticaPortifolio,
+};
+
 const brands = [
   { name: "Budweiser", category: "Cervejas Premium" },
   { name: "Skol", category: "Cervejas" },
@@ -12,7 +36,7 @@ const brands = [
   { name: "Guaraná Antarctica", category: "Refrigerantes" },
   { name: "Pepsi", category: "Refrigerantes" },
   { name: "H2OH!", category: "Bebidas Funcionais" },
-  { name: "Lipton", category: "Bebidas Funcionais" },
+  { name: "Beck's", category: "Bebidas Funcionais" },
   { name: "Fusion", category: "Energéticos" },
   { name: "Tônica Antarctica", category: "Mixers" },
 ];
@@ -112,8 +136,16 @@ export default function Marcas() {
                   className="group relative overflow-hidden rounded-xl bg-card p-6 shadow-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-1"
                 >
                   <div className="flex flex-col items-center text-center">
-                    <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-primary text-white text-xl font-bold">
-                      {brand.name.charAt(0)}
+                    <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-primary text-white text-xl font-bold overflow-hidden">
+                      {brandLogos[brand.name] ? (
+                        <img
+                          src={brandLogos[brand.name]}
+                          alt={`${brand.name} logo`}
+                          className="w-full h-full object-contain p-1"
+                        />
+                      ) : (
+                        brand.name.charAt(0)
+                      )}
                     </div>
                     <h3 className="text-lg font-semibold mb-2">{brand.name}</h3>
                     <Badge variant="outline" className="text-xs">
