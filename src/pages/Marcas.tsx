@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import { Badge } from "@/components/ui/badge";
 
 // Brand portfolio images
-import brahmaPortifolio from "@/assets/brahma-portifolio.jpg";
+import coloradoMarcas from "@/assets/colorado-marcas.jpg";
 import budweiserPortifolio from "@/assets/budweiser-portifolio.jpg";
 import coronaPortifolio from "@/assets/corona-portifolio.jpg";
 import pepsiPortifolio from "@/assets/pepsi-portifolio.jpg";
@@ -20,7 +20,7 @@ import tonicaPortifolio from "@/assets/tonica-portifolio.jpg";
 
 // Brand logos mapping
 const brandLogos: Record<string, string> = {
-  "Brahma": brahmaPortifolio,
+  "Colorado": coloradoMarcas,
   "Budweiser": budweiserPortifolio,
   "Corona": coronaPortifolio,
   "Pepsi": pepsiPortifolio,
@@ -38,7 +38,7 @@ const brandLogos: Record<string, string> = {
 const brands = [
   { name: "Budweiser", category: "Cervejas Premium" },
   { name: "Skol", category: "Cervejas" },
-  { name: "Brahma", category: "Cervejas" },
+  { name: "Colorado", category: "Cervejas Premium" },
   { name: "Antarctica", category: "Cervejas" },
   { name: "Stella Artois", category: "Cervejas Premium" },
   { name: "Corona", category: "Cervejas Premium" },
