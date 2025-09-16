@@ -22,7 +22,7 @@ import guaranaLogo from "@/assets/guarana-logo.jpg";
 import stellaLogo from "@/assets/stella-logo.jpg";
 import stellaPortifolio from "@/assets/stella-portifolio.jpg";
 import skolPortifolio from "@/assets/skol-portifolio.jpg";
-import antercticaPortifolio from "@/assets/antarctica-portifolio.jpg";
+import antarcticaPortifolio from "@/assets/antarctica-portifolio.jpg";
 
 // Hero carousel images (separate from brands section)
 const heroCarouselImages = [
