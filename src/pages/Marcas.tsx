@@ -36,7 +36,7 @@ const brandLogos: Record<string, string> = {
 };
 
 const brands = [
-  { name: "Gatorade", category: "Refrigentes" },
+  { name: "Gatorade", category: "Isotonico" },
   { name: "Skol", category: "Cervejas" },
   { name: "Colorado", category: "Cervejas Premium" },
   { name: "Antarctica", category: "Cervejas" },
@@ -54,9 +54,9 @@ const categories = [
   { name: "Cervejas", count: 4, color: "bg-primary" },
   { name: "Cervejas Premium", count: 3, color: "bg-accent" },
   { name: "Refrigerantes", count: 2, color: "bg-secondary" },
-  { name: "Bebidas Funcionais", count: 2, color: "bg-primary-light" },
+  { name: "Bebidas Gaseficada", count: 2, color: "bg-primary-light" },
   { name: "Energéticos", count: 1, color: "bg-secondary-light" },
-  { name: "Mixers", count: 1, color: "bg-accent-light" },
+  { name: "Isotonico", count: 1, color: "bg-accent-light" },
 ];
 
 export default function Marcas() {
