@@ -39,8 +39,8 @@ const brands = [
   { name: "Corona", category: "Cervejas Premium" },
   { name: "Guaraná Antarctica", category: "Refrigerantes" },
   { name: "Pepsi", category: "Refrigerantes" },
-  { name: "H2OH!", category: "Bebidas Funcionais" },
-  { name: "Beck's", category: "Bebidas Funcionais" },
+  { name: "H2OH!", category: "Refrigerantes" },
+  { name: "Beck's", category: "Cervejas Premium" },
   { name: "Fusion", category: "Energéticos" },
   { name: "Tônica Antarctica", category: "Mixers" },
 ];
