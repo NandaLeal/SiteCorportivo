@@ -2,7 +2,7 @@ import { Calendar } from "lucide-react";
 import linhaDoTempo1 from "@/assets/timeline/linha-do-tempo-1.jpg";
 import linhaDoTempo2 from "@/assets/timeline/linha-do-tempo-2.jpg";
 import linhaDoTempo3 from "@/assets/timeline/linha-do-tempo-3.jpg";
-import frota2010 from "@/assets/timeline/frota-2010.jpg";
+import linhaDoTempo4 from "@/assets/timeline/linha-do-tempo-4.jpg";
 import certificacoes2015 from "@/assets/timeline/certificacoes-2015.jpg";
 import inovacao2020 from "@/assets/timeline/inovacao-2020.jpg";
 import sustentavel2024 from "@/assets/timeline/sustentavel-2024.jpg";
@@ -43,9 +43,9 @@ const timelineEvents: TimelineEvent[] = [
   },
   {
     year: "2010",
-    title: "Modernização da Frota",
+    title: "Treinando nossa Gente",
     description: "Investimento em tecnologia e logística, garantindo entregas mais eficientes e sustentáveis.",
-    image: frota2010,
+    image: linhaDoTempo4,
     gradient: "from-red-500 to-orange-600",
     textColor: "text-red-600"
   },
