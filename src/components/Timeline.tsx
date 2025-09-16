@@ -4,7 +4,7 @@ import linhaDoTempo2 from "@/assets/timeline/linha-do-tempo-2.jpg";
 import linhaDoTempo3 from "@/assets/timeline/linha-do-tempo-3.jpg";
 import linhaDoTempo4 from "@/assets/timeline/linha-do-tempo-4.jpg";
 import linhaDoTempo5 from "@/assets/timeline/linha-do-tempo-5.jpg";
-import inovacao2020 from "@/assets/timeline/inovacao-2020.jpg";
+import linhaDoTempo6 from "@/assets/timeline/linha-do-tempo-6.jpg";
 import sustentavel2024 from "@/assets/timeline/sustentavel-2024.jpg";
 
 interface TimelineEvent {
@@ -58,10 +58,10 @@ const timelineEvents: TimelineEvent[] = [
     textColor: "text-orange-600"
   },
   {
-    year: "2020",
-    title: "Inovação Digital",
+    year: "2022",
+    title: "Nossa Filial",
     description: "Implementação de sistemas digitais avançados e plataformas online para melhor atendimento aos clientes.",
-    image: inovacao2020,
+    image: linhaDoTempo6,
     gradient: "from-yellow-500 to-green-600",
     textColor: "text-yellow-600"
   },
