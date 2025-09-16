@@ -29,12 +29,14 @@ import coronaPortifolio from "@/assets/corona-portifolio.jpg";
 import pepsiPortifolio from "@/assets/pepsi-portifolio.jpg";
 import sukitaPortifolio from "@/assets/sukita-portifolio.jpg";
 import becksPortifolio from "@/assets/becks-portifolio.jpg";
+import carrossel1 from "@/assets/carrossel-1.jpg";
+import carrossel2 from "@/assets/carrossel-2.jpg";
 
 // Hero carousel images (separate from brands section)
 const heroCarouselImages = [
   { name: "Brahma", image: brahmaBanner },
-  { name: "Spaten", image: spatenLogo },
-  { name: "Stella", image: stellaLogo },
+  { name: "Wisky", image: carrossel1 },
+  { name: "Stella", image: carrossel2 },
   { name: "Guaraná Antarctica", image: guaranaBanner },
   { name: "Red Bull", image: redbullBanner },
 ];
