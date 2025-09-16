@@ -15,6 +15,7 @@ import antarcticaPortifolio from "@/assets/antarctica-portifolio.jpg";
 import becksPortifolio from "@/assets/becks-portifolio.jpg";
 import guaranaPortifolio from "@/assets/guarana-logo.jpg";
 import fusionPortifolio from "@/assets/fusion-portifolio.jpg";
+import tonicaPortifolio from "@/assets/tonica-portifolio.jpg";
 
 // Brand logos mapping
 const brandLogos: Record<string, string> = {
@@ -30,6 +31,7 @@ const brandLogos: Record<string, string> = {
   "Beck's": becksPortifolio,
   "Guaraná Antarctica": guaranaPortifolio,
   "Fusion": fusionPortifolio,
+  "Tônica Antarctica": tonicaPortifolio,
 };
 
 const brands = [
@@ -44,7 +46,7 @@ const brands = [
   { name: "H2OH!", category: "Refrigerantes" },
   { name: "Beck's", category: "Cervejas Premium" },
   { name: "Fusion", category: "Energéticos" },
-  { name: "Tônica Antarctica", category: "Mixers" },
+  { name: "Tônica Antarctica", category: "Bebida Gaseificada" },
 ];
 
 const categories = [
