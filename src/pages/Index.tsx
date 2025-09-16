@@ -27,6 +27,7 @@ import budweiserPortifolio from "@/assets/budweiser-portifolio.jpg";
 import coronaPortifolio from "@/assets/corona-portifolio.jpg";
 import pepsiPortifolio from "@/assets/pepsi-portifolio.jpg";
 import h2ohPortifolio from "@/assets/h2oh-portifolio.jpg";
+import bescksPortifolio from "@/assets/becks-portifolio.jpg";
 
 // Hero carousel images (separate from brands section)
 const heroCarouselImages = [
@@ -59,6 +60,7 @@ const brandLogosMap: { [key: string]: string } = {
   "Corona": coronaPortifolio,
   "Pepsi": pepsiPortifolio,
   "H2OH!": h2ohPortifolio,
+  "Beck's: becksPortifolio,
 };
 
 const brands = [
