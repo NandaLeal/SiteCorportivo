@@ -37,7 +37,7 @@ const brandLogos: Record<string, string> = {
 
 const brands = [
   { name: "Gatorade", category: "Isotonico" },
-  { name: "Beats", category: "Cervejas" },
+  { name: "Beats", category: "Bebida Gaseificada" },
   { name: "Colorado", category: "Cervejas Premium" },
   { name: "Antarctica", category: "Cervejas" },
   { name: "Stella Artois", category: "Cervejas Premium" },
