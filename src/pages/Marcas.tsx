@@ -8,7 +8,7 @@ import gatoradeMarcas from "@/assets/gatorade-marcas.jpg";
 import coronaPortifolio from "@/assets/corona-portifolio.jpg";
 import pepsiPortifolio from "@/assets/pepsi-portifolio.jpg";
 import sukitaPortifolio from "@/assets/sukita-portifolio.jpg";
-import skolPortifolio from "@/assets/skol-portifolio.jpg";
+import beatsMarcas from "@/assets/beats-marcas.jpg";
 import spatenPortifolio from "@/assets/spaten-portifolio.jpg";
 import stellaPortifolio from "@/assets/stella-portifolio.jpg";
 import antarcticaPortifolio from "@/assets/antarctica-portifolio.jpg";
@@ -25,7 +25,7 @@ const brandLogos: Record<string, string> = {
   "Corona": coronaPortifolio,
   "Pepsi": pepsiPortifolio,
   "Sukita": sukitaPortifolio,
-  "Skol": skolPortifolio,
+  "Beats": beatsMarcas,
   "Spaten": spatenPortifolio,
   "Stella Artois": stellaPortifolio,
   "Antarctica": antarcticaPortifolio,
@@ -37,7 +37,7 @@ const brandLogos: Record<string, string> = {
 
 const brands = [
   { name: "Gatorade", category: "Isotonico" },
-  { name: "Skol", category: "Cervejas" },
+  { name: "Beats", category: "Cervejas" },
   { name: "Colorado", category: "Cervejas Premium" },
   { name: "Antarctica", category: "Cervejas" },
   { name: "Stella Artois", category: "Cervejas Premium" },
