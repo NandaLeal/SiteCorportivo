@@ -22,7 +22,7 @@ import tonicaPortifolio from "@/assets/tonica-portifolio.jpg";
 const brandLogos: Record<string, string> = {
   "Colorado": coloradoMarcas,
   "Gatorade": gatoradeMarcas,
-  "Brutal Fruit": brutalFruitMarcas,
+  "Guaraná Antarctica": guaranaPortifolio,
   "Pepsi": pepsiPortifolio,
   "Sukita": sukitaPortifolio,
   "Beats": beatsMarcas,
@@ -30,7 +30,7 @@ const brandLogos: Record<string, string> = {
   "Hoegaarden": hoegaardenMarcas,
   "Antarctica": antarcticaPortifolio,
   "Beck's": becksPortifolio,
-  "Guaraná Antarctica": guaranaPortifolio,
+  "Brutal Fruit": brutalFruitMarcas,
   "Fusion": fusionPortifolio,
   "Tônica Antarctica": tonicaPortifolio,
 };
@@ -40,9 +40,9 @@ const brands = [
   { name: "Beats", category: "Bebida Gaseificada" },
   { name: "Colorado", category: "Cervejas Premium" },
   { name: "Antarctica", category: "Cervejas" },
+   { name: "Guaraná Antarctica", category: "Refrigerantes" },
   { name: "Hoegaarden", category: "Cervejas Premium" },
   { name: "Brutal Fruit", category: "Frisante" },
-  { name: "Guaraná Antarctica", category: "Refrigerantes" },
   { name: "Pepsi", category: "Refrigerantes" },
   { name: "Sukita", category: "Refrigerantes" },
   { name: "Beck's", category: "Cervejas Premium" },
