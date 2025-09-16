@@ -24,6 +24,7 @@ import stellaPortifolio from "@/assets/stella-portifolio.jpg";
 import skolPortifolio from "@/assets/skol-portifolio.jpg";
 import antarcticaPortifolio from "@/assets/antarctica-portifolio.jpg";
 import budweiserPortifolio from "@/assets/budweiser-portifolio.jpg";
+import coronaPortifolio from "@/assets/corona-portifolio.jpg";
 
 // Hero carousel images (separate from brands section)
 const heroCarouselImages = [
@@ -53,6 +54,7 @@ const brandLogosMap: { [key: string]: string } = {
   "Skol": skolPortifolio,
   "Antarctica": antarcticaPortifolio,
   "Budweiser": budweiserPortifolio,
+  "Corona": coronaPortifolio,
 };
 
 const brands = [
