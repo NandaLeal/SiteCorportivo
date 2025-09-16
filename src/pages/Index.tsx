@@ -26,7 +26,7 @@ import antarcticaPortifolio from "@/assets/antarctica-portifolio.jpg";
 import budweiserPortifolio from "@/assets/budweiser-portifolio.jpg";
 import coronaPortifolio from "@/assets/corona-portifolio.jpg";
 import pepsiPortifolio from "@/assets/pepsi-portifolio.jpg";
-import h2ohPortifolio from "@/assets/h2oh-portifolio.jpg";
+import sukitaPortifolio from "@/assets/sukita-portifolio.jpg";
 import becksPortifolio from "@/assets/becks-portifolio.jpg";
 
 // Hero carousel images (separate from brands section)
@@ -59,13 +59,13 @@ const brandLogosMap: { [key: string]: string } = {
   "Budweiser": budweiserPortifolio,
   "Corona": coronaPortifolio,
   "Pepsi": pepsiPortifolio,
-  "H2OH!": h2ohPortifolio,
+  "Sukita": sukitaPortifolio,
   "Beck's": becksPortifolio,
 };
 
 const brands = [
   "Budweiser", "Skol", "Brahma", "Antarctica", "Stella Artois", 
-  "Corona", "Guaraná Antarctica", "Pepsi", "H2OH!", "Beck's"
+  "Corona", "Guaraná Antarctica", "Pepsi", "Sukita", "Beck's"
 ];
 
 const stats = [
