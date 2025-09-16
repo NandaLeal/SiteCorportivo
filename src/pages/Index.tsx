@@ -58,7 +58,7 @@ const brandLogosMap: { [key: string]: string } = {
   "Budweiser": budweiserPortifolio,
   "Corona": coronaPortifolio,
   "Pepsi": pepsiPortifolio,
-  "H2OH": h2ohPortifolio,
+  "H2OH!": h2ohPortifolio,
 };
 
 const brands = [
