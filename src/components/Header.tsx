@@ -54,7 +54,7 @@ const BeerBoxNavItem = ({ item, isActive, onClick }: {
             "text-primary-foreground group-hover:text-accent-foreground",
             isActive && "text-accent-foreground"
           )}>
-            <Icon className="h-4 w-4 mb-1" />
+            <Icon className="h-4 w-4" />
             <span className="text-xs font-ambev-alpha-1 leading-tight text-center px-1">
               {item.name}
             </span>
