@@ -16,6 +16,7 @@ import becksPortifolio from "@/assets/becks-portifolio.jpg";
 import guaranaPortifolio from "@/assets/guarana-portifolio.jpg";
 import fusionPortifolio from "@/assets/fusion-portifolio.jpg";
 import tonicaPortifolio from "@/assets/tonica-portifolio.jpg";
+import spatenPortifolio from "@/assets/spaten-portifolio.jpg";
 
 
 // Brand logos mapping
