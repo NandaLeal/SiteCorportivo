@@ -11,7 +11,7 @@ import sukitaPortifolio from "@/assets/sukita-portifolio.jpg";
 import beatsMarcas from "@/assets/beats-marcas.jpg";
 import hoegaardenMarcas from "@/assets/hoegaarden-marcas.jpg";
 import stellaPortifolio from "@/assets/stella-portifolio.jpg";
-import antarcticaPortifolio from "@/assets/antarctica-portifolio.jpg";
+import mikesMarcas from "@/assets/mikes-marcas.jpg";
 import becksPortifolio from "@/assets/becks-portifolio.jpg";
 import guaranaPortifolio from "@/assets/guarana-portifolio.jpg";
 import fusionPortifolio from "@/assets/fusion-portifolio.jpg";
@@ -28,7 +28,7 @@ const brandLogos: Record<string, string> = {
   "Beats": beatsMarcas,
   "Spaten": spatenPortifolio,
   "Hoegaarden": hoegaardenMarcas,
-  "Antarctica": antarcticaPortifolio,
+  "Mike's": mikesMarcas,
   "Beck's": becksPortifolio,
   "Brutal Fruit": brutalFruitMarcas,
   "Fusion": fusionPortifolio,
@@ -39,7 +39,7 @@ const brands = [
   { name: "Gatorade", category: "Isotonico" },
   { name: "Beats", category: "Bebida Gaseificada" },
   { name: "Colorado", category: "Cervejas Premium" },
-  { name: "Antarctica", category: "Cervejas" },
+  { name: "Mike's", category: "Bebida Gaseificada" },
   { name: "Guaraná Antarctica", category: "Refrigerantes" },
   { name: "Hoegaarden", category: "Cervejas Premium" },
   { name: "Brutal Fruit", category: "Frisante" },
