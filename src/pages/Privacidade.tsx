@@ -203,7 +203,7 @@ export default function Privacidade() {
                     entre em contato conosco:
                   </p>
                   <div className="bg-muted/30 rounded-lg p-4 mt-4">
-                    <p><strong>E-mail:</strong> privacidade@cervantes.com.br</p>
+                    <p><strong>E-mail:</strong> dpo@cervantes.com.br</p>
                     <p><strong>Telefone:</strong> (38) 3213-1234</p>
                     <p><strong>Endereço:</strong> Montes Claros - MG</p>
                   </div>
