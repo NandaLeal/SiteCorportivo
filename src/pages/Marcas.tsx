@@ -15,7 +15,7 @@ import mikesMarcas from "@/assets/mikes-marcas.jpg";
 import becksPortifolio from "@/assets/becks-portifolio.jpg";
 import guaranaPortifolio from "@/assets/guarana-portifolio.jpg";
 import fusionPortifolio from "@/assets/fusion-portifolio.jpg";
-import tonicaPortifolio from "@/assets/tonica-portifolio.jpg";
+import originalMarcas from "@/assets/original-marcas.jpg";
 
 
 // Brand logos mapping
@@ -31,7 +31,7 @@ const brandLogos: Record<string, string> = {
   "Beck's": becksPortifolio,
   "Brutal Fruit": brutalFruitMarcas,
   "Fusion": fusionPortifolio,
-  "Tônica Antarctica": tonicaPortifolio,
+  "Original": originalMarcas,
 };
 
 const brands = [
@@ -46,7 +46,7 @@ const brands = [
   { name: "Sukita", category: "Refrigerantes" },
   { name: "Beck's", category: "Cervejas Premium" },
   { name: "Fusion", category: "Energéticos" },
-  { name: "Tônica Antarctica", category: "Bebida Gaseificada" },
+  { name: "Original", category: "Cervejas" },
 ];
 
 const categories = [
