@@ -107,43 +107,45 @@ export default function Timeline() {
                     </div>
                     
                     {/* Title */}
-                    <h3 className="text-xl sm:text-2xl font-gotham font-bold mb-3 text-foreground">
+                    <h3 className="text-xl sm:text-2xl font-gotham font-bold mb-6 text-foreground">
                       {event.title}
                     </h3>
                     
-                    {/* Description */}
-                    <p className="text-base sm:text-lg font-gotham font-light text-muted-foreground leading-relaxed">
-                      {event.description}
-                    </p>
+                    {/* Large Image Placeholder */}
+                    <div className="relative w-full h-48 sm:h-56 lg:h-64 rounded-2xl overflow-hidden shadow-elegant group-hover:shadow-glow transition-all duration-500 bg-gradient-to-br from-gray-100 to-gray-200">
+                      {/* Image Placeholder Content */}
+                      <div className="w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-white/90 to-gray-100/90">
+                        <div className={`w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-br ${event.gradient} mb-4 flex items-center justify-center shadow-card`}>
+                          <span className="text-white text-lg sm:text-xl font-bold">IMG</span>
+                        </div>
+                        <p className="text-sm sm:text-base text-gray-600 text-center px-4 leading-relaxed font-gotham">
+                          {event.imagePlaceholder}
+                        </p>
+                        <div className="mt-3 px-4 py-2 bg-gray-200 rounded-lg">
+                          <p className="text-xs text-gray-500">Clique para adicionar imagem</p>
+                        </div>
+                      </div>
+                      
+                      {/* Gradient Overlay on hover */}
+                      <div className={`absolute inset-0 bg-gradient-to-br ${event.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}></div>
+                    </div>
                   </div>
 
-                  {/* Center Image Placeholder */}
+                  {/* Center Connection Point */}
                   <div className="relative z-10 flex items-center justify-center">
                     {/* Connection Line */}
                     <div className={`absolute w-8 h-0.5 bg-gradient-to-r ${event.gradient} ${
                       isEven ? '-left-8' : '-right-8'
                     }`}></div>
                     
-                    {/* Image Container */}
+                    {/* Small Icon/Dot */}
                     <div className={`
-                      relative w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 rounded-2xl 
-                      shadow-elegant hover:shadow-glow transition-all duration-500 
-                      group-hover:scale-110 group-hover:rotate-3
-                      overflow-hidden bg-gradient-to-br ${event.gradient}
-                      border-4 border-white
+                      relative w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-gradient-to-br ${event.gradient} 
+                      shadow-card transition-all duration-500 
+                      group-hover:scale-125
+                      flex items-center justify-center border-2 border-white
                     `}>
-                      {/* Image Placeholder */}
-                      <div className="w-full h-full bg-gradient-to-br from-white/90 to-white/70 flex items-center justify-center">
-                        <div className="text-center p-2">
-                          <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-primary rounded-lg mx-auto mb-1 flex items-center justify-center">
-                            <span className="text-white text-xs sm:text-sm font-bold">IMG</span>
-                          </div>
-                          <p className="text-xs text-gray-600 leading-tight">{event.imagePlaceholder}</p>
-                        </div>
-                      </div>
-                      
-                      {/* Glow Effect */}
-                      <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${event.gradient} opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-500`}></div>
+                      <div className="w-2 h-2 bg-white rounded-full"></div>
                     </div>
                   </div>
 
