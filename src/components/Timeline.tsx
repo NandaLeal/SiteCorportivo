@@ -6,6 +6,7 @@ import linhaDoTempo4 from "@/assets/timeline/linha-do-tempo-4.jpg";
 import linhaDoTempo5 from "@/assets/timeline/linha-do-tempo-5.jpg";
 import linhaDoTempo6 from "@/assets/timeline/linha-do-tempo-6.jpg";
 import linhaDoTempo7 from "@/assets/timeline/linha-do-tempo-7.jpg";
+import linhaDoTempo8 from "@/assets/timeline/linha-do-tempo-8.jpg";
 
 interface TimelineEvent {
   year: string;
@@ -71,6 +72,14 @@ const timelineEvents: TimelineEvent[] = [
     description: "Lançamento de iniciativas sustentáveis e projetos sociais, inspirando pessoas a fazer o bem.",
     image: linhaDoTempo7,
     gradient: "from-green-500 to-teal-600",
+    textColor: "text-green-600"
+  }
+  {
+    year: "2024",
+    title: "Nosso Marketplace",
+    description: "Lançamento de iniciativas sustentáveis e projetos sociais, inspirando pessoas a fazer o bem.",
+    image: linhaDoTempo8,
+    gradient: "from-green-500 to-teal-700",
     textColor: "text-green-600"
   }
 ];
