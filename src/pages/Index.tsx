@@ -231,7 +231,7 @@ export default function Index() {
             <div className="text-center mt-8 sm:mt-12">
               <Button variant="outline" asChild className="font-gotham font-medium w-full sm:w-auto">
                 <Link to="/marcas">
-                  Ver Todas as Marcas
+                  Ver mais marcas!
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
