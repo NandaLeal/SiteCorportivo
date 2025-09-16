@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 
 // Brand portfolio images
 import coloradoMarcas from "@/assets/colorado-marcas.jpg";
-import walsMarcas from "@/assets/wals-marcas.jpg";
+import gatoradeMarcas from "@/assets/gatorade-marcas.jpg";
 import coronaPortifolio from "@/assets/corona-portifolio.jpg";
 import pepsiPortifolio from "@/assets/pepsi-portifolio.jpg";
 import sukitaPortifolio from "@/assets/sukita-portifolio.jpg";
@@ -21,7 +21,7 @@ import tonicaPortifolio from "@/assets/tonica-portifolio.jpg";
 // Brand logos mapping
 const brandLogos: Record<string, string> = {
   "Colorado": coloradoMarcas,
-  "Wäls": walsMarcas,
+  "Gatorade": gatoradeMarcas,
   "Corona": coronaPortifolio,
   "Pepsi": pepsiPortifolio,
   "Sukita": sukitaPortifolio,
@@ -36,7 +36,7 @@ const brandLogos: Record<string, string> = {
 };
 
 const brands = [
-  { name: "Wäls", category: "Cervejas Premium" },
+  { name: "Gatorade", category: "Refrigentes" },
   { name: "Skol", category: "Cervejas" },
   { name: "Colorado", category: "Cervejas Premium" },
   { name: "Antarctica", category: "Cervejas" },
