@@ -1,4 +1,5 @@
 import { Calendar } from "lucide-react";
+import { Link } from "react-router-dom";
 import linhaDoTempo1 from "@/assets/timeline/linha-do-tempo-1.jpg";
 import linhaDoTempo2 from "@/assets/timeline/linha-do-tempo-2.jpg";
 import linhaDoTempo3 from "@/assets/timeline/linha-do-tempo-3.jpg";
@@ -177,10 +178,12 @@ export default function Timeline() {
 
         {/* Call to Action */}
         <div className="text-center mt-16">
-          <div className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-primary text-white rounded-full font-gotham font-medium shadow-elegant hover:shadow-glow transition-all duration-300 hover:scale-105">
-            <Calendar className="w-5 h-5" />
-            <span>Continue essa história conosco</span>
-          </div>
+          <Link to="/seja-cliente">
+            <div className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-primary text-white rounded-full font-gotham font-medium shadow-elegant hover:shadow-glow transition-all duration-300 hover:scale-105">
+              <Calendar className="w-5 h-5" />
+              <span>Continue essa história conosco</span>
+            </div>
+          </Link>
         </div>
       </div>
     </section>
