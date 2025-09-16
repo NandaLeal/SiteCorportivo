@@ -1,7 +1,6 @@
 import { ArrowRight, Target, Eye, Heart, Truck, Users, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import { Link } from "react-router-dom";
@@ -32,7 +31,6 @@ import becksPortifolio from "@/assets/becks-portifolio.jpg";
 import carrossel1 from "@/assets/carrossel-1.jpg";
 import carrossel2 from "@/assets/carrossel-2.jpg";
 
-// Hero carousel images (separate from brands section)
 const heroCarouselImages = [
   { name: "Brahma", image: brahmaBanner },
   { name: "Wisky", image: carrossel1 },
@@ -41,7 +39,6 @@ const heroCarouselImages = [
   { name: "Red Bull", image: redbullBanner },
 ];
 
-// Brand logos for "Brands we distribute" section
 const brandLogos = [
   { name: "Brahma", image: brahmaLogo },
   { name: "Spaten", image: spatenLogo },
@@ -50,7 +47,6 @@ const brandLogos = [
   { name: "Red Bull", image: redbullLogo },
 ];
 
-// Mapping brands to their logos
 const brandLogosMap: { [key: string]: string } = {
   "Brahma": brahmaPortifolio,
   "Spaten": spatenPortifolio,
@@ -67,7 +63,7 @@ const brandLogosMap: { [key: string]: string } = {
 };
 
 const brands = [
-  "Budweiser", "Skol", "Brahma", "Antarctica", "Stella Artois", 
+  "Budweiser", "Skol", "Brahma", "Antarctica", "Stella Artois",
   "Corona", "Guaraná Antarctica", "Pepsi", "Sukita", "Beck's"
 ];
 
@@ -82,20 +78,20 @@ export default function Index() {
     <>
       <Header />
       <main>
-        {/* Hero Section */}
+        {/* Hero Section (contain no mobile, cover no desktop) */}
         <section className="relative overflow-hidden w-full">
-          <Carousel 
+          <Carousel
             className="group w-full"
             plugins={[Autoplay({ delay: 4000 })]}
           >
             <CarouselContent className="ml-0">
               {heroCarouselImages.map((brand) => (
                 <CarouselItem key={brand.name} className="pl-0">
-                  <div className="relative w-full h-[60vh] sm:h-[70vh] lg:h-[80vh] bg-gradient-to-br from-primary/5 to-secondary/5 flex items-center justify-center">
+                  <div className="relative w-full h-[45vh] sm:h-[65vh] lg:h-[80vh] bg-gradient-to-br from-primary/5 to-secondary/5 flex items-center justify-center">
                     <img
                       src={brand.image}
                       alt={`${brand.name} - Distribuída pela Cervantes`}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-contain sm:object-cover"
                     />
                   </div>
                 </CarouselItem>
@@ -125,7 +121,7 @@ export default function Index() {
           </div>
         </section>
 
-        {/* Company Introduction */}
+        {/* Company Introduction (contain no mobile) */}
         <section className="py-16 sm:py-20 lg:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto grid max-w-2xl grid-cols-1 gap-y-12 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:gap-x-8 lg:gap-y-0 lg:items-center">
@@ -155,7 +151,7 @@ export default function Index() {
                 <img
                   src={teamImage}
                   alt="Equipe Cervantes - Diversidade e Inclusão"
-                  className="w-full rounded-2xl shadow-elegant"
+                  className="w-full h-64 sm:h-auto object-contain sm:object-cover rounded-2xl shadow-elegant"
                 />
               </div>
             </div>
@@ -174,7 +170,7 @@ export default function Index() {
               </p>
             </div>
 
-            {/* Featured Brand Logos - Mobile Responsive */}
+            {/* Featured Brand Logos */}
             <div className="relative mb-12 sm:mb-16">
               <div className="flex justify-start sm:justify-center items-center gap-4 sm:gap-6 lg:gap-8 mb-8 sm:mb-12 overflow-x-auto pb-4 px-2 sm:px-0">
                 {brandLogos.map((brand) => (
@@ -197,16 +193,18 @@ export default function Index() {
                 ))}
               </div>
             </div>
-            
+
+            {/* Showcase grande (contain no mobile, cover no desktop) */}
             <div className="relative overflow-hidden rounded-xl sm:rounded-2xl shadow-elegant mb-8 sm:mb-12">
               <img
                 src={brandsShowcase}
                 alt="Marcas distribuídas pela Cervantes"
-                className="w-full h-48 sm:h-56 lg:h-64 object-cover"
+                className="w-full h-[40vh] sm:h-56 lg:h-64 object-contain sm:object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20" />
             </div>
 
+            {/* Grid de marcas */}
             <div className="grid grid-cols-2 gap-3 sm:gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
               {brands.map((brand) => (
                 <div
@@ -242,7 +240,7 @@ export default function Index() {
           </div>
         </section>
 
-        {/* Mission, Vision, Values */}
+        {/* Valores */}
         <section className="py-16 sm:py-20 lg:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-2xl text-center mb-12 sm:mb-16">
@@ -305,7 +303,6 @@ export default function Index() {
             </div>
           </div>
         </section>
-
 
         {/* CTA Section */}
         <section className="py-16 sm:py-20 lg:py-24 bg-gradient-hero">
