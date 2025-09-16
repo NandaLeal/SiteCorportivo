@@ -21,7 +21,7 @@ import tonicaPortifolio from "@/assets/tonica-portifolio.jpg";
 // Brand logos mapping
 const brandLogos: Record<string, string> = {
   "Colorado": coloradoMarcas,
-  "Wals": walsMarcas,
+  "Wäls": walsMarcas,
   "Corona": coronaPortifolio,
   "Pepsi": pepsiPortifolio,
   "Sukita": sukitaPortifolio,
