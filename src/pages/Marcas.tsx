@@ -16,7 +16,6 @@ import becksPortifolio from "@/assets/becks-portifolio.jpg";
 import guaranaPortifolio from "@/assets/guarana-portifolio.jpg";
 import fusionPortifolio from "@/assets/fusion-portifolio.jpg";
 import tonicaPortifolio from "@/assets/tonica-portifolio.jpg";
-import spatenPortifolio from "@/assets/spaten-portifolio.jpg";
 
 
 // Brand logos mapping
@@ -27,7 +26,6 @@ const brandLogos: Record<string, string> = {
   "Serrana": serranaMarcas,
   "Sukita": sukitaPortifolio,
   "Beats": beatsMarcas,
-  "Spaten": spatenPortifolio,
   "Hoegaarden": hoegaardenMarcas,
   "Mike's": mikesMarcas,
   "Beck's": becksPortifolio,
