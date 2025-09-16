@@ -42,7 +42,7 @@ const brands = [
   { name: "Mike's", category: "Bebida Gaseificada" },
   { name: "Guaraná Antarctica", category: "Refrigerantes" },
   { name: "Hoegaarden", category: "Cervejas Premium" },
-  { name: "Brutal Fruit", category: "Frisante" },
+  { name: "Brutal Fruit", category: "Refrigerantes" },
   { name: "Serrana", category: "Cervejas" },
   { name: "Sukita", category: "Refrigerantes" },
   { name: "Beck's", category: "Cervejas Premium" },
