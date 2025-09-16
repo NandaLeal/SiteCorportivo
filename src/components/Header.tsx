@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Package, Users, Award, UserPlus, Briefcase, Phone } from "lucide-react";
@@ -35,38 +34,27 @@ const BeerBoxNavItem = ({ item, isActive, onClick }: {
     <Link
       to={item.href}
       onClick={handleClick}
-      className="group relative block transform transition-all duration-300 hover:scale-105"
+      className="group relative block transform transition-all duration-300"
     >
-      <div className={cn(
-        "relative perspective-1000 transform-style-preserve-3d transition-transform duration-300",
-        isOpen && "rotate-y-12"
-      )}>
-          {/* Caixa de Cerveja */}
-        <div className={cn(
-          "relative h-12 w-20 rounded-lg shadow-lg transform transition-all duration-300",
-          "bg-primary hover:bg-primary/90 group-hover:bg-accent",
-          isActive && "ring-2 ring-primary ring-offset-2 bg-accent",
-          isOpen && "shadow-xl scale-110"
-        )}>
-          {/* Frente da caixa */}
-          <div className={cn(
+      <div
+        className={cn(
+          "relative h-12 w-28 rounded-lg border border-orange-500 bg-white transition-all duration-300",
+          "hover:bg-orange-500 hover:text-white",
+          isActive && "bg-orange-500 text-white shadow-md",
+          isOpen && "scale-105"
+        )}
+      >
+        <div
+          className={cn(
             "absolute inset-0 flex flex-col items-center justify-center rounded-lg transition-colors duration-300",
-            "text-primary-foreground group-hover:text-accent-foreground",
-            isActive && "text-accent-foreground"
-          )}>
-            <Icon className="h-4 w-4 mb-1" />
-            <span className="text-xs font-ambev-alpha-1 leading-tight text-center px-1">
-              {item.name}
-            </span>
-          </div>
-          
-          {/* Efeito de abertura */}
-          {isOpen && (
-            <div className="absolute inset-0 bg-white/20 rounded-lg animate-pulse" />
+            "text-orange-500 group-hover:text-white",
+            isActive && "text-white"
           )}
-          
-          {/* Sombra interna */}
-          <div className="absolute inset-0 rounded-lg shadow-inner bg-black/10" />
+        >
+          <Icon className="h-4 w-4 mb-1" />
+          <span className="text-xs font-medium text-center px-1">
+            {item.name}
+          </span>
         </div>
       </div>
     </Link>
@@ -114,7 +102,7 @@ export default function Header() {
         </div>
       </nav>
       
-      {/* Mobile menu - Horizontal tabs */}
+      {/* Mobile menu */}
       <div className={cn(
         "lg:hidden",
         mobileMenuOpen ? "fixed inset-0 z-[99999]" : "hidden"
@@ -155,8 +143,8 @@ export default function Header() {
                     className={cn(
                       "flex flex-col items-center gap-1 rounded-lg px-3 py-2 min-w-[70px] text-xs font-medium transition-colors",
                       isActive 
-                        ? "bg-primary text-primary-foreground shadow-md" 
-                        : "text-muted-foreground hover:bg-muted hover:text-foreground bg-muted/30"
+                        ? "bg-orange-500 text-white shadow-md" 
+                        : "text-orange-500 border border-orange-500 bg-white hover:bg-orange-500 hover:text-white"
                     )}
                   >
                     <Icon className="h-4 w-4" />
