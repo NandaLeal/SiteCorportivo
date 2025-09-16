@@ -22,8 +22,8 @@ const timelineEvents: TimelineEvent[] = [
     title: "Brahma no Norte de Minas",
     description: "Início das atividades como distribuidora de bebidas no Norte de Minas, com foco na qualidade e atendimento personalizado.",
     image: linhaDoTempo1,
-    gradient: "from-blue-500 to-purple-600",
-    textColor: "text-blue-600"
+    gradient: "from-orange-500 to-red-600",
+    textColor: "text-orange-600"
   },
   {
     year: "1994",
