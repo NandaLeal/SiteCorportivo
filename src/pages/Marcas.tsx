@@ -12,7 +12,7 @@ import beatsMarcas from "@/assets/beats-marcas.jpg";
 import hoegaardenMarcas from "@/assets/hoegaarden-marcas.jpg";
 import stellaPortifolio from "@/assets/stella-portifolio.jpg";
 import mikesMarcas from "@/assets/mikes-marcas.jpg";
-import becksPortifolio from "@/assets/becks-portifolio.jpg";
+import ypeMarcas from "@/assets/ype-marcas.jpg";
 import florestalMarcas from "@/assets/florestal-marcas.jpg";
 import fusionPortifolio from "@/assets/fusion-portifolio.jpg";
 import originalMarcas from "@/assets/original-marcas.jpg";
@@ -28,7 +28,7 @@ const brandLogos: Record<string, string> = {
   "Beats": beatsMarcas,
   "Hoegaarden": hoegaardenMarcas,
   "Mike's": mikesMarcas,
-  "Beck's": becksPortifolio,
+  "Ypê": ypeMarcas,
   "Brutal Fruit": brutalFruitMarcas,
   "Fusion": fusionPortifolio,
   "Original": originalMarcas,
@@ -44,7 +44,7 @@ const brands = [
   { name: "Brutal Fruit", category: "Refrigerantes" },
   { name: "Serrana", category: "Cervejas" },
   { name: "Caracu", category: "Cervajas Premium" },
-  { name: "Beck's", category: "Cervejas Premium" },
+  { name: "Ypê", category: "Limpeza" },
   { name: "Fusion", category: "Energéticos" },
   { name: "Original", category: "Cervejas" },
 ];
