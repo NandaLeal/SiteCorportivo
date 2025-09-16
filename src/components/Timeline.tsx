@@ -20,64 +20,48 @@ interface TimelineEvent {
 
 const timelineEvents: TimelineEvent[] = [
   {
-    year: "1964",
-    title: "Brahma no Norte de Minas",
     description: "Início das atividades como distribuidora de bebidas no Norte de Minas, com foco na qualidade e atendimento personalizado.",
     image: linhaDoTempo1,
     gradient: "from-orange-500 to-red-600",
     textColor: "text-orange-600"
   },
   {
-    year: "1994",
-    title: "Fundação da Cervantes",
     description: "Tornamo-nos representantes oficiais da Ambev, expandindo nosso portfólio com as principais marcas do mercado.",
     image: linhaDoTempo2,
     gradient: "from-purple-500 to-pink-600",
     textColor: "text-purple-600"
   },
   {
-    year: "2000",
-    title: "Revenda Embaixadora!",
     description: "Ampliação da área de cobertura para 30+ cidades, consolidando nossa presença no Norte de Minas Gerais.",
     image: linhaDoTempo3,
     gradient: "from-pink-500 to-red-600",
     textColor: "text-pink-600"
   },
   {
-    year: "2010",
-    title: "Treinando nossa Gente",
     description: "Investimento em tecnologia e logística, garantindo entregas mais eficientes e sustentáveis.",
     image: linhaDoTempo4,
     gradient: "from-red-500 to-orange-600",
     textColor: "text-red-600"
   },
   {
-    year: "2019",
-    title: "Diversidade e Inclusão.",
     description: "Conquista de importantes certificações, reforçando nosso compromisso com a excelência operacional.",
     image: linhaDoTempo5,
     gradient: "from-orange-500 to-yellow-600",
     textColor: "text-orange-600"
   },
   {
-    year: "2022",
-    title: "Nossa Filial",
     description: "Implementação de sistemas digitais avançados e plataformas online para melhor atendimento aos clientes.",
     image: linhaDoTempo6,
     gradient: "from-yellow-500 to-green-600",
     textColor: "text-yellow-600"
   },
   {
-    year: "2022",
-    title: "Nosso Marketplace",
     description: "Lançamento de iniciativas sustentáveis e projetos sociais, inspirando pessoas a fazer o bem.",
     image: linhaDoTempo7,
     gradient: "from-green-500 to-teal-600",
     textColor: "text-green-600"
   },
   {
-    year: "2024",
-    title: "30 Anos",
     description: "Lançamento de iniciativas sustentáveis e projetos sociais, inspirando pessoas a fazer o bem.",
     image: linhaDoTempo8,
     gradient: "from-green-500 to-teal-700",
