@@ -128,11 +128,11 @@ export default function Timeline() {
                     </h3>
                     
                     {/* Timeline Image */}
-                    <div className="relative w-full h-48 sm:h-56 lg:h-64 rounded-2xl overflow-hidden shadow-elegant group-hover:shadow-glow transition-all duration-500">
+                    <div className="relative w-full rounded-2xl overflow-hidden shadow-elegant group-hover:shadow-glow transition-all duration-500">
                       <img 
                         src={event.image} 
                         alt={event.title}
-                        className="w-full h-full object-cover"
+                        className="w-full h-auto object-contain"
                       />
                       
                       {/* Gradient Overlay on hover */}
