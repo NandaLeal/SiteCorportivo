@@ -182,7 +182,7 @@ export default function Marcas() {
                   </div>
                   <h3 className="font-semibold mb-2">Produtos Originais</h3>
                   <p className="text-sm text-muted-foreground text-center">
-                    Todas as marcas são originais e distribuídas diretamente pela Ambev
+                    Todas as marcas são originais e distribuídas com a melhor qualidade do mercado
                   </p>
                 </div>
                 <div className="flex flex-col items-center">
