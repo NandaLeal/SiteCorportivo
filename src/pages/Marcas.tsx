@@ -7,7 +7,7 @@ import brahmaPortifolio from "@/assets/brahma-portifolio.jpg";
 import budweiserPortifolio from "@/assets/budweiser-portifolio.jpg";
 import coronaPortifolio from "@/assets/corona-portifolio.jpg";
 import pepsiPortifolio from "@/assets/pepsi-portifolio.jpg";
-import h2ohPortifolio from "@/assets/h2oh-portifolio.jpg";
+import sukitaPortifolio from "@/assets/sukita-portifolio.jpg";
 import skolPortifolio from "@/assets/skol-portifolio.jpg";
 import spatenPortifolio from "@/assets/spaten-portifolio.jpg";
 import stellaPortifolio from "@/assets/stella-portifolio.jpg";
@@ -24,7 +24,7 @@ const brandLogos: Record<string, string> = {
   "Budweiser": budweiserPortifolio,
   "Corona": coronaPortifolio,
   "Pepsi": pepsiPortifolio,
-  "H2OH!": h2ohPortifolio,
+  "Sukita": sukitaPortifolio,
   "Skol": skolPortifolio,
   "Spaten": spatenPortifolio,
   "Stella Artois": stellaPortifolio,
@@ -44,7 +44,7 @@ const brands = [
   { name: "Corona", category: "Cervejas Premium" },
   { name: "Guaraná Antarctica", category: "Refrigerantes" },
   { name: "Pepsi", category: "Refrigerantes" },
-  { name: "H2OH!", category: "Refrigerantes" },
+  { name: "Sukita!", category: "Refrigerantes" },
   { name: "Beck's", category: "Cervejas Premium" },
   { name: "Fusion", category: "Energéticos" },
   { name: "Tônica Antarctica", category: "Bebida Gaseificada" },
