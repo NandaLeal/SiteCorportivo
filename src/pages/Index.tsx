@@ -7,6 +7,7 @@ import Autoplay from "embla-carousel-autoplay";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Timeline from "@/components/Timeline";
 import heroBanner from "@/assets/hero-banner.jpg";
 import brandsShowcase from "@/assets/brands-showcase-new.jpg";
 import teamImage from "@/assets/team-diversity.jpg";
@@ -302,6 +303,9 @@ export default function Index() {
             </div>
           </div>
         </section>
+
+        {/* Timeline Section */}
+        <Timeline />
 
         {/* CTA Section */}
         <section className="py-16 sm:py-20 lg:py-24 bg-gradient-hero">
