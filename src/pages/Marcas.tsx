@@ -28,7 +28,7 @@ const brandLogos: Record<string, string> = {
   "Stella Artois": stellaPortifolio,
   "Antarctica": antarcticaPortifolio,
   "Beck's": becksPortifolio,
-  "Guaraná Antartica": guaranaPortifolio,
+  "Guaraná Antarctica": guaranaPortifolio,
   "Fusion": fusionPortifolio,
 };
 
