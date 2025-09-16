@@ -96,9 +96,12 @@ export default function Header() {
           ))}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <Button variant="default" asChild className="px-3 py-2 text-sm xl:px-4">
-            <Link to="/seja-cliente">Seja Nosso Cliente</Link>
-          </Button>
+          <Link
+            to="/seja-cliente"
+            className="px-4 py-2 rounded-lg border border-orange-500 bg-white text-orange-500 hover:bg-orange-500 hover:text-white transition text-sm font-medium"
+          >
+            Seja Nosso Cliente
+          </Link>
         </div>
       </nav>
       
