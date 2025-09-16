@@ -3,7 +3,7 @@ import linhaDoTempo1 from "@/assets/timeline/linha-do-tempo-1.jpg";
 import linhaDoTempo2 from "@/assets/timeline/linha-do-tempo-2.jpg";
 import linhaDoTempo3 from "@/assets/timeline/linha-do-tempo-3.jpg";
 import linhaDoTempo4 from "@/assets/timeline/linha-do-tempo-4.jpg";
-import certificacoes2015 from "@/assets/timeline/certificacoes-2015.jpg";
+import linhaDoTempo5 from "@/assets/timeline/linha-do-tempo-5.jpg";
 import inovacao2020 from "@/assets/timeline/inovacao-2020.jpg";
 import sustentavel2024 from "@/assets/timeline/sustentavel-2024.jpg";
 
@@ -50,10 +50,10 @@ const timelineEvents: TimelineEvent[] = [
     textColor: "text-red-600"
   },
   {
-    year: "2015",
-    title: "Certificações de Qualidade",
+    year: "2019",
+    title: "Diversidade e Inclusão.",
     description: "Conquista de importantes certificações, reforçando nosso compromisso com a excelência operacional.",
-    image: certificacoes2015,
+    image: linhaDoTempo5,
     gradient: "from-orange-500 to-yellow-600",
     textColor: "text-orange-600"
   },
