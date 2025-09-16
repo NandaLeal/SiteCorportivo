@@ -73,7 +73,7 @@ const timelineEvents: TimelineEvent[] = [
     image: linhaDoTempo7,
     gradient: "from-green-500 to-teal-600",
     textColor: "text-green-600"
-  }
+  },
   {
     year: "2024",
     title: "Nosso Marketplace",
