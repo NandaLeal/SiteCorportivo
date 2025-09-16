@@ -14,6 +14,7 @@ import stellaPortifolio from "@/assets/stella-portifolio.jpg";
 import antarcticaPortifolio from "@/assets/antarctica-portifolio.jpg";
 import becksPortifolio from "@/assets/becks-portifolio.jpg";
 import guaranaPortifolio from "@/assets/guarana-logo.jpg";
+import fusionPortifolio from "@/assets/fusion-portifolio.jpg";
 
 // Brand logos mapping
 const brandLogos: Record<string, string> = {
@@ -28,6 +29,7 @@ const brandLogos: Record<string, string> = {
   "Antarctica": antarcticaPortifolio,
   "Beck's": becksPortifolio,
   "Guaraná Antartica": guaranaPortifolio,
+  "Fusion": fusionPortifolio,
 };
 
 const brands = [
