@@ -9,6 +9,7 @@ const navigation = [
   { name: "Início", href: "/", icon: Package },
   { name: "Quem Somos", href: "/quem-somos", icon: Users },
   { name: "Marcas", href: "/marcas", icon: Award },
+  { name: "Seja Nosso Cliente", href: "/seja-cliente", icon: UserPlus },
   { name: "Trabalhe Conosco", href: "/trabalhe-conosco", icon: Briefcase },
   { name: "Contato", href: "/contato", icon: Phone },
 ];
@@ -94,7 +95,15 @@ export default function Header() {
             />
           ))}
         </div>
-        </nav>
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+          <Link
+            to="/seja-cliente"
+            className="px-4 py-2 rounded-lg border border-orange-500 bg-white text-orange-500 hover:bg-orange-500 hover:text-white transition text-sm font-medium"
+          >
+            Seja Nosso Cliente
+          </Link>
+        </div>
+      </nav>
       
       {/* Mobile menu */}
       <div className={cn(
