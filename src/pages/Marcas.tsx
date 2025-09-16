@@ -40,7 +40,7 @@ const brands = [
   { name: "Beats", category: "Bebida Gaseificada" },
   { name: "Colorado", category: "Cervejas Premium" },
   { name: "Antarctica", category: "Cervejas" },
-   { name: "Guaraná Antarctica", category: "Refrigerantes" },
+  { name: "Guaraná Antarctica", category: "Refrigerantes" },
   { name: "Hoegaarden", category: "Cervejas Premium" },
   { name: "Brutal Fruit", category: "Frisante" },
   { name: "Pepsi", category: "Refrigerantes" },
