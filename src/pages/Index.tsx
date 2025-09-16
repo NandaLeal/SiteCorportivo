@@ -20,6 +20,7 @@ import redbullBanner from "@/assets/redbull-banner.jpg";
 import guaranaBanner from "@/assets/guarana-banner.jpg";
 import guaranaLogo from "@/assets/guarana-logo.jpg";
 import stellaLogo from "@/assets/stella-logo.jpg";
+import skolPortifolio from "@/assets/skol-portifolio.jpg";
 
 // Hero carousel images (separate from brands section)
 const heroCarouselImages = [
@@ -46,6 +47,7 @@ const brandLogosMap: { [key: string]: string } = {
   "Stella Artois": stellaLogo,
   "Guaraná Antarctica": guaranaLogo,
   "Red Bull": redbullLogo,
+  "Skol": skolPortifolio
 };
 
 const brands = [
