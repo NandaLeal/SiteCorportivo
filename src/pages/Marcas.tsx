@@ -54,7 +54,6 @@ const categories = [
   { name: "Cervejas", count: 4, color: "bg-primary" },
   { name: "Cervejas Premium", count: 3, color: "bg-accent" },
   { name: "Refrigerantes", count: 2, color: "bg-secondary" },
-  { name: "Frisante", count: 2, color: "bg-secondary" },
   { name: "Bebidas Gaseficada", count: 2, color: "bg-primary-light" },
   { name: "Energéticos", count: 1, color: "bg-secondary-light" },
   { name: "Isotonico", count: 1, color: "bg-accent-light" },
