@@ -1,10 +1,17 @@
 import { Calendar } from "lucide-react";
+import fundacao1990 from "@/assets/timeline/fundacao-1990.jpg";
+import parceria1995 from "@/assets/timeline/parceria-1995.jpg";
+import expansao2000 from "@/assets/timeline/expansao-2000.jpg";
+import frota2010 from "@/assets/timeline/frota-2010.jpg";
+import certificacoes2015 from "@/assets/timeline/certificacoes-2015.jpg";
+import inovacao2020 from "@/assets/timeline/inovacao-2020.jpg";
+import sustentavel2024 from "@/assets/timeline/sustentavel-2024.jpg";
 
 interface TimelineEvent {
   year: string;
   title: string;
   description: string;
-  imagePlaceholder: string;
+  image: string;
   gradient: string;
   textColor: string;
 }
@@ -14,7 +21,7 @@ const timelineEvents: TimelineEvent[] = [
     year: "1990",
     title: "Fundação da Cervantes",
     description: "Início das atividades como distribuidora de bebidas no Norte de Minas, com foco na qualidade e atendimento personalizado.",
-    imagePlaceholder: "Coloque aqui a imagem da fundação da empresa",
+    image: fundacao1990,
     gradient: "from-blue-500 to-purple-600",
     textColor: "text-blue-600"
   },
@@ -22,7 +29,7 @@ const timelineEvents: TimelineEvent[] = [
     year: "1995",
     title: "Parceria com a Ambev",
     description: "Tornamo-nos representantes oficiais da Ambev, expandindo nosso portfólio com as principais marcas do mercado.",
-    imagePlaceholder: "Coloque aqui a imagem da parceria com Ambev",
+    image: parceria1995,
     gradient: "from-purple-500 to-pink-600",
     textColor: "text-purple-600"
   },
@@ -30,7 +37,7 @@ const timelineEvents: TimelineEvent[] = [
     year: "2000",
     title: "Expansão Regional",
     description: "Ampliação da área de cobertura para 30+ cidades, consolidando nossa presença no Norte de Minas Gerais.",
-    imagePlaceholder: "Coloque aqui a imagem da expansão regional",
+    image: expansao2000,
     gradient: "from-pink-500 to-red-600",
     textColor: "text-pink-600"
   },
@@ -38,7 +45,7 @@ const timelineEvents: TimelineEvent[] = [
     year: "2010",
     title: "Modernização da Frota",
     description: "Investimento em tecnologia e logística, garantindo entregas mais eficientes e sustentáveis.",
-    imagePlaceholder: "Coloque aqui a imagem da frota modernizada",
+    image: frota2010,
     gradient: "from-red-500 to-orange-600",
     textColor: "text-red-600"
   },
@@ -46,7 +53,7 @@ const timelineEvents: TimelineEvent[] = [
     year: "2015",
     title: "Certificações de Qualidade",
     description: "Conquista de importantes certificações, reforçando nosso compromisso com a excelência operacional.",
-    imagePlaceholder: "Coloque aqui a imagem das certificações",
+    image: certificacoes2015,
     gradient: "from-orange-500 to-yellow-600",
     textColor: "text-orange-600"
   },
@@ -54,7 +61,7 @@ const timelineEvents: TimelineEvent[] = [
     year: "2020",
     title: "Inovação Digital",
     description: "Implementação de sistemas digitais avançados e plataformas online para melhor atendimento aos clientes.",
-    imagePlaceholder: "Coloque aqui a imagem da inovação digital",
+    image: inovacao2020,
     gradient: "from-yellow-500 to-green-600",
     textColor: "text-yellow-600"
   },
@@ -62,7 +69,7 @@ const timelineEvents: TimelineEvent[] = [
     year: "2024",
     title: "Futuro Sustentável",
     description: "Lançamento de iniciativas sustentáveis e projetos sociais, inspirando pessoas a fazer o bem.",
-    imagePlaceholder: "Coloque aqui a imagem dos projetos sustentáveis",
+    image: sustentavel2024,
     gradient: "from-green-500 to-teal-600",
     textColor: "text-green-600"
   }
@@ -111,23 +118,16 @@ export default function Timeline() {
                       {event.title}
                     </h3>
                     
-                    {/* Large Image Placeholder */}
-                    <div className="relative w-full h-48 sm:h-56 lg:h-64 rounded-2xl overflow-hidden shadow-elegant group-hover:shadow-glow transition-all duration-500 bg-gradient-to-br from-gray-100 to-gray-200">
-                      {/* Image Placeholder Content */}
-                      <div className="w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-white/90 to-gray-100/90">
-                        <div className={`w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-br ${event.gradient} mb-4 flex items-center justify-center shadow-card`}>
-                          <span className="text-white text-lg sm:text-xl font-bold">IMG</span>
-                        </div>
-                        <p className="text-sm sm:text-base text-gray-600 text-center px-4 leading-relaxed font-gotham">
-                          {event.imagePlaceholder}
-                        </p>
-                        <div className="mt-3 px-4 py-2 bg-gray-200 rounded-lg">
-                          <p className="text-xs text-gray-500">Clique para adicionar imagem</p>
-                        </div>
-                      </div>
+                    {/* Timeline Image */}
+                    <div className="relative w-full h-48 sm:h-56 lg:h-64 rounded-2xl overflow-hidden shadow-elegant group-hover:shadow-glow transition-all duration-500">
+                      <img 
+                        src={event.image} 
+                        alt={event.title}
+                        className="w-full h-full object-cover"
+                      />
                       
                       {/* Gradient Overlay on hover */}
-                      <div className={`absolute inset-0 bg-gradient-to-br ${event.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}></div>
+                      <div className={`absolute inset-0 bg-gradient-to-br ${event.gradient} opacity-0 group-hover:opacity-20 transition-opacity duration-500`}></div>
                     </div>
                   </div>
 
