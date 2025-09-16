@@ -5,7 +5,7 @@ import linhaDoTempo3 from "@/assets/timeline/linha-do-tempo-3.jpg";
 import linhaDoTempo4 from "@/assets/timeline/linha-do-tempo-4.jpg";
 import linhaDoTempo5 from "@/assets/timeline/linha-do-tempo-5.jpg";
 import linhaDoTempo6 from "@/assets/timeline/linha-do-tempo-6.jpg";
-import sustentavel2024 from "@/assets/timeline/sustentavel-2024.jpg";
+import linhaDoTempo7 from "@/assets/timeline/linha-do-tempo-7.jpg";
 
 interface TimelineEvent {
   year: string;
@@ -66,10 +66,10 @@ const timelineEvents: TimelineEvent[] = [
     textColor: "text-yellow-600"
   },
   {
-    year: "2024",
-    title: "Futuro Sustentável",
+    year: "2022",
+    title: "Nosso Marketplace",
     description: "Lançamento de iniciativas sustentáveis e projetos sociais, inspirando pessoas a fazer o bem.",
-    image: sustentavel2024,
+    image: linhaDoTempo7,
     gradient: "from-green-500 to-teal-600",
     textColor: "text-green-600"
   }
