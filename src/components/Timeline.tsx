@@ -1,5 +1,5 @@
 import { Calendar } from "lucide-react";
-import fundacao1990 from "@/assets/timeline/fundacao-1990.jpg";
+import linhaDoTempo1 from "@/assets/timeline/linha-do-tempo-1.jpg";
 import parceria1995 from "@/assets/timeline/parceria-1995.jpg";
 import expansao2000 from "@/assets/timeline/expansao-2000.jpg";
 import frota2010 from "@/assets/timeline/frota-2010.jpg";
@@ -18,10 +18,10 @@ interface TimelineEvent {
 
 const timelineEvents: TimelineEvent[] = [
   {
-    year: "1990",
-    title: "Fundação da Cervantes",
+    year: "1964",
+    title: "Brahma no Norte de Minas",
     description: "Início das atividades como distribuidora de bebidas no Norte de Minas, com foco na qualidade e atendimento personalizado.",
-    image: fundacao1990,
+    image: linhaDoTempo1,
     gradient: "from-blue-500 to-purple-600",
     textColor: "text-blue-600"
   },
