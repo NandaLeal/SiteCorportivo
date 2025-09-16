@@ -1,6 +1,6 @@
 import { Calendar } from "lucide-react";
 import linhaDoTempo1 from "@/assets/timeline/linha-do-tempo-1.jpg";
-import parceria1995 from "@/assets/timeline/parceria-1995.jpg";
+import linhaDoTempo2 from "@/assets/timeline/linha-do-tempo-2.jpg";
 import expansao2000 from "@/assets/timeline/expansao-2000.jpg";
 import frota2010 from "@/assets/timeline/frota-2010.jpg";
 import certificacoes2015 from "@/assets/timeline/certificacoes-2015.jpg";
@@ -26,10 +26,10 @@ const timelineEvents: TimelineEvent[] = [
     textColor: "text-blue-600"
   },
   {
-    year: "1995",
-    title: "Parceria com a Ambev",
+    year: "1994",
+    title: "Fundação da Cervantes",
     description: "Tornamo-nos representantes oficiais da Ambev, expandindo nosso portfólio com as principais marcas do mercado.",
-    image: parceria1995,
+    image: linhaDoTempo2,
     gradient: "from-purple-500 to-pink-600",
     textColor: "text-purple-600"
   },
