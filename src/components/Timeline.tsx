@@ -1,7 +1,7 @@
 import { Calendar } from "lucide-react";
 import linhaDoTempo1 from "@/assets/timeline/linha-do-tempo-1.jpg";
 import linhaDoTempo2 from "@/assets/timeline/linha-do-tempo-2.jpg";
-import expansao2000 from "@/assets/timeline/expansao-2000.jpg";
+import linhaDoTempo3 from "@/assets/timeline/linha-do-tempo-3.jpg";
 import frota2010 from "@/assets/timeline/frota-2010.jpg";
 import certificacoes2015 from "@/assets/timeline/certificacoes-2015.jpg";
 import inovacao2020 from "@/assets/timeline/inovacao-2020.jpg";
@@ -35,9 +35,9 @@ const timelineEvents: TimelineEvent[] = [
   },
   {
     year: "2000",
-    title: "Expansão Regional",
+    title: "Revenda Embaixadora!",
     description: "Ampliação da área de cobertura para 30+ cidades, consolidando nossa presença no Norte de Minas Gerais.",
-    image: expansao2000,
+    image: linhaDoTempo3,
     gradient: "from-pink-500 to-red-600",
     textColor: "text-pink-600"
   },
