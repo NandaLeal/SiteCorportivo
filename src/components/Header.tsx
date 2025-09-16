@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Package, Users, Award, UserPlus, Briefcase, Phone } from "lucide-react";
+import { Menu, X, Package, Users, Award, Briefcase, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { LogoProcessor } from "./LogoProcessor";
@@ -9,7 +9,6 @@ const navigation = [
   { name: "Início", href: "/", icon: Package },
   { name: "Quem Somos", href: "/quem-somos", icon: Users },
   { name: "Marcas", href: "/marcas", icon: Award },
-  { name: "Seja Nosso Cliente", href: "/seja-cliente", icon: UserPlus },
   { name: "Trabalhe Conosco", href: "/trabalhe-conosco", icon: Briefcase },
   { name: "Contato", href: "/contato", icon: Phone },
 ];
@@ -155,6 +154,14 @@ export default function Header() {
                   </Link>
                 );
               })}
+              {/* Botão "Seja Nosso Cliente" no mobile também */}
+              <Link
+                to="/seja-cliente"
+                onClick={() => setMobileMenuOpen(false)}
+                className="flex flex-col items-center gap-1 rounded-lg px-3 py-2 min-w-[70px] text-xs font-medium transition-colors text-orange-500 border border-orange-500 bg-white hover:bg-orange-500 hover:text-white"
+              >
+                <span className="text-center leading-tight">Seja Nosso Cliente</span>
+              </Link>
             </div>
           </div>
         </div>
@@ -162,3 +169,4 @@ export default function Header() {
     </header>
   );
 }
+
