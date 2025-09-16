@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 // Brand portfolio images
 import coloradoMarcas from "@/assets/colorado-marcas.jpg";
 import gatoradeMarcas from "@/assets/gatorade-marcas.jpg";
-import coronaPortifolio from "@/assets/corona-portifolio.jpg";
+import brutalFruitMarcas from "@/assets/brutal-fruit-marcas.jpg";
 import pepsiPortifolio from "@/assets/pepsi-portifolio.jpg";
 import sukitaPortifolio from "@/assets/sukita-portifolio.jpg";
 import beatsMarcas from "@/assets/beats-marcas.jpg";
@@ -22,7 +22,7 @@ import tonicaPortifolio from "@/assets/tonica-portifolio.jpg";
 const brandLogos: Record<string, string> = {
   "Colorado": coloradoMarcas,
   "Gatorade": gatoradeMarcas,
-  "Corona": coronaPortifolio,
+  "Brutal Fruit": brutalFruitMarcas,
   "Pepsi": pepsiPortifolio,
   "Sukita": sukitaPortifolio,
   "Beats": beatsMarcas,
@@ -41,7 +41,7 @@ const brands = [
   { name: "Colorado", category: "Cervejas Premium" },
   { name: "Antarctica", category: "Cervejas" },
   { name: "Stella Artois", category: "Cervejas Premium" },
-  { name: "Corona", category: "Cervejas Premium" },
+  { name: "Brutal Fruit", category: "Frisante" },
   { name: "Guaraná Antarctica", category: "Refrigerantes" },
   { name: "Pepsi", category: "Refrigerantes" },
   { name: "Sukita", category: "Refrigerantes" },
@@ -54,6 +54,7 @@ const categories = [
   { name: "Cervejas", count: 4, color: "bg-primary" },
   { name: "Cervejas Premium", count: 3, color: "bg-accent" },
   { name: "Refrigerantes", count: 2, color: "bg-secondary" },
+  { name: "Frisante", count: 2, color: "bg-secondary" },
   { name: "Bebidas Gaseficada", count: 2, color: "bg-primary-light" },
   { name: "Energéticos", count: 1, color: "bg-secondary-light" },
   { name: "Isotonico", count: 1, color: "bg-accent-light" },
