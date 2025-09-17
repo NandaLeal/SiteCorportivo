@@ -69,8 +69,8 @@ const brands = [
 
 const stats = [
   { number: "+30", label: "Anos de Tradição", icon: Star },
-  { number: "30+", label: "Cidades Atendidas", icon: Truck },
-  { number: "5000+", label: "Clientes Satisfeitos", icon: Users },
+  { number: "+30", label: "Cidades Atendidas", icon: Truck },
+  { number: "+5000", label: "Clientes Satisfeitos", icon: Users },
 ];
 
 export default function Index() {
