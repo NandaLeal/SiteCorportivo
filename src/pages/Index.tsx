@@ -8,7 +8,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 import heroBanner from "@/assets/hero-banner.jpg";
-import brandsShowcase from "@/assets/brands-showcase-updated.jpg";
+import brandsShowcase from "@/assets/brands-showcase-new.jpg";
 import teamImage from "@/assets/team-diversity.jpg";
 import brahmaLogo from "@/assets/brahma-logo.jpg";
 import brahmaBanner from "@/assets/brahma-banner.jpg";
@@ -194,13 +194,14 @@ export default function Index() {
               </div>
             </div>
 
-            {/* Showcase grande - Imagem das marcas completa */}
-            <div className="mb-8 sm:mb-12">
+            {/* Showcase grande (contain no mobile, cover no desktop) */}
+            <div className="relative overflow-hidden rounded-xl sm:rounded-2xl shadow-elegant mb-8 sm:mb-12">
               <img
                 src={brandsShowcase}
                 alt="Marcas distribuídas pela Cervantes"
-                className="w-full max-w-4xl mx-auto h-auto object-contain rounded-xl sm:rounded-2xl shadow-elegant"
+                className="w-full h-[40vh] sm:h-56 lg:h-64 object-contain sm:object-cover"
               />
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20" />
             </div>
 
             {/* Grid de marcas */}
