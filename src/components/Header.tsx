@@ -1,64 +1,17 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Package, Users, Award, Briefcase, Phone } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { LogoProcessor } from "./LogoProcessor";
 
 const navigation = [
-  { name: "Início", href: "/", icon: Package },
-  { name: "Quem Somos", href: "/quem-somos", icon: Users },
-  { name: "Marcas", href: "/marcas", icon: Award },
-  { name: "Trabalhe Conosco", href: "/trabalhe-conosco", icon: Briefcase },
-  { name: "Contato", href: "/contato", icon: Phone },
+  { name: "Início", href: "/" },
+  { name: "Quem Somos", href: "/quem-somos" },
+  { name: "Marcas", href: "/marcas" },
+  { name: "Trabalhe Conosco", href: "/trabalhe-conosco" },
+  { name: "Contato", href: "/contato" },
 ];
-
-const BeerBoxNavItem = ({ item, isActive, onClick }: { 
-  item: typeof navigation[0], 
-  isActive: boolean, 
-  onClick?: () => void 
-}) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const Icon = item.icon;
-
-  const handleClick = () => {
-    setIsOpen(true);
-    setTimeout(() => {
-      setIsOpen(false);
-      onClick?.();
-    }, 300);
-  };
-
-  return (
-    <Link
-      to={item.href}
-      onClick={handleClick}
-      className="group relative block transform transition-all duration-300"
-    >
-      <div
-        className={cn(
-          "relative h-12 w-28 rounded-lg border border-orange-500 bg-white transition-all duration-300",
-          "hover:bg-orange-500 hover:text-white",
-          isActive && "bg-orange-500 text-white shadow-md",
-          isOpen && "scale-105"
-        )}
-      >
-        <div
-          className={cn(
-            "absolute inset-0 flex flex-col items-center justify-center rounded-lg transition-colors duration-300",
-            "text-orange-500 group-hover:text-white",
-            isActive && "text-white"
-          )}
-        >
-          <Icon className="h-4 w-4 mb-1" />
-          <span className="text-xs font-medium text-center px-1">
-            {item.name}
-          </span>
-        </div>
-      </div>
-    </Link>
-  );
-};
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -85,13 +38,20 @@ export default function Header() {
             <span className="sr-only">Abrir menu</span>
           </Button>
         </div>
-        <div className="hidden lg:flex lg:gap-x-4 xl:gap-x-6 lg:items-center">
+        <div className="hidden lg:flex lg:gap-x-6 xl:gap-x-8 lg:items-center">
           {navigation.map((item) => (
-            <BeerBoxNavItem
+            <Link
               key={item.name}
-              item={item}
-              isActive={location.pathname === item.href}
-            />
+              to={item.href}
+              className={cn(
+                "text-sm font-medium transition-colors hover:text-primary",
+                location.pathname === item.href 
+                  ? "text-primary" 
+                  : "text-muted-foreground"
+              )}
+            >
+              {item.name}
+            </Link>
           ))}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
@@ -132,9 +92,8 @@ export default function Header() {
             </div>
             
             {/* Horizontal Navigation */}
-            <div className="flex flex-wrap gap-2 justify-center">
+            <div className="flex flex-wrap gap-3 justify-center">
               {navigation.map((item) => {
-                const Icon = item.icon;
                 const isActive = location.pathname === item.href;
                 
                 return (
@@ -143,14 +102,13 @@ export default function Header() {
                     to={item.href}
                     onClick={() => setMobileMenuOpen(false)}
                     className={cn(
-                      "flex flex-col items-center gap-1 rounded-lg px-3 py-2 min-w-[70px] text-xs font-medium transition-colors",
+                      "px-4 py-2 text-sm font-medium transition-colors",
                       isActive 
-                        ? "bg-orange-500 text-white shadow-md" 
-                        : "text-orange-500 border border-orange-500 bg-white hover:bg-orange-500 hover:text-white"
+                        ? "text-primary" 
+                        : "text-muted-foreground hover:text-primary"
                     )}
                   >
-                    <Icon className="h-4 w-4" />
-                    <span className="text-center leading-tight">{item.name}</span>
+                    {item.name}
                   </Link>
                 );
               })}
@@ -158,9 +116,9 @@ export default function Header() {
               <Link
                 to="/seja-cliente"
                 onClick={() => setMobileMenuOpen(false)}
-                className="flex flex-col items-center gap-1 rounded-lg px-3 py-2 min-w-[70px] text-xs font-medium transition-colors text-orange-500 border border-orange-500 bg-white hover:bg-orange-500 hover:text-white"
+                className="px-4 py-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
               >
-                <span className="text-center leading-tight">Seja Nosso Cliente</span>
+                Seja Nosso Cliente
               </Link>
             </div>
           </div>
