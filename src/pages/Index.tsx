@@ -195,13 +195,12 @@ export default function Index() {
             </div>
 
             {/* Showcase grande - Imagem das marcas completa */}
-            <div className="relative overflow-hidden rounded-xl sm:rounded-2xl shadow-elegant mb-8 sm:mb-12">
+            <div className="mb-8 sm:mb-12">
               <img
                 src={brandsShowcase}
                 alt="Marcas distribuídas pela Cervantes"
-                className="w-full h-auto object-contain"
+                className="w-full max-w-4xl mx-auto h-auto object-contain rounded-xl sm:rounded-2xl shadow-elegant"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20" />
             </div>
 
             {/* Grid de marcas */}
