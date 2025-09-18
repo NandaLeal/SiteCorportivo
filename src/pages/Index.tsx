@@ -17,7 +17,7 @@ import spatenLogo from "@/assets/spaten-logo.jpg";
 import spatenPortifolio from "@/assets/spaten-portifolio.jpg";
 import redbullLogo from "@/assets/redbull-logo.jpg";
 import redbullBanner from "@/assets/redbull-banner.jpg";
-import guaranaBanner from "@/assets/guarana-banner.jpg";
+import guaranaBanner from "@/assets/guarana-banner.png";
 import guaranaLogo from "@/assets/guarana-logo.jpg";
 import stellaLogo from "@/assets/stella-logo.jpg";
 import stellaPortifolio from "@/assets/stella-portifolio.jpg";
