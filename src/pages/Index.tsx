@@ -30,6 +30,7 @@ import sukitaPortifolio from "@/assets/sukita-portifolio.jpg";
 import becksPortifolio from "@/assets/becks-portifolio.jpg";
 import carrossel1 from "@/assets/carrossel-1.jpg";
 import carrossel2 from "@/assets/carrossel-2.jpg";
+import stellaCarrossel from "@/assets/stella-banner.png";
 
 const heroCarouselImages = [
   { name: "Brahma", image: brahmaBanner },
@@ -37,6 +38,7 @@ const heroCarouselImages = [
   { name: "Stella", image: carrossel2 },
   { name: "Guaraná Antarctica", image: guaranaBanner },
   { name: "Red Bull", image: redbullBanner },
+  { name: "Stella", image: stellaCarrossel},
 ];
 
 const brandLogos = [
