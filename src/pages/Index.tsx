@@ -34,11 +34,9 @@ import stellaCarrossel from "@/assets/stella-banner.png";
 
 const heroCarouselImages = [
   { name: "Brahma", image: brahmaBanner },
-  { name: "Wisky", image: carrossel1 },
-  { name: "Stella", image: carrossel2 },
   { name: "Guaraná Antarctica", image: guaranaBanner },
+  { name: "Stella Artois", image: stellaCarrossel },
   { name: "Red Bull", image: redbullBanner },
-  { name: "Stella", image: stellaCarrossel},
 ];
 
 const brandLogos = [
@@ -89,12 +87,13 @@ export default function Index() {
             <CarouselContent className="ml-0">
               {heroCarouselImages.map((brand) => (
                 <CarouselItem key={brand.name} className="pl-0">
-                  <div className="relative w-full h-[45vh] sm:h-[65vh] lg:h-[80vh] bg-gradient-to-br from-primary/5 to-secondary/5 flex items-center justify-center">
+                  <div className="relative w-full h-[50vh] sm:h-[70vh] lg:h-[85vh] bg-gradient-to-br from-primary/5 to-secondary/5 flex items-center justify-center overflow-hidden">
                     <img
                       src={brand.image}
                       alt={`${brand.name} - Distribuída pela Cervantes`}
-                      className="w-full h-full object-contain sm:object-cover"
+                      className="w-full h-full object-cover object-center"
                     />
+                    <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/20" />
                   </div>
                 </CarouselItem>
               ))}
