@@ -31,11 +31,12 @@ import becksPortifolio from "@/assets/becks-portifolio.jpg";
 import carrossel1 from "@/assets/carrossel-1.jpg";
 import carrossel2 from "@/assets/carrossel-2.jpg";
 import stellaCarrossel from "@/assets/stella-banner.png";
+import stellaCarrosselNovo from "@/assets/stella-carrossel-novo.png";
 
 const heroCarouselImages = [
   { name: "Brahma", image: brahmaBanner },
   { name: "Guaraná Antarctica", image: guaranaBanner },
-  { name: "Stella Artois", image: stellaCarrossel },
+  { name: "Stella Artois", image: stellaCarrosselNovo },
   { name: "Red Bull", image: redbullBanner },
 ];
 
