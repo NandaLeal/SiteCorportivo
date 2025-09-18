@@ -35,6 +35,8 @@ const heroCarouselImages = [
   { name: "Brahma", image: brahmaBanner },
   { name: "Guaraná Antarctica", image: guaranaBanner },
   { name: "Red Bull", image: redbullBanner },
+  {name: "Wisky", image: carrossel1 },
+  {name: " Hoegaarden", image: carrossel2 },
 ];
 
 const brandLogos = [
