@@ -11,7 +11,7 @@ import heroBanner from "@/assets/hero-banner.jpg";
 import brandsShowcase from "@/assets/brands-showcase-new.jpg";
 import teamImage from "@/assets/team-diversity.jpg";
 import brahmaLogo from "@/assets/brahma-logo.jpg";
-import brahmaBanner from "@/assets/brahma-banner.jpg";
+import brahmaBanner from "@/assets/brahma-banner.png";
 import brahmaPortifolio from "@/assets/brahma-portifolio.jpg";
 import spatenLogo from "@/assets/spaten-logo.jpg";
 import spatenPortifolio from "@/assets/spaten-portifolio.jpg";
