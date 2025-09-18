@@ -22,17 +22,22 @@ export default function Contato() {
       const formData = new FormData(e.currentTarget);
       const contactData = {
         nome: formData.get("nome") as string,
-        telefone: formData.get("telefone") as string || null,
+        telefone: formData.get("telefone") as string || undefined,
         email: formData.get("email") as string,
         mensagem: formData.get("mensagem") as string,
       };
 
-      const { error } = await supabase
-        .from("contacts")
-        .insert([contactData]);
+      // Use the secure edge function instead of direct database insert
+      const { data, error } = await supabase.functions.invoke('contact-form', {
+        body: contactData
+      });
 
       if (error) {
         throw error;
+      }
+
+      if (data?.error) {
+        throw new Error(data.error);
       }
 
       toast({
@@ -42,11 +47,21 @@ export default function Contato() {
       
       // Reset form
       (e.target as HTMLFormElement).reset();
-    } catch (error) {
+    } catch (error: any) {
       console.error("Erro ao enviar mensagem:", error);
+      
+      let errorMessage = "Tente novamente mais tarde.";
+      
+      // Handle specific error messages
+      if (error.message?.includes("Muitas tentativas")) {
+        errorMessage = "Muitas tentativas. Aguarde 15 minutos antes de tentar novamente.";
+      } else if (error.message?.includes("Dados inválidos")) {
+        errorMessage = "Por favor, verifique os dados informados.";
+      }
+
       toast({
         title: "Erro ao enviar mensagem",
-        description: "Tente novamente mais tarde.",
+        description: errorMessage,
         variant: "destructive",
       });
     } finally {
@@ -158,52 +173,58 @@ export default function Contato() {
                   <CardContent className="p-4 sm:p-6 pt-0">
                     <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
                       <div className="grid grid-cols-1 gap-4 sm:gap-6 sm:grid-cols-2">
-                        <div className="space-y-2">
-                          <Label htmlFor="nome" className="text-sm sm:text-base">Nome *</Label>
-                          <Input 
-                            id="nome" 
-                            name="nome"
-                            type="text" 
-                            required
-                            placeholder="Seu nome completo"
-                            className="text-sm sm:text-base"
-                          />
-                        </div>
-                        <div className="space-y-2">
-                          <Label htmlFor="telefone" className="text-sm sm:text-base">Telefone</Label>
-                          <Input 
-                            id="telefone" 
-                            name="telefone"
-                            type="tel" 
-                            placeholder="(00) 00000-0000"
-                            className="text-sm sm:text-base"
-                          />
-                        </div>
+                         <div className="space-y-2">
+                           <Label htmlFor="nome" className="text-sm sm:text-base">Nome *</Label>
+                           <Input 
+                             id="nome" 
+                             name="nome"
+                             type="text" 
+                             required
+                             minLength={2}
+                             maxLength={100}
+                             placeholder="Seu nome completo"
+                             className="text-sm sm:text-base"
+                           />
+                         </div>
+                         <div className="space-y-2">
+                           <Label htmlFor="telefone" className="text-sm sm:text-base">Telefone</Label>
+                           <Input 
+                             id="telefone" 
+                             name="telefone"
+                             type="tel" 
+                             pattern="[\(\)\s\-\+\d]{10,20}"
+                             placeholder="(00) 00000-0000"
+                             className="text-sm sm:text-base"
+                           />
+                         </div>
                       </div>
                       
-                      <div className="space-y-2">
-                        <Label htmlFor="email" className="text-sm sm:text-base">E-mail *</Label>
-                        <Input 
-                          id="email" 
-                          name="email"
-                          type="email" 
-                          required
-                          placeholder="seu@email.com"
-                          className="text-sm sm:text-base"
-                        />
-                      </div>
+                       <div className="space-y-2">
+                         <Label htmlFor="email" className="text-sm sm:text-base">E-mail *</Label>
+                         <Input 
+                           id="email" 
+                           name="email"
+                           type="email" 
+                           required
+                           maxLength={254}
+                           placeholder="seu@email.com"
+                           className="text-sm sm:text-base"
+                         />
+                       </div>
                       
-                      <div className="space-y-2">
-                        <Label htmlFor="mensagem" className="text-sm sm:text-base">Mensagem *</Label>
-                        <Textarea 
-                          id="mensagem" 
-                          name="mensagem"
-                          required
-                          placeholder="Digite sua mensagem..."
-                          rows={5}
-                          className="text-sm sm:text-base resize-none"
-                        />
-                      </div>
+                       <div className="space-y-2">
+                         <Label htmlFor="mensagem" className="text-sm sm:text-base">Mensagem *</Label>
+                         <Textarea 
+                           id="mensagem" 
+                           name="mensagem"
+                           required
+                           minLength={10}
+                           maxLength={2000}
+                           placeholder="Digite sua mensagem..."
+                           rows={5}
+                           className="text-sm sm:text-base resize-none"
+                         />
+                       </div>
                       
                       <Button 
                         type="submit" 
