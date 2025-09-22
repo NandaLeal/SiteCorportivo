@@ -19,7 +19,7 @@ export default function QuemSomos() {
                 Quem Somos
               </h1>
               <p className="text-lg leading-8 text-muted-foreground">
-                A mais de 30 anos de tradição, inovação e compromisso com a excelência no Norte de Minas
+                Há mais de 30 anos de tradição, inovação e compromisso com a excelência no Norte de Minas
               </p>
             </div>
           </div>
