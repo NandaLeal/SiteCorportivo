@@ -31,12 +31,15 @@ import becksPortifolio from "@/assets/becks-portifolio.jpg";
 import bud from "@/assets/BUD.png";
 import spaten from "@/assets/SPATEN.png";
 
-const heroCarouselImages = [
-  { name: "Brahma", image: brahmaBanner },
-  { name: "Guaraná Antarctica", image: guaranaBanner },
-  { name: "Red Bull", image: redbullBanner },
-  {name: "Budweiser", image: bud },
-  {name: "Spaten", image: spaten },
+type HeroItem = { name: string; image: string; focal?: string };
+
+const heroCarouselImages: HeroItem[] = [
+  { name: "Brahma", image: brahmaBanner, focal: "md:object-center" },
+  { name: "Guaraná Antarctica", image: guaranaBanner, focal: "md:object-center" },
+  { name: "Red Bull", image: redbullBanner, focal: "md:object-center" },
+  { name: "Budweiser", image: bud, focal: "md:object-[50%_50%]" },
+  // Spaten com foco mais alto para preservar garrafa/caneca quando em cover
+  { name: "Spaten", image: spaten, focal: "md:object-[50%_30%]" },
 ];
 
 const brandLogos = [
@@ -48,23 +51,31 @@ const brandLogos = [
 ];
 
 const brandLogosMap: { [key: string]: string } = {
-  "Brahma": brahmaPortifolio,
-  "Spaten": spatenPortifolio,
+  Brahma: brahmaPortifolio,
+  Spaten: spatenPortifolio,
   "Stella Artois": stellaPortifolio,
   "Guaraná Antarctica": guaranaLogo,
   "Red Bull": redbullLogo,
-  "Skol": skolPortifolio,
-  "Antarctica": antarcticaPortifolio,
-  "Budweiser": budweiserPortifolio,
-  "Corona": coronaPortifolio,
-  "Pepsi": pepsiPortifolio,
-  "Sukita": sukitaPortifolio,
+  Skol: skolPortifolio,
+  Antarctica: antarcticaPortifolio,
+  Budweiser: budweiserPortifolio,
+  Corona: coronaPortifolio,
+  Pepsi: pepsiPortifolio,
+  Sukita: sukitaPortifolio,
   "Beck's": becksPortifolio,
 };
 
 const brands = [
-  "Budweiser", "Skol", "Brahma", "Antarctica", "Stella Artois",
-  "Corona", "Guaraná Antarctica", "Pepsi", "Sukita", "Beck's"
+  "Budweiser",
+  "Skol",
+  "Brahma",
+  "Antarctica",
+  "Stella Artois",
+  "Corona",
+  "Guaraná Antarctica",
+  "Pepsi",
+  "Sukita",
+  "Beck's",
 ];
 
 const stats = [
@@ -78,12 +89,9 @@ export default function Index() {
     <>
       <Header />
       <main>
-        {/* Hero Section (contain no mobile, cover no desktop) */}
+        {/* Hero Section (contain no mobile, cover no desktop + foco por item) */}
         <section className="relative overflow-hidden w-full">
-          <Carousel
-            className="group w-full"
-            plugins={[Autoplay({ delay: 4000 })]}
-          >
+          <Carousel className="group w-full" plugins={[Autoplay({ delay: 4000 })]}>
             <CarouselContent className="ml-0">
               {heroCarouselImages.map((brand) => (
                 <CarouselItem key={brand.name} className="pl-0">
@@ -91,7 +99,7 @@ export default function Index() {
                     <img
                       src={brand.image}
                       alt={`${brand.name} - Distribuída pela Cervantes`}
-                      className="w-full h-full object-cover object-center"
+                      className={`w-full h-full object-contain md:object-cover ${brand.focal ?? "md:object-center"}`}
                     />
                     <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/20" />
                   </div>
@@ -131,14 +139,13 @@ export default function Index() {
                   Mais que uma distribuidora
                 </h2>
                 <p className="text-base sm:text-lg font-gotham font-light leading-7 sm:leading-8 text-muted-foreground mb-6 sm:mb-8">
-                  Somos a <strong className="font-medium text-foreground">Distribuidora de Bebidas Cervantes</strong>, 
-                  representantes da Ambev em nossa região. Nosso compromisso é 
-                  <strong className="font-medium text-primary"> excelência</strong>, 
-                  <strong className="font-medium text-secondary"> sustentabilidade</strong> e 
+                  Somos a <strong className="font-medium text-foreground">Distribuidora de Bebidas Cervantes</strong>, representantes da Ambev em nossa região. Nosso compromisso é
+                  <strong className="font-medium text-primary"> excelência</strong>,
+                  <strong className="font-medium text-secondary"> sustentabilidade</strong> e
                   <strong className="font-medium text-accent"> foco no cliente</strong>.
                 </p>
                 <p className="text-base sm:text-lg font-gotham font-light leading-7 sm:leading-8 text-muted-foreground mb-6 sm:mb-8">
-                  Acreditamos firmemente em ser mais do que uma simples revenda, 
+                  Acreditamos firmemente em ser mais do que uma simples revenda,
                   <strong className="font-medium text-primary"> inspirando pessoas a fazer o bem</strong>.
                 </p>
                 <Button asChild className="font-gotham font-medium w-full sm:w-auto">
@@ -163,12 +170,8 @@ export default function Index() {
         <section className="py-16 sm:py-20 lg:py-24 bg-gradient-elegant">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-2xl text-center mb-12 sm:mb-16">
-              <h2 className="text-2xl sm:text-3xl font-gotham font-bold tracking-tight mb-4">
-                Marcas que Distribuímos
-              </h2>
-              <p className="text-base sm:text-lg font-gotham font-light text-muted-foreground">
-                Representamos com orgulho as principais marcas da Ambev
-              </p>
+              <h2 className="text-2xl sm:text-3xl font-gotham font-bold tracking-tight mb-4">Marcas que Distribuímos</h2>
+              <p className="text-base sm:text-lg font-gotham font-light text-muted-foreground">Representamos com orgulho as principais marcas da Ambev</p>
             </div>
 
             {/* Featured Brand Logos */}
@@ -181,11 +184,7 @@ export default function Index() {
                   >
                     <div className="p-4 sm:p-6 text-center">
                       <div className="h-16 sm:h-20 lg:h-24 w-full flex items-center justify-center mb-3 sm:mb-4 overflow-hidden rounded-lg sm:rounded-xl">
-                        <img 
-                          src={brand.image} 
-                          alt={`${brand.name} logo`}
-                          className="max-h-full max-w-full object-contain"
-                        />
+                        <img src={brand.image} alt={`${brand.name} logo`} className="max-h-full max-w-full object-contain" />
                       </div>
                       <h3 className="text-sm sm:text-base lg:text-lg font-gotham font-medium text-foreground">{brand.name}</h3>
                     </div>
@@ -200,7 +199,7 @@ export default function Index() {
               <img
                 src={brandsShowcase}
                 alt="Marcas distribuídas pela Cervantes"
-                className="w-full h-[40vh] sm:h-56 lg:h-64 object-contain sm:object-cover"
+                className="w-full h-[40vh] sm:h-56 lg:h-64 object-contain md:object-cover md:object-[50%_35%]"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20" />
             </div>
@@ -214,11 +213,7 @@ export default function Index() {
                 >
                   <div className="mb-2 flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-primary/10 mx-auto overflow-hidden">
                     {brandLogosMap[brand] ? (
-                      <img 
-                        src={brandLogosMap[brand]} 
-                        alt={`${brand} logo`}
-                        className="w-full h-full object-cover rounded-full"
-                      />
+                      <img src={brandLogosMap[brand]} alt={`${brand} logo`} className="w-full h-full object-cover rounded-full" />
                     ) : (
                       <div className="bg-gradient-primary text-white text-sm sm:text-lg font-bold font-gotham w-full h-full flex items-center justify-center rounded-full">
                         {brand.charAt(0)}
@@ -245,14 +240,10 @@ export default function Index() {
         <section className="py-16 sm:py-20 lg:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-2xl text-center mb-12 sm:mb-16">
-              <h2 className="text-2xl sm:text-3xl font-gotham font-bold tracking-tight mb-4">
-                Nossos Valores
-              </h2>
-              <p className="text-base sm:text-lg font-gotham font-light text-muted-foreground">
-                Os pilares que guiam nossa jornada há mais de três décadas
-              </p>
+              <h2 className="text-2xl sm:text-3xl font-gotham font-bold tracking-tight mb-4">Nossos Valores</h2>
+              <p className="text-base sm:text-lg font-gotham font-light text-muted-foreground">Os pilares que guiam nossa jornada há mais de três décadas</p>
             </div>
-            
+
             <div className="grid grid-cols-1 gap-6 sm:gap-8 lg:grid-cols-3">
               <Card className="shadow-card hover:shadow-elegant transition-shadow duration-300 border-t-4 border-t-primary">
                 <CardHeader className="text-center p-4 sm:p-6">
@@ -263,9 +254,7 @@ export default function Index() {
                 </CardHeader>
                 <CardContent className="text-center p-4 sm:p-6 pt-0 sm:pt-0">
                   <p className="text-sm sm:text-base text-muted-foreground font-gotham font-light leading-relaxed">
-                    Distribuir produtos de qualidade com excelência operacional, 
-                    construindo relacionamentos duradouros e contribuindo para 
-                    o desenvolvimento da região Norte de Minas.
+                    Distribuir produtos de qualidade com excelência operacional, construindo relacionamentos duradouros e contribuindo para o desenvolvimento da região Norte de Minas.
                   </p>
                 </CardContent>
               </Card>
@@ -279,9 +268,7 @@ export default function Index() {
                 </CardHeader>
                 <CardContent className="text-center p-4 sm:p-6 pt-0 sm:pt-0">
                   <p className="text-sm sm:text-base text-muted-foreground font-gotham font-light leading-relaxed">
-                    Ser a distribuidora de bebidas mais confiável e inovadora 
-                    do Norte de Minas, reconhecida pela excelência no atendimento 
-                    e sustentabilidade.
+                    Ser a distribuidora de bebidas mais confiável e inovadora do Norte de Minas, reconhecida pela excelência no atendimento e sustentabilidade.
                   </p>
                 </CardContent>
               </Card>
@@ -295,9 +282,7 @@ export default function Index() {
                 </CardHeader>
                 <CardContent className="text-center p-4 sm:p-6 pt-0 sm:pt-0">
                   <p className="text-sm sm:text-base text-muted-foreground font-gotham font-light leading-relaxed">
-                    Inspirar pessoas a fazer o bem, criando um impacto positivo 
-                    na sociedade através de nossos produtos, serviços e 
-                    relacionamentos genuínos.
+                    Inspirar pessoas a fazer o bem, criando um impacto positivo na sociedade através de nossos produtos, serviços e relacionamentos genuínos.
                   </p>
                 </CardContent>
               </Card>
@@ -313,8 +298,7 @@ export default function Index() {
                 Pronto para Fazer Parte da Nossa História?
               </h2>
               <p className="text-lg sm:text-xl font-gotham font-light text-white/90 mb-8 sm:mb-10">
-                Seja nosso cliente ou integre nossa equipe. Juntos, continuamos 
-                construindo o futuro do Norte de Minas.
+                Seja nosso cliente ou integre nossa equipe. Juntos, continuamos construindo o futuro do Norte de Minas.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" variant="secondary" asChild className="font-gotham font-medium w-full sm:w-auto">
@@ -325,9 +309,7 @@ export default function Index() {
                   </Link>
                 </Button>
                 <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 font-gotham font-medium w-full sm:w-auto" asChild>
-                  <Link to="/trabalhe-conosco">
-                    Trabalhe Conosco
-                  </Link>
+                  <Link to="/trabalhe-conosco">Trabalhe Conosco</Link>
                 </Button>
               </div>
             </div>
