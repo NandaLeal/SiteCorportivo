@@ -28,15 +28,15 @@ import coronaPortifolio from "@/assets/corona-portifolio.jpg";
 import pepsiPortifolio from "@/assets/pepsi-portifolio.jpg";
 import sukitaPortifolio from "@/assets/sukita-portifolio.jpg";
 import becksPortifolio from "@/assets/becks-portifolio.jpg";
-import carrossel1 from "@/assets/carrossel-1.jpg";
-import carrossel2 from "@/assets/carrossel-2.jpg";
+import bud from "@/assets/BUD.png";
+import spaten from "@/assets/SPATEN.png";
 
 const heroCarouselImages = [
   { name: "Brahma", image: brahmaBanner },
   { name: "Guaraná Antarctica", image: guaranaBanner },
   { name: "Red Bull", image: redbullBanner },
-  {name: "Wisky", image: carrossel1 },
-  {name: " Hoegaarden", image: carrossel2 },
+  {name: "Budweiser", image: bud },
+  {name: "Spaten", image: spaten },
 ];
 
 const brandLogos = [
