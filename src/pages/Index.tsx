@@ -43,10 +43,8 @@ const heroCarouselImages: HeroItem[] = [
   { name: "Brahma", image: brahmaBanner, focal: "md:object-center", fitMd: "cover" },
   { name: "Guaraná Antarctica", image: guaranaBanner, focal: "md:object-center", fitMd: "cover" },
   { name: "Red Bull", image: redbullBanner, focal: "md:object-center", fitMd: "cover" },
-
   // Budweiser → contain no desktop (não corta nada)
   { name: "Budweiser", image: bud, fitMd: "contain" },
-
   // Spaten → cover com foco mais alto
   { name: "Spaten", image: spaten, focal: "md:object-[50%_30%]", fitMd: "cover" },
 ];
@@ -296,4 +294,46 @@ export default function Index() {
                 </CardHeader>
                 <CardContent className="text-center p-4 sm:p-6 pt-0 sm:pt-0">
                   <p className="text-sm sm:text-base text-muted-foreground font-gotham font-light leading-relaxed">
-                    Inspirar pessoas a fazer o
+                    Inspirar pessoas a fazer o bem, criando um impacto positivo na sociedade através de nossos produtos, serviços e relacionamentos genuínos.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA SECTION */}
+        <section className="py-16 sm:py-20 lg:py-24 bg-gradient-hero">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-2xl text-center">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-gotham font-bold tracking-tight text-white mb-4 sm:mb-6">
+                Pronto para Fazer Parte da Nossa História?
+              </h2>
+              <p className="text-lg sm:text-xl font-gotham font-light text-white/90 mb-8 sm:mb-10">
+                Seja nosso cliente ou integre nossa equipe. Juntos, continuamos construindo o futuro do Norte de Minas.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button size="lg" variant="secondary" asChild className="font-gotham font-medium w-full sm:w-auto">
+                  <Link to="/seja-cliente">
+                    <span className="hidden sm:inline">Quer ser nosso cliente?</span>
+                    <span className="sm:hidden">Seja Cliente</span>
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-white text-white hover:bg-white/10 font-gotham font-medium w-full sm:w-auto"
+                  asChild
+                >
+                  <Link to="/trabalhe-conosco">Trabalhe Conosco</Link>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </>
+  );
+}
