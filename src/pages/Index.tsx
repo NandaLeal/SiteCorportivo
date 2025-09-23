@@ -31,17 +31,27 @@ import becksPortifolio from "@/assets/becks-portifolio.jpg";
 import bud from "@/assets/BUD.png";
 import spaten from "@/assets/SPATEN.png";
 
-type HeroItem = { name: string; image: string; focal?: string };
+// ---------------- HERO CONFIG ----------------
+type HeroItem = {
+  name: string;
+  image: string;
+  focal?: string;              // foco quando cover
+  fitMd?: "cover" | "contain"; // comportamento desktop
+};
 
 const heroCarouselImages: HeroItem[] = [
-  { name: "Brahma", image: brahmaBanner, focal: "md:object-center" },
-  { name: "Guaraná Antarctica", image: guaranaBanner, focal: "md:object-center" },
-  { name: "Red Bull", image: redbullBanner, focal: "md:object-center" },
-  { name: "Budweiser", image: bud, focal: "md:object-[50%_50%]" },
-  // Spaten com foco mais alto para preservar garrafa/caneca quando em cover
-  { name: "Spaten", image: spaten, focal: "md:object-[50%_30%]" },
+  { name: "Brahma", image: brahmaBanner, focal: "md:object-center", fitMd: "cover" },
+  { name: "Guaraná Antarctica", image: guaranaBanner, focal: "md:object-center", fitMd: "cover" },
+  { name: "Red Bull", image: redbullBanner, focal: "md:object-center", fitMd: "cover" },
+
+  // Budweiser → contain no desktop (não corta nada)
+  { name: "Budweiser", image: bud, fitMd: "contain" },
+
+  // Spaten → cover com foco mais alto
+  { name: "Spaten", image: spaten, focal: "md:object-[50%_30%]", fitMd: "cover" },
 ];
 
+// ---------------- BRANDS CONFIG ----------------
 const brandLogos = [
   { name: "Brahma", image: brahmaLogo },
   { name: "Spaten", image: spatenLogo },
@@ -89,7 +99,7 @@ export default function Index() {
     <>
       <Header />
       <main>
-        {/* Hero Section (contain no mobile, cover no desktop + foco por item) */}
+        {/* HERO SECTION */}
         <section className="relative overflow-hidden w-full">
           <Carousel className="group w-full" plugins={[Autoplay({ delay: 4000 })]}>
             <CarouselContent className="ml-0">
@@ -99,7 +109,11 @@ export default function Index() {
                     <img
                       src={brand.image}
                       alt={`${brand.name} - Distribuída pela Cervantes`}
-                      className={`w-full h-full object-contain md:object-cover ${brand.focal ?? "md:object-center"}`}
+                      className={
+                        "w-full h-full object-contain " +
+                        (brand.fitMd === "contain" ? "md:object-contain " : "md:object-cover ") +
+                        (brand.focal ?? "md:object-center")
+                      }
                     />
                     <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/20" />
                   </div>
@@ -111,7 +125,7 @@ export default function Index() {
           </Carousel>
         </section>
 
-        {/* Stats Section */}
+        {/* STATS SECTION */}
         <section className="py-12 sm:py-16 lg:py-20 bg-gradient-elegant">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 gap-6 sm:gap-8 sm:grid-cols-3">
@@ -130,7 +144,7 @@ export default function Index() {
           </div>
         </section>
 
-        {/* Company Introduction (contain no mobile) */}
+        {/* INTRODUÇÃO */}
         <section className="py-16 sm:py-20 lg:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto grid max-w-2xl grid-cols-1 gap-y-12 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:gap-x-8 lg:gap-y-0 lg:items-center">
@@ -166,7 +180,7 @@ export default function Index() {
           </div>
         </section>
 
-        {/* Brands Carousel */}
+        {/* BRANDS */}
         <section className="py-16 sm:py-20 lg:py-24 bg-gradient-elegant">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-2xl text-center mb-12 sm:mb-16">
@@ -194,7 +208,7 @@ export default function Index() {
               </div>
             </div>
 
-            {/* Showcase grande (contain no mobile, cover no desktop) */}
+            {/* Showcase grande */}
             <div className="relative overflow-hidden rounded-xl sm:rounded-2xl shadow-elegant mb-8 sm:mb-12">
               <img
                 src={brandsShowcase}
@@ -236,7 +250,7 @@ export default function Index() {
           </div>
         </section>
 
-        {/* Valores */}
+        {/* VALORES */}
         <section className="py-16 sm:py-20 lg:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-2xl text-center mb-12 sm:mb-16">
@@ -282,41 +296,4 @@ export default function Index() {
                 </CardHeader>
                 <CardContent className="text-center p-4 sm:p-6 pt-0 sm:pt-0">
                   <p className="text-sm sm:text-base text-muted-foreground font-gotham font-light leading-relaxed">
-                    Inspirar pessoas a fazer o bem, criando um impacto positivo na sociedade através de nossos produtos, serviços e relacionamentos genuínos.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-16 sm:py-20 lg:py-24 bg-gradient-hero">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="mx-auto max-w-2xl text-center">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-gotham font-bold tracking-tight text-white mb-4 sm:mb-6">
-                Pronto para Fazer Parte da Nossa História?
-              </h2>
-              <p className="text-lg sm:text-xl font-gotham font-light text-white/90 mb-8 sm:mb-10">
-                Seja nosso cliente ou integre nossa equipe. Juntos, continuamos construindo o futuro do Norte de Minas.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" variant="secondary" asChild className="font-gotham font-medium w-full sm:w-auto">
-                  <Link to="/seja-cliente">
-                    <span className="hidden sm:inline">Quer ser nosso cliente?</span>
-                    <span className="sm:hidden">Seja Cliente</span>
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 font-gotham font-medium w-full sm:w-auto" asChild>
-                  <Link to="/trabalhe-conosco">Trabalhe Conosco</Link>
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
-      <Footer />
-    </>
-  );
-}
+                    Inspirar pessoas a fazer o
