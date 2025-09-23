@@ -62,8 +62,8 @@ const categories = [
 ];
 
 export default function Marcas() {
-  const beesUrl = process.env.NEXT_PUBLIC_BEES_URL || "https://www.bees.com.br/";
-  const zeUrl = process.env.NEXT_PUBLIC_ZE_URL || "https://www.ze.delivery/";
+  const beesUrl = import.meta.env.VITE_BEES_URL || "https://www.bees.com.br/";
+  const zeUrl = import.meta.env.VITE_ZE_URL || "https://www.ze.delivery/";
 
   return (
     <>
