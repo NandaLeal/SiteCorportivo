@@ -43,10 +43,8 @@ const heroCarouselImages: HeroItem[] = [
   { name: "Brahma", image: brahmaBanner, focal: "md:object-center", fitMd: "cover" },
   { name: "Guaraná Antarctica", image: guaranaBanner, focal: "md:object-center", fitMd: "cover" },
   { name: "Red Bull", image: redbullBanner, focal: "md:object-center", fitMd: "cover" },
-  // Budweiser → contain no desktop (não corta nada)
-  { name: "Budweiser", image: bud, fitMd: "contain" },
-  // Spaten → cover com foco mais alto
-  { name: "Spaten", image: spaten, focal: "md:object-[50%_30%]", fitMd: "cover" },
+  { name: "Budweiser", image: bud, fitMd: "contain" }, // Bud sem corte
+  { name: "Spaten", image: spaten, focal: "md:object-[50%_30%]", fitMd: "cover" }, // Spaten com foco alto
 ];
 
 // ---------------- BRANDS CONFIG ----------------
@@ -103,17 +101,29 @@ export default function Index() {
             <CarouselContent className="ml-0">
               {heroCarouselImages.map((brand) => (
                 <CarouselItem key={brand.name} className="pl-0">
-                  <div className="relative w-full h-[50vh] sm:h-[70vh] lg:h-[85vh] bg-gradient-to-br from-primary/5 to-secondary/5 flex items-center justify-center overflow-hidden">
+                  <div className="relative w-full h-[50vh] sm:h-[70vh] lg:h-[85vh] overflow-hidden">
+                    {/* Fundo com cover + blur */}
+                    <img
+                      src={brand.image}
+                      alt=""
+                      aria-hidden
+                      className="absolute inset-0 w-full h-full object-cover scale-[1.08] blur-md opacity-60"
+                    />
+                    <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-black/10 to-black/25" />
+                    {/* Imagem principal */}
                     <img
                       src={brand.image}
                       alt={`${brand.name} - Distribuída pela Cervantes`}
                       className={
-                        "w-full h-full object-contain " +
+                        "relative z-10 w-full h-full object-contain " +
                         (brand.fitMd === "contain" ? "md:object-contain " : "md:object-cover ") +
                         (brand.focal ?? "md:object-center")
                       }
+                      style={{ maxHeight: "100%" }}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/20" />
+                    {/* Vinhetas laterais */}
+                    <div className="pointer-events-none absolute inset-y-0 left-0 w-24 md:w-32 bg-gradient-to-r from-black/10 to-transparent" />
+                    <div className="pointer-events-none absolute inset-y-0 right-0 w-24 md:w-32 bg-gradient-to-l from-black/10 to-transparent" />
                   </div>
                 </CarouselItem>
               ))}
