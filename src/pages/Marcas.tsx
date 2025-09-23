@@ -1,6 +1,9 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { ExternalLink, Users, Truck } from "lucide-react";
 
 // Brand portfolio images
 import coloradoMarcas from "@/assets/colorado-marcas.jpg";
@@ -35,15 +38,15 @@ const brandLogos: Record<string, string> = {
 };
 
 const brands = [
-  { name: "Gatorade", category: "Isotonico" },
-  { name: "Beats", category: "Bebida Gaseificada" },
+  { name: "Gatorade", category: "Isotônico" },
+  { name: "Beats", category: "Bebidas Gaseificadas" },
   { name: "Colorado", category: "Cervejas Premium" },
-  { name: "Mike's", category: "Bebida Gaseificada" },
+  { name: "Mike's", category: "Bebidas Gaseificadas" },
   { name: "Florestal", category: "Diversos" },
   { name: "Hoegaarden", category: "Cervejas Premium" },
   { name: "Brutal Fruit", category: "Refrigerantes" },
   { name: "Serrana", category: "Cervejas" },
-  { name: "Caracu", category: "Cervajas Premium" },
+  { name: "Caracu", category: "Cervejas Premium" },
   { name: "Ypê", category: "Limpeza" },
   { name: "Fusion", category: "Energéticos" },
   { name: "Original", category: "Cervejas" },
@@ -53,12 +56,15 @@ const categories = [
   { name: "Cervejas", count: 4, color: "bg-primary" },
   { name: "Cervejas Premium", count: 3, color: "bg-accent" },
   { name: "Refrigerantes", count: 2, color: "bg-secondary" },
-  { name: "Bebidas Gaseficada", count: 2, color: "bg-primary-light" },
+  { name: "Bebidas Gaseificadas", count: 2, color: "bg-primary-light" },
   { name: "Energéticos", count: 1, color: "bg-secondary-light" },
-  { name: "Isotonico", count: 1, color: "bg-accent-light" },
+  { name: "Isotônico", count: 1, color: "bg-accent-light" },
 ];
 
 export default function Marcas() {
+  const beesUrl = process.env.NEXT_PUBLIC_BEES_URL || "https://www.bees.com.br/";
+  const zeUrl = process.env.NEXT_PUBLIC_ZE_URL || "https://www.ze.delivery/";
+
   return (
     <>
       <Header />
@@ -74,6 +80,95 @@ export default function Marcas() {
               <p className="text-lg leading-8 text-muted-foreground">
                 Representamos com orgulho as marcas da Ambev no Norte de Minas
               </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Seja Nosso Cliente Section */}
+        <section className="py-24">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16 items-center">
+              {/* Text Content */}
+              <div className="space-y-8">
+                <div>
+                  <h2 className="text-3xl font-bold tracking-tight mb-6">
+                    Seja Nosso Cliente
+                  </h2>
+                  <p className="text-lg leading-8 text-muted-foreground mb-8">
+                    Hoje, nossas vendas são direcionadas a clientes com CNPJ ativo e compras recorrentes, 
+                    através do nosso parceiro BEES. Para compras esporádicas realizadas por CPF, 
+                    utilize o aplicativo Zé Delivery.
+                  </p>
+                </div>
+                
+                {/* Action Buttons */}
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button 
+                    asChild
+                    className="flex items-center gap-2"
+                  >
+                    <a 
+                      href={beesUrl} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      aria-label="Cadastrar no BEES - Abre em nova aba"
+                    >
+                      <Users className="h-4 w-4" />
+                      Cadastrar no BEES
+                      <ExternalLink className="h-4 w-4" />
+                    </a>
+                  </Button>
+                  
+                  <Button 
+                    variant="outline" 
+                    asChild
+                    className="flex items-center gap-2"
+                  >
+                    <a 
+                      href={zeUrl} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      aria-label="Comprar no Zé Delivery - Abre em nova aba"
+                    >
+                      <Truck className="h-4 w-4" />
+                      Comprar no Zé Delivery
+                      <ExternalLink className="h-4 w-4" />
+                    </a>
+                  </Button>
+                </div>
+              </div>
+
+              {/* Info Card */}
+              <div>
+                <Card className="bg-card shadow-card hover:shadow-elegant transition-shadow duration-300">
+                  <CardHeader>
+                    <CardTitle className="flex items-center gap-2">
+                      Como funciona
+                      <Badge variant="secondary">Info</Badge>
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div className="flex items-start gap-3">
+                      <div className="mt-1.5 h-2 w-2 rounded-full bg-primary flex-shrink-0" />
+                      <p className="text-sm text-muted-foreground">
+                        <strong>CNPJ ativo + compras recorrentes</strong> → cadastro e pedidos via BEES.
+                      </p>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <div className="mt-1.5 h-2 w-2 rounded-full bg-secondary flex-shrink-0" />
+                      <p className="text-sm text-muted-foreground">
+                        <strong>CPF ou compra pontual</strong> → realizar pedido pelo Zé Delivery.
+                      </p>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <div className="mt-1.5 h-2 w-2 rounded-full bg-accent flex-shrink-0" />
+                      <p className="text-sm text-muted-foreground">
+                        <strong>Cobertura logística</strong> para 30+ cidades do Norte de Minas.
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
             </div>
           </div>
         </section>
