@@ -101,29 +101,36 @@ export default function Index() {
             <CarouselContent className="ml-0">
               {heroCarouselImages.map((brand) => (
                 <CarouselItem key={brand.name} className="pl-0">
-                  <div className="relative w-full h-[50vh] sm:h-[70vh] lg:h-[85vh] overflow-hidden">
-                    {/* Fundo com cover + blur */}
+                  <div className="relative w-full aspect-[4/3] sm:aspect-[16/10] lg:aspect-[21/9] max-h-[60vh] sm:max-h-[70vh] lg:max-h-[85vh] overflow-hidden bg-gradient-to-br from-muted/20 to-muted/40">
+                    {/* Fundo com cover + blur para profundidade */}
                     <img
                       src={brand.image}
                       alt=""
                       aria-hidden
-                      className="absolute inset-0 w-full h-full object-cover scale-[1.08] blur-md opacity-60"
+                      className="absolute inset-0 w-full h-full object-cover scale-105 blur-sm opacity-40"
                     />
-                    <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-black/10 to-black/25" />
-                    {/* Imagem principal */}
-                    <img
-                      src={brand.image}
-                      alt={`${brand.name} - Distribuída pela Cervantes`}
-                      className={
-                        "relative z-10 w-full h-full object-contain " +
-                        (brand.fitMd === "contain" ? "md:object-contain " : "md:object-cover ") +
-                        (brand.focal ?? "md:object-center")
-                      }
-                      style={{ maxHeight: "100%" }}
-                    />
-                    {/* Vinhetas laterais */}
-                    <div className="pointer-events-none absolute inset-y-0 left-0 w-24 md:w-32 bg-gradient-to-r from-black/10 to-transparent" />
-                    <div className="pointer-events-none absolute inset-y-0 right-0 w-24 md:w-32 bg-gradient-to-l from-black/10 to-transparent" />
+                    
+                    {/* Overlay gradiente */}
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/5 via-transparent to-black/20" />
+                    
+                    {/* Imagem principal - responsiva */}
+                    <div className="relative z-10 w-full h-full flex items-center justify-center p-4 sm:p-6 lg:p-8">
+                      <img
+                        src={brand.image}
+                        alt={`${brand.name} - Distribuída pela Cervantes`}
+                        className={
+                          "max-w-full max-h-full object-contain " +
+                          (brand.fitMd === "contain" 
+                            ? "lg:object-contain lg:max-w-[80%] lg:max-h-[80%]" 
+                            : "lg:object-cover lg:w-full lg:h-full " + (brand.focal ?? "lg:object-center")
+                          )
+                        }
+                      />
+                    </div>
+                    
+                    {/* Vinhetas laterais sutis */}
+                    <div className="absolute inset-y-0 left-0 w-8 sm:w-16 lg:w-24 bg-gradient-to-r from-black/5 to-transparent pointer-events-none" />
+                    <div className="absolute inset-y-0 right-0 w-8 sm:w-16 lg:w-24 bg-gradient-to-l from-black/5 to-transparent pointer-events-none" />
                   </div>
                 </CarouselItem>
               ))}
