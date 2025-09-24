@@ -91,11 +91,13 @@ export default function Marcas() {
                 Parceria Estratégica
               </h2>
               <p className="text-lg leading-8 text-muted-foreground">
-                Como distribuidores oficiais da Ambev no Norte de Minas, oferecemos acesso completo ao portfólio das principais marcas de bebidas do Brasil. Nossa parceria garante produtos autênticos, frescor garantido e suporte especializado.
+                Como distribuidores oficiais da Ambev no Norte de Minas, oferecemos acesso completo ao portfólio das
+                principais marcas de bebidas do Brasil. Nossa parceria garante produtos autênticos, frescor garantido e suporte especializado.
 
-Além da Ambev, também trabalhamos com marcas renomadas como Seleta, Müller, Diageo, Pernod Ricard, Mondelez, Croques, Tial, Florestal, Ypê, entre outras — ampliando ainda mais nosso portfólio com bebidas, alimentos, produtos de higiene e muito mais.
-
-Com essa diversidade, atendemos de forma completa o seu negócio, com agilidade, qualidade e confiança.
+                Além da Ambev, também trabalhamos com marcas renomadas como Seleta, Müller, Diageo, Pernod Ricard, Mondelez, Croques, Tial, Florestal,
+                Ypê, entre outras — ampliando ainda mais nosso portfólio com bebidas, alimentos, produtos de higiene e muito mais.
+                
+                Com essa diversidade, atendemos de forma completa o seu negócio, com agilidade, qualidade e confiança.
               </p>
             </div>
           </div>
