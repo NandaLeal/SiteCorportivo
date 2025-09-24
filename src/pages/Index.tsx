@@ -43,8 +43,8 @@ const heroCarouselImages: HeroItem[] = [
   { name: "Brahma", image: brahmaBanner, focal: "md:object-center", fitMd: "cover" },
   { name: "Guaraná Antarctica", image: guaranaBanner, focal: "md:object-center", fitMd: "cover" },
   { name: "Red Bull", image: redbullBanner, focal: "md:object-center", fitMd: "cover" },
-  // Budweiser → cover with center focus
-  { name: "Budweiser", image: bud, focal: "md:object-center", fitMd: "cover" },
+  // Budweiser → contain no desktop (não corta nada)
+  { name: "Budweiser", image: bud, fitMd: "contain" },
   // Spaten → cover com foco mais alto
   { name: "Spaten", image: spaten, focal: "md:object-[50%_30%]", fitMd: "cover" },
 ];
