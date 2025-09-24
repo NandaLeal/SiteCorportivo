@@ -37,117 +37,100 @@ export default function SejaCliente() {
     <>
       <Header />
       <main className="min-h-screen">
-        {/* Hero Section */}
+        {/* Política Comercial Section - Moved to top */}
         <section className="relative py-16 sm:py-20 lg:py-24 xl:py-32">
           <div className="absolute inset-0 bg-gradient-hero opacity-10" />
           <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="mx-auto max-w-2xl text-center">
+            <div className="mx-auto max-w-2xl text-center mb-12">
               <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight mb-4 sm:mb-6">
-                Seja Nosso Cliente
+                Nossa Política Comercial
               </h1>
               <p className="text-base sm:text-lg leading-7 sm:leading-8 text-muted-foreground mb-6 sm:mb-8">
-                Cadastre-se pelo nosso parceiro BEES e tenha acesso ao nosso portfólio completo
+                Hoje, nossas vendas são direcionadas a clientes com CNPJ ativo e compras recorrentes, 
+                através do nosso parceiro BEES. Para compras esporádicas realizadas por CPF, 
+                utilize o aplicativo Zé Delivery.
               </p>
-              <Button size="lg" asChild className="w-full sm:w-auto">
-                <a 
-                  href="https://bees.com.br" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2"
+              
+              {/* Action Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button 
+                  asChild
+                  size="lg"
+                  className="flex items-center gap-2"
                 >
-                  Cadastrar no BEES
-                  <ExternalLink className="h-4 w-4" />
-                </a>
-              </Button>
+                  <a 
+                    href={import.meta.env.VITE_BEES_URL || "https://www.bees.com.br/"} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    aria-label="Cadastrar no BEES - Abre em nova aba"
+                  >
+                    <Users className="h-4 w-4" />
+                    Cadastrar no BEES
+                    <ExternalLink className="h-4 w-4" />
+                  </a>
+                </Button>
+                
+                <Button 
+                  variant="outline" 
+                  size="lg"
+                  asChild
+                  className="flex items-center gap-2"
+                >
+                  <a 
+                    href={import.meta.env.VITE_ZE_URL || "https://www.ze.delivery/"} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    aria-label="Comprar no Zé Delivery - Abre em nova aba"
+                  >
+                    <Truck className="h-4 w-4" />
+                    Comprar no Zé Delivery
+                    <ExternalLink className="h-4 w-4" />
+                  </a>
+                </Button>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Política Comercial Section */}
+        {/* Como Funciona Section - Expanded */}
         <section className="py-24">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16 items-center">
-              {/* Text Content */}
-              <div className="space-y-8">
-                <div>
-                  <h2 className="text-3xl font-bold tracking-tight mb-6">
-                    Nossa Política Comercial
-                  </h2>
-                  <p className="text-lg leading-8 text-muted-foreground mb-8">
-                    Hoje, nossas vendas são direcionadas a clientes com CNPJ ativo e compras recorrentes, 
-                    através do nosso parceiro BEES. Para compras esporádicas realizadas por CPF, 
-                    utilize o aplicativo Zé Delivery.
-                  </p>
-                </div>
-                
-                {/* Action Buttons */}
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Button 
-                    asChild
-                    className="flex items-center gap-2"
-                  >
-                    <a 
-                      href={import.meta.env.VITE_BEES_URL || "https://www.bees.com.br/"} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      aria-label="Cadastrar no BEES - Abre em nova aba"
-                    >
-                      <Users className="h-4 w-4" />
-                      Cadastrar no BEES
-                      <ExternalLink className="h-4 w-4" />
-                    </a>
-                  </Button>
-                  
-                  <Button 
-                    variant="outline" 
-                    asChild
-                    className="flex items-center gap-2"
-                  >
-                    <a 
-                      href={import.meta.env.VITE_ZE_URL || "https://www.ze.delivery/"} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      aria-label="Comprar no Zé Delivery - Abre em nova aba"
-                    >
-                      <Truck className="h-4 w-4" />
-                      Comprar no Zé Delivery
-                      <ExternalLink className="h-4 w-4" />
-                    </a>
-                  </Button>
-                </div>
-              </div>
-
-              {/* Info Card */}
-              <div>
-                <Card className="bg-card shadow-card hover:shadow-elegant transition-shadow duration-300">
-                  <CardHeader>
-                    <CardTitle className="flex items-center gap-2">
-                      Como funciona
-                      <Badge variant="secondary">Info</Badge>
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <div className="flex items-start gap-3">
-                      <div className="mt-1.5 h-2 w-2 rounded-full bg-primary flex-shrink-0" />
-                      <p className="text-sm text-muted-foreground">
-                        <strong>CNPJ ativo + compras recorrentes</strong> → cadastro e pedidos via BEES.
+            <div className="mx-auto max-w-4xl">
+              <Card className="bg-card shadow-elegant">
+                <CardHeader className="text-center">
+                  <CardTitle className="flex items-center justify-center gap-2 text-2xl sm:text-3xl">
+                    Como funciona
+                    <Badge variant="secondary">Info</Badge>
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-8 p-8">
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div className="text-center p-6 rounded-lg bg-primary/5 border border-primary/20">
+                      <div className="mx-auto mb-4 h-3 w-3 rounded-full bg-primary" />
+                      <h3 className="text-lg font-semibold mb-2">CNPJ ativo + compras recorrentes</h3>
+                      <p className="text-muted-foreground">
+                        Cadastro e pedidos via BEES para empresas com CNPJ ativo e compras regulares.
                       </p>
                     </div>
-                    <div className="flex items-start gap-3">
-                      <div className="mt-1.5 h-2 w-2 rounded-full bg-secondary flex-shrink-0" />
-                      <p className="text-sm text-muted-foreground">
-                        <strong>CPF ou compra pontual</strong> → realizar pedido pelo Zé Delivery.
+                    
+                    <div className="text-center p-6 rounded-lg bg-secondary/5 border border-secondary/20">
+                      <div className="mx-auto mb-4 h-3 w-3 rounded-full bg-secondary" />
+                      <h3 className="text-lg font-semibold mb-2">CPF ou compra pontual</h3>
+                      <p className="text-muted-foreground">
+                        Realize pedidos pelo Zé Delivery para compras esporádicas ou com CPF.
                       </p>
                     </div>
-                    <div className="flex items-start gap-3">
-                      <div className="mt-1.5 h-2 w-2 rounded-full bg-accent flex-shrink-0" />
-                      <p className="text-sm text-muted-foreground">
-                        <strong>Cobertura logística</strong> para +30 cidades do Norte de Minas.
+                    
+                    <div className="text-center p-6 rounded-lg bg-accent/5 border border-accent/20">
+                      <div className="mx-auto mb-4 h-3 w-3 rounded-full bg-accent" />
+                      <h3 className="text-lg font-semibold mb-2">Cobertura logística</h3>
+                      <p className="text-muted-foreground">
+                        Atendemos mais de 30 cidades do Norte de Minas com nossa frota própria.
                       </p>
                     </div>
-                  </CardContent>
-                </Card>
-              </div>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </section>
