@@ -11,7 +11,7 @@ import heroBanner from "@/assets/hero-banner.jpg";
 import brandsShowcase from "@/assets/brands-showcase-new.jpg";
 import teamImage from "@/assets/team-diversity.jpg";
 import brahmaLogo from "@/assets/brahma-logo.jpg";
-import brahmaBanner from "@/assets/brahma-banner.png";
+import budweiserBanner from "@/assets/budweiser-banner.png";
 import brahmaPortifolio from "@/assets/brahma-portifolio.jpg";
 import spatenLogo from "@/assets/spaten-logo.jpg";
 import spatenPortifolio from "@/assets/spaten-portifolio.jpg";
@@ -40,7 +40,7 @@ type HeroItem = {
 };
 
 const heroCarouselImages: HeroItem[] = [
-  { name: "Brahma", image: brahmaBanner, focal: "md:object-center", fitMd: "cover" },
+  { name: "Budweiser", image: budweiserBanner, focal: "md:object-center", fitMd: "cover" },
   { name: "Guaraná Antarctica", image: guaranaBanner, focal: "md:object-center", fitMd: "cover" },
   { name: "Beats", image: beatsBanner, focal: "md:object-center", fitMd: "cover" },
   { name: "Corona", image: coronaBanner, focal: "md:object-center", fitMd: "cover" },
