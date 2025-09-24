@@ -142,7 +142,7 @@ export default function SejaCliente() {
                     <div className="flex items-start gap-3">
                       <div className="mt-1.5 h-2 w-2 rounded-full bg-accent flex-shrink-0" />
                       <p className="text-sm text-muted-foreground">
-                        <strong>Cobertura logística</strong> para 30+ cidades do Norte de Minas.
+                        <strong>Cobertura logística</strong> para +30 cidades do Norte de Minas.
                       </p>
                     </div>
                   </CardContent>
