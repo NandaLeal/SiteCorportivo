@@ -93,10 +93,10 @@ export default function Marcas() {
               <p className="text-lg leading-8 text-muted-foreground">
                 Como distribuidores oficiais da Ambev no Norte de Minas, oferecemos acesso completo ao portfólio das
                 principais marcas de bebidas do Brasil. Nossa parceria garante produtos autênticos, frescor garantido e suporte especializado.
-
+                 <br /><br />
                 Além da Ambev, também trabalhamos com marcas renomadas como Seleta, Müller, Diageo, Pernod Ricard, Mondelez, Croques, Tial, Florestal,
                 Ypê, entre outras — ampliando ainda mais nosso portfólio com bebidas, alimentos, produtos de higiene e muito mais.
-                
+                 <br /><br />
                 Com essa diversidade, atendemos de forma completa o seu negócio, com agilidade, qualidade e confiança.
               </p>
             </div>
