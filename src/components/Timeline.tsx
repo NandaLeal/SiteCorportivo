@@ -117,17 +117,7 @@ export default function Timeline() {
                   } group`}
                 >
                   {/* Content Side */}
-                  <div className={`w-5/12 ${isEven ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
-                    {/* Year */}
-                    <div className={`text-4xl sm:text-5xl lg:text-6xl font-gotham font-bold mb-4 ${event.textColor} animate-fade-in`}>
-                      {event.year}
-                    </div>
-                    
-                    {/* Title */}
-                    <h3 className="text-xl sm:text-2xl font-gotham font-bold mb-6 text-foreground">
-                      {event.title}
-                    </h3>
-                    
+                  <div className={`w-6/12 ${isEven ? 'pr-4' : 'pl-4'}`}>
                     {/* Timeline Image */}
                     <div className="relative w-full rounded-2xl overflow-hidden shadow-elegant group-hover:shadow-glow transition-all duration-500">
                       <img 
@@ -160,7 +150,7 @@ export default function Timeline() {
                   </div>
 
                   {/* Empty Side for Balance */}
-                  <div className="w-5/12"></div>
+                  <div className="w-6/12"></div>
 
                   {/* Background Decoration */}
                   <div className={`
