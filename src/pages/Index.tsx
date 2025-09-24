@@ -43,8 +43,10 @@ const heroCarouselImages: HeroItem[] = [
   { name: "Brahma", image: brahmaBanner, focal: "md:object-center", fitMd: "cover" },
   { name: "Guaraná Antarctica", image: guaranaBanner, focal: "md:object-center", fitMd: "cover" },
   { name: "Red Bull", image: redbullBanner, focal: "md:object-center", fitMd: "cover" },
-  { name: "Budweiser", image: bud, fitMd: "contain" }, // Bud sem corte
-  { name: "Spaten", image: spaten, focal: "md:object-[50%_30%]", fitMd: "cover" }, // Spaten com foco alto
+  // Budweiser → contain no desktop (não corta nada)
+  { name: "Budweiser", image: bud, fitMd: "contain" },
+  // Spaten → cover com foco mais alto
+  { name: "Spaten", image: spaten, focal: "md:object-[50%_30%]", fitMd: "cover" },
 ];
 
 // ---------------- BRANDS CONFIG ----------------
@@ -101,12 +103,17 @@ export default function Index() {
             <CarouselContent className="ml-0">
               {heroCarouselImages.map((brand) => (
                 <CarouselItem key={brand.name} className="pl-0">
-                  <div className="relative w-full h-[50vh] sm:h-[60vh] lg:h-[70vh] bg-muted/10 flex items-center justify-center">
+                  <div className="relative w-full h-[50vh] sm:h-[70vh] lg:h-[85vh] bg-gradient-to-br from-primary/5 to-secondary/5 flex items-center justify-center overflow-hidden">
                     <img
                       src={brand.image}
                       alt={`${brand.name} - Distribuída pela Cervantes`}
-                      className="w-full h-full object-contain max-w-full max-h-full"
+                      className={
+                        "w-full h-full object-contain " +
+                        (brand.fitMd === "contain" ? "md:object-contain " : "md:object-cover ") +
+                        (brand.focal ?? "md:object-center")
+                      }
                     />
+                    <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/20" />
                   </div>
                 </CarouselItem>
               ))}
