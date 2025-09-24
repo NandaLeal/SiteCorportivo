@@ -107,7 +107,7 @@ export default function SejaCliente() {
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div className="text-center p-6 rounded-lg bg-primary/5 border border-primary/20">
                       <div className="mx-auto mb-4 h-3 w-3 rounded-full bg-primary" />
-                      <h3 className="text-lg font-semibold mb-2">CNPJ ativo + compras recorrentes</h3>
+                      <h3 className="text-lg font-semibold mb-2">CNPJ ativo, mais compras recorrentes</h3>
                       <p className="text-muted-foreground">
                         Cadastro e pedidos via BEES para empresas com CNPJ ativo e compras regulares.
                       </p>
