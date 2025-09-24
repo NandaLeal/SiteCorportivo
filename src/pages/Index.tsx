@@ -28,7 +28,7 @@ import coronaPortifolio from "@/assets/corona-portifolio.jpg";
 import pepsiPortifolio from "@/assets/pepsi-portifolio.jpg";
 import sukitaPortifolio from "@/assets/sukita-portifolio.jpg";
 import becksPortifolio from "@/assets/becks-portifolio.jpg";
-import bud from "@/assets/BUD.png";
+import coronaBanner from "@/assets/corona-banner.png";
 import spaten from "@/assets/SPATEN.png";
 
 // ---------------- HERO CONFIG ----------------
@@ -43,9 +43,7 @@ const heroCarouselImages: HeroItem[] = [
   { name: "Brahma", image: brahmaBanner, focal: "md:object-center", fitMd: "cover" },
   { name: "Guaraná Antarctica", image: guaranaBanner, focal: "md:object-center", fitMd: "cover" },
   { name: "Red Bull", image: redbullBanner, focal: "md:object-center", fitMd: "cover" },
-  // Budweiser → contain no desktop (não corta nada)
-  { name: "Budweiser", image: bud, fitMd: "contain" },
-  // Spaten → cover com foco mais alto
+  { name: "Corona", image: coronaBanner, focal: "md:object-center", fitMd: "cover" },
   { name: "Spaten", image: spaten, focal: "md:object-[50%_30%]", fitMd: "cover" },
 ];
 
