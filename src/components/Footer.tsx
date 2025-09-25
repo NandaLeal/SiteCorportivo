@@ -108,8 +108,8 @@ export default function Footer() {
                 <li className="flex items-start space-x-2">
                   <MapPin className="h-4 w-4 sm:h-5 sm:w-5 text-primary flex-shrink-0 mt-0.5" />
                   <span className="text-sm text-muted-foreground">
-                    Montes Claros - MG<br />
-                    Norte de Minas Gerais
+                    Av. Gov. Magalhães Pinto, 7800 - Jaraguá,<br />
+                     Montes Claros - MG, 39404-166
                   </span>
                 </li>
                 <li className="flex items-center space-x-2">
