@@ -106,8 +106,7 @@ export default function Contato() {
                     <CardContent className="p-4 sm:p-6 pt-0">
                       <p className="text-sm sm:text-base text-muted-foreground">
                         Av. Gov. Magalhães Pinto, 7800 - Jaraguá,<br />
-                        Montes Claros - MG, 39404-166<br />
-                        Brasil
+                        Montes Claros - MG, 39404-166
                       </p>
                     </CardContent>
                   </Card>
