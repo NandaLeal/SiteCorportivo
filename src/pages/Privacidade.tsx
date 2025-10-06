@@ -105,7 +105,7 @@ export default function Privacidade() {
                 >
                   <Button size="lg" className="gap-2">
                     <FileText className="h-5 w-5" />
-                    Baixar Política Completa em PDF
+                    Formulário LGPD – Titular de Dados
                   </Button>
                 </a>
               </div>
