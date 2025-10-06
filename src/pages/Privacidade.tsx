@@ -1,5 +1,6 @@
-import { Shield, Eye, Lock, UserCheck } from "lucide-react";
+import { Shield, Eye, Lock, UserCheck, FileText } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -94,9 +95,115 @@ export default function Privacidade() {
           <div className="mx-auto max-w-4xl px-6 lg:px-8">
             <div className="space-y-12">
               
+              {/* Download PDF Button */}
+              <div className="flex justify-center mb-8">
+                <a 
+                  href="/CERVANTES_CANAL_DE_COMUNICACAO_LGPD.pdf" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  download
+                >
+                  <Button size="lg" className="gap-2">
+                    <FileText className="h-5 w-5" />
+                    Baixar Política Completa em PDF
+                  </Button>
+                </a>
+              </div>
+
               <Card className="shadow-elegant">
                 <CardHeader>
-                  <CardTitle>1. Coleta de Dados</CardTitle>
+                  <CardTitle>O QUE SÃO DADOS PESSOAIS?</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4 text-muted-foreground">
+                  <p>
+                    Segundo o art. 5º da Lei 13.709/2018 (Lei Geral de Proteção de Dados - LGPD), 
+                    considera-se dado pessoal toda informação relacionada à pessoa natural identificada 
+                    ou identificável a partir de dados pessoais diretos ou indiretos.
+                  </p>
+                  <p>
+                    Outra categoria de dados pessoais são os denominados <strong>dados pessoais sensíveis</strong>, 
+                    que se referem às informações da pessoa natural relacionadas à: raça, etnia, convicção religiosa, 
+                    opinião política, filiação a sindicato ou organização de caráter religioso, filosófico ou político, 
+                    relacionadas à saúde ou à vida sexual, dados genéticos ou biométricos.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="shadow-elegant">
+                <CardHeader>
+                  <CardTitle>O QUE É TRATAMENTO DE DADOS PESSOAIS?</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4 text-muted-foreground">
+                  <p>
+                    Conforme consta no art. 5º, inciso X da Lei 13.709/2018, tratamento é: toda operação 
+                    realizada com dados pessoais, como as que se referem a coleta, produção, recepção, 
+                    classificação, utilização, acesso, reprodução, transmissão, distribuição, processamento, 
+                    arquivamento, armazenamento, eliminação, avaliação ou controle da informação, modificação, 
+                    comunicação, transferência, difusão ou extração.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="shadow-elegant">
+                <CardHeader>
+                  <CardTitle>QUEM SÃO OS TITULARES DE DADOS E QUAIS SÃO OS SEUS DIREITOS?</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4 text-muted-foreground">
+                  <p>
+                    São Titulares de Dados toda pessoa natural a quem se referem os dados que são objeto de tratamento.
+                  </p>
+                  <p>
+                    Conforme art. 18 da Lei 13.709/2018, ao(à) titular estão garantidos os direitos de:
+                  </p>
+                  <ul className="list-disc list-inside space-y-2 ml-4">
+                    <li>Confirmação da existência de tratamento</li>
+                    <li>Acesso aos dados</li>
+                    <li>Correção de dados incompletos, inexatos ou desatualizados</li>
+                    <li>Anonimização, bloqueio ou eliminação de dados desnecessários, excessivos ou tratados em desconformidade com o disposto na LGPD</li>
+                    <li>Portabilidade dos dados a outro fornecedor de serviço ou produto, mediante requisição expressa, de acordo com a regulamentação da Autoridade Nacional, observados os segredos comercial e industrial</li>
+                    <li>Eliminação dos dados pessoais tratados com o consentimento do(a) titular, exceto nas hipóteses previstas no art. 16 da Lei</li>
+                    <li>Informação das entidades públicas e privadas com as quais o Controlador realizou uso compartilhado de dados</li>
+                    <li>Informação sobre a possibilidade de não fornecer consentimento e sobre consequências da negativa</li>
+                    <li>Revogação do consentimento, nos termos do §5.º do art. 8.º da Lei</li>
+                  </ul>
+                </CardContent>
+              </Card>
+
+              <Card className="shadow-elegant">
+                <CardHeader>
+                  <CardTitle>QUAL O CANAL DE COMUNICAÇÃO OFERECIDO AOS TITULARES DE DADOS?</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4 text-muted-foreground">
+                  <p>
+                    O Canal de Comunicação é o meio utilizado pelo Titular de Dados para exercer, de forma 
+                    simplificada e gratuita, o seu direito de autodeterminação informativa, como previsto no 
+                    art. 2º, II, da Lei 13.709/2018.
+                  </p>
+                  <p>
+                    Em observância ao que determina a LGPD, a Distribuidora de Bebidas Cervantes Ltda torna 
+                    público o contato do seu Encarregado (Data Protection Officer - DPO) pelo tratamento de 
+                    dados pessoais e os meios de atendimento para envio de eventuais comunicações, pedidos de 
+                    esclarecimentos ou exercício de quaisquer dos direitos previstos nesta Política:
+                  </p>
+                  <div className="bg-muted/30 rounded-lg p-6 mt-4 space-y-3">
+                    <p><strong>Encarregado de Dados:</strong> Fernanda Pimenta Leal</p>
+                    <p><strong>E-mail:</strong> dpo@cervantes.com.br</p>
+                  </div>
+                  <p className="mt-4">
+                    Através desse Canal de Comunicação e Contato, o Titular de Dados poderá obter do Controlador 
+                    (Cervantes), a qualquer momento e mediante requisição, informações sobre o tratamento dos seus dados.
+                  </p>
+                  <p>
+                    Desta forma, para exercer seu direito de autodeterminação informativa e, assim, sanar suas 
+                    dúvidas e obter esclarecimentos, o Titular de Dados deverá preencher o Formulário disponibilizado 
+                    na aba "Formulário LGPD – Titular de Dados" e enviar para o e-mail acima descrito.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="shadow-elegant">
+                <CardHeader>
+                  <CardTitle>Coleta de Dados</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4 text-muted-foreground">
                   <p>
@@ -113,7 +220,7 @@ export default function Privacidade() {
 
               <Card className="shadow-elegant">
                 <CardHeader>
-                  <CardTitle>2. Uso dos Dados</CardTitle>
+                  <CardTitle>Uso dos Dados</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4 text-muted-foreground">
                   <p>
@@ -130,7 +237,7 @@ export default function Privacidade() {
 
               <Card className="shadow-elegant">
                 <CardHeader>
-                  <CardTitle>3. Compartilhamento de Dados</CardTitle>
+                  <CardTitle>Compartilhamento de Dados</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4 text-muted-foreground">
                   <p>
@@ -146,7 +253,7 @@ export default function Privacidade() {
 
               <Card className="shadow-elegant">
                 <CardHeader>
-                  <CardTitle>4. Segurança dos Dados</CardTitle>
+                  <CardTitle>Segurança dos Dados</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4 text-muted-foreground">
                   <p>
@@ -163,26 +270,7 @@ export default function Privacidade() {
 
               <Card className="shadow-elegant">
                 <CardHeader>
-                  <CardTitle>5. Seus Direitos (LGPD)</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4 text-muted-foreground">
-                  <p>
-                    De acordo com a LGPD, você tem direito a:
-                  </p>
-                  <ul className="list-disc list-inside space-y-2 ml-4">
-                    <li>Confirmação da existência de tratamento de dados</li>
-                    <li>Acesso aos dados pessoais</li>
-                    <li>Correção de dados incompletos, inexatos ou desatualizados</li>
-                    <li>Anonimização, bloqueio ou eliminação de dados</li>
-                    <li>Portabilidade dos dados</li>
-                    <li>Eliminação dos dados tratados com consentimento</li>
-                  </ul>
-                </CardContent>
-              </Card>
-
-              <Card className="shadow-elegant">
-                <CardHeader>
-                  <CardTitle>6. Cookies</CardTitle>
+                  <CardTitle>Cookies</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4 text-muted-foreground">
                   <p>
@@ -195,24 +283,7 @@ export default function Privacidade() {
 
               <Card className="shadow-elegant">
                 <CardHeader>
-                  <CardTitle>7. Contato</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4 text-muted-foreground">
-                  <p>
-                    Para exercer seus direitos ou esclarecer dúvidas sobre esta política, 
-                    entre em contato conosco:
-                  </p>
-                  <div className="bg-muted/30 rounded-lg p-4 mt-4">
-                    <p><strong>E-mail:</strong> dpo@cervantes.com.br</p>
-                    <p><strong>Telefone:</strong> (38) 3213-1234</p>
-                    <p><strong>Endereço:</strong> Montes Claros - MG</p>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="shadow-elegant">
-                <CardHeader>
-                  <CardTitle>8. Alterações</CardTitle>
+                  <CardTitle>Alterações na Política</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4 text-muted-foreground">
                   <p>
