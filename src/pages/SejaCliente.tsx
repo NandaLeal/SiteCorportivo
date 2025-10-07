@@ -229,7 +229,7 @@ export default function SejaCliente() {
                 </div>
                 <div className="text-center mt-6 sm:mt-8">
                   <p className="text-xs sm:text-sm text-muted-foreground">
-                    Essas são as áreas que a nossa revenda!
+                    Essas são as áreas que a nossa revenda atende!
                   </p>
                 </div>
               </CardContent>
