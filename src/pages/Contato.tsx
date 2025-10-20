@@ -155,7 +155,7 @@ export default function Contato() {
                     <CardContent className="p-4 sm:p-6 pt-0">
                       <div className="space-y-1 text-sm sm:text-base text-muted-foreground">
                         <p>Segunda a Sexta: 8h às 18h</p>
-                        <p>Sábado: 8h às 12h</p>
+                        <p>Sábado: Fechado</p>
                         <p>Domingo: Fechado</p>
                       </div>
                     </CardContent>
