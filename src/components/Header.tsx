@@ -13,6 +13,10 @@ const navigation = [
   { name: "Contato", href: "/contato" },
 ];
 
+<!-- Elfsight Cookie Consent | Untitled Cookie Consent -->
+<script src="https://elfsightcdn.com/platform.js" async></script>
+<div class="elfsight-app-f38e9c90-d057-4f7e-8de3-5e2bd74ec583" data-elfsight-app-lazy></div>
+  
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
