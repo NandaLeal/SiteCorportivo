@@ -41,15 +41,105 @@ export type Database = {
         }
         Relationships: []
       }
+      dColaboradores: {
+        Row: {
+          "1 Contato": string | null
+          "2 Contato": string | null
+          "3 Contato": string | null
+          Admissão: string | null
+          Afastamento: string | null
+          "Código eSocial": string | null
+          "Código Funcionário": number | null
+          CPF: string
+          "Data de Nascimento": string | null
+          Demissão: string | null
+          Empresa: string | null
+          "Estado Civil": string | null
+          Função: string | null
+          "Nome Completo": string | null
+          "Orgão RG": string | null
+          "Perfil Colaborador": string | null
+          RG: string
+          Setor: string | null
+          Sexo: string | null
+          "UF RG": string | null
+        }
+        Insert: {
+          "1 Contato"?: string | null
+          "2 Contato"?: string | null
+          "3 Contato"?: string | null
+          Admissão?: string | null
+          Afastamento?: string | null
+          "Código eSocial"?: string | null
+          "Código Funcionário"?: number | null
+          CPF: string
+          "Data de Nascimento"?: string | null
+          Demissão?: string | null
+          Empresa?: string | null
+          "Estado Civil"?: string | null
+          Função?: string | null
+          "Nome Completo"?: string | null
+          "Orgão RG"?: string | null
+          "Perfil Colaborador"?: string | null
+          RG: string
+          Setor?: string | null
+          Sexo?: string | null
+          "UF RG"?: string | null
+        }
+        Update: {
+          "1 Contato"?: string | null
+          "2 Contato"?: string | null
+          "3 Contato"?: string | null
+          Admissão?: string | null
+          Afastamento?: string | null
+          "Código eSocial"?: string | null
+          "Código Funcionário"?: number | null
+          CPF?: string
+          "Data de Nascimento"?: string | null
+          Demissão?: string | null
+          Empresa?: string | null
+          "Estado Civil"?: string | null
+          Função?: string | null
+          "Nome Completo"?: string | null
+          "Orgão RG"?: string | null
+          "Perfil Colaborador"?: string | null
+          RG?: string
+          Setor?: string | null
+          Sexo?: string | null
+          "UF RG"?: string | null
+        }
+        Relationships: []
+      }
+      user_roles: {
+        Row: {
+          created_at: string
+          role: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          role: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          role?: Database["public"]["Enums"]["app_role"]
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      has_role: {
+        Args: { _role: Database["public"]["Enums"]["app_role"] }
+        Returns: boolean
+      }
     }
     Enums: {
-      [_ in never]: never
+      app_role: "admin" | "manager" | "user"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -176,6 +266,8 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      app_role: ["admin", "manager", "user"],
+    },
   },
 } as const
