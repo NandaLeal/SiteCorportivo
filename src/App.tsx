@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import ScrollToTop from "@/components/ScrollToTop";
+import { CookieConsent } from "@/components/CookieConsent";
 import Index from "./pages/Index";
 import QuemSomos from "./pages/QuemSomos";
 import Marcas from "./pages/Marcas";
@@ -34,6 +35,7 @@ const App = () => (
           <Route path="*" element={<NotFound />} />
         </Routes>
         <WhatsAppFloat />
+        <CookieConsent />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
