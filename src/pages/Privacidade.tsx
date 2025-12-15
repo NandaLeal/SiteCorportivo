@@ -95,13 +95,12 @@ export default function Privacidade() {
           <div className="mx-auto max-w-4xl px-6 lg:px-8">
             <div className="space-y-12">
               
-              {/* Download PDF Button */}
+              {/* LGPD Form Button */}
               <div className="flex justify-center mb-8">
                 <a 
-                  href="/CERVANTES_CANAL_DE_COMUNICACAO_LGPD.pdf" 
+                  href="https://forms.office.com/Pages/ResponsePage.aspx?id=_LFKUVrk8ki8QOlMRmycr8DUchOqKnZOlCrcObnpFTBUQ0VGTlRRTk84MkxDRExRNUZCTDhYRUlZSy4u" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  download
                 >
                   <Button size="lg" className="gap-2">
                     <FileText className="h-5 w-5" />
