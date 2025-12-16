@@ -12,6 +12,7 @@ import SejaCliente from "./pages/SejaCliente";
 import Trabalhe from "./pages/Trabalhe";
 import Contato from "./pages/Contato";
 import Privacidade from "./pages/Privacidade";
+import PoliticaCookies from "./pages/PoliticaCookies";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -31,6 +32,7 @@ const App = () => (
           <Route path="/trabalhe-conosco" element={<Trabalhe />} />
           <Route path="/contato" element={<Contato />} />
           <Route path="/privacidade" element={<Privacidade />} />
+          <Route path="/politica-cookies" element={<PoliticaCookies />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <WhatsAppFloat />
