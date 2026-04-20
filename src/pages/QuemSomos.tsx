@@ -118,9 +118,7 @@ export default function QuemSomos() {
                   </div>
                   <h3 className="text-xl font-semibold mb-4">Sonho</h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Inspirar o bem com segurança e engajamento,
-                    otimizando custos, fortalecendo nossas marcas,
-                    sempre com foco no cliente.
+                   Inspirar o bem com SEGURANÇA e ENGAJAMENTO, otimizando CUSTOS, fortalecendo nossas MARCAS, sempre com FOCO NO CLIENTE.
                   </p>
                 </CardContent>
               </Card>
